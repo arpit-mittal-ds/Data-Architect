@@ -14,6 +14,7 @@ Setup Master Data Governance processes.
 
 Understand the role of data stewards in Master Data Management.
 
+## What Is Master Data Management
 
 **A common data problem is that the same data exists in more than one application in a company and is inconsistent. This creates a serious challenge for the business operations of the company. Master data and Master Data Management help solve this problem.**
 
@@ -29,7 +30,6 @@ Master data is not transactional in nature. For example, sales transactions, ord
 
 Master data usually has many versions in different systems. Golden Record is the best possible record in an Enterprise and is created by consolidating and correcting inaccurate and duplicated data in different systems. Golden Record is a single, unified version of the data. It is a trusted and accurate version of data and is also called the “Single Version of the truth”.
 
-## What Is Master Data Management
 **Master Data Management (also called MDM) system is a technology solution that gathers data from multiple systems, then consolidates the data using different algorithms to create the golden record.**
 The golden records for different master data entities are stored in a central database called Master Data Hub or Master Data Repository. MDM system also enables governance of master data by providing a mechanism for reviewal, approval, and rejection of the master data. Master data is distributed to all the different systems, and all the changes in different systems are synced back to the master data.
 
@@ -108,5 +108,4 @@ is a hybrid between Consolidated MDM and Centralized MDM and hence it is also ca
 **Coexistence MDM:** Master data is created both in MDM hub and source systems and kept in sync between the two.
 
 ### Further reading
-For a slightly different version of the architecture diagrams and explanations for each MDM architecture style, you can reference this article
-(https://towardsdatascience.com/understanding-various-mdm-implementation-styles-5b4c8fcbbecf)
+[Explanations for each MDM architecture style](https://towardsdatascience.com/understanding-various-mdm-implementation-styles-5b4c8fcbbecf)
