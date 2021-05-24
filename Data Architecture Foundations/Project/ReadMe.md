@@ -1,4 +1,7 @@
-# Project Overview
+# Project: Designing an HR Database
+Architect a database based on the business requirements for a Human Resources Department, combining all the skills, learnt so far!
+
+## Project Overview
 In this project, I designed, built, and populated a database for the Human Resources (HR) Department at the imaginary Tech ABC Corp, a video game company. 
 
 This project started with a request from the HR Manager. From there, I designed a database using the foundational principals of data architecture that is best suited to the department's needs. I followed steps of database architecture, creating database proposals, database entity relationship diagrams (ERD), and finally creating the database itself. This project is important, as it is a scaled-down simulation of the kind of real-world assignments data architects work on every day.
