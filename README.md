@@ -1,0 +1,2 @@
+# Data-Architect
+plan, design and implement enterprise data infrastructure solutions and create the blueprints for an organization’s data management system. You’ll create a relational database with PostGreSQL, design an Online Analytical Processing (OLAP) data model to build a cloud based data warehouse, and design scalable data lake architecture that meets the needs of Big Data. Finally, you’ll learn how to apply the principles of data governance to an organization’s data management system.
