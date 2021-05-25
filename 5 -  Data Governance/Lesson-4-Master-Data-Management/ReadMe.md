@@ -131,3 +131,41 @@ is a hybrid between Consolidated MDM and Centralized MDM and hence it is also ca
 
 ### Further reading
 [Explanations for each MDM architecture style](https://towardsdatascience.com/understanding-various-mdm-implementation-styles-5b4c8fcbbecf)
+
+
+## Data Quality Monitoring
+
+![image](https://user-images.githubusercontent.com/68102477/119577890-d3f00f00-bdfe-11eb-877d-d22bf761aca2.png)
+
+![image](https://user-images.githubusercontent.com/68102477/119577926-e79b7580-bdfe-11eb-9877-e8543b03ba38.png)
+
+### Data quality is continuously monitored using various techniques. Details of these techniques:
+
+Data Quality dashboards **provide a graphical view of data quality measurements** and are typically shown as bar graphs, line graphs, pie charts, summary counts.. etc.
+Each dashboard can display many items that indicate data quality. 
+**Some sample items:**
+
+Display **error counts** by entity or attribute. For example, the error counts for the customer entity or error counts for the customer ID attribute in the customer entity.
+
+Display **data quality score trending over time.**
+For example, display the data quality score week over week for a 6 month period, month over month for the past year, quarter over quarter for the past 3 years..etc.
+
+Display **data quality scores per attribute** by each data quality dimension - completeness, validity, consistency, uniqueness, accuracy, and timeliness and compare the score to a threshold.
+
+Display **trend report** to enable the users to review how data quality is trending over time.
+
+**Exception reports** display the list of data issues and exceptions identified. Exceptions are records that fail the data quality checks. The next step is to research the root cause behind these issues to identify the appropriate remediation method.
+
+**Email alerts and notifications** are setups for the data quality scores, dashboards, and reports. They notify users and IT support about different events and issues with data quality processing.
+
+Alerts are used to raise issues like data quality status changes to red for a dataset or data element. These alerts are sent to data stewards, who then work on the research and remediation of these issues.
+Sometimes, the data quality processes that calculate the scores or create reports and dashboards can fail. In the case of these failures, IT support is alerted.
+Notifications can be used to notify users that the data quality process is complete and that scores, dashboards, and reports are now available for review. These notifications are sent out to all users of the data quality system.
+Data stewards are notified if some of the data quality scores fall into alert status.
+
+### Further reading
+[sample data quality dashboard -1](https://public.tableau.com/views/DataQualityDashboards/Dashboard1?:embed=y&:showVizHome=no&:display_count=y&:display_static_image=y&:bootstrapWhenNotified=true)
+[Sample Dashboard -2](https://www.quadrant.io/solutions/data-quality-dashboard)
+
+
+
