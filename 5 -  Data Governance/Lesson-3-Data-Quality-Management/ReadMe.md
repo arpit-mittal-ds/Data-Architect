@@ -1,5 +1,11 @@
 # Notes - Data Quality Management
 
+Data profiling
+Data Quality Dimensions
+Data Quality Remediation
+Data Quality Measurement and Monitoring
+
+
 ## What is Data profiling ?
 
 Data profiling is a process where we analyze the data from different sources and **summarize information about data**. 
@@ -91,22 +97,39 @@ Data Domain: is the subject area of the data.
 Additional data profiling can be performed by further analyzing data based on several data quality dimensions - completeness, conformity, consistency, accuracy, uniqueness, and validity. This aids in identifying data quality issues like missing data, data inconsistencies, inaccuracies, and duplicates. Details of the six data quality dimensions:
 
 **Completeness**
-We review how much of the expected dataset is complete and what data is missing. For example, if among all the customers sign up for an account, only 20% filled in their phone number, we would say the dataset is 20% complete.
+What data is missing ? We review how much of the expected dataset is complete and what data is missing. For example, if among all the customers sign up for an account, only 20% filled in their phone number, we would say the dataset is 20% complete.
+
+![image](https://user-images.githubusercontent.com/68102477/119479864-6c04de80-bd94-11eb-8df0-b2c13304635f.png)
 
 **Validity**
-We review the data to determine if it conforms to the specified format and business rules. For example, if a text value is stored in a phone number field, it is not valid.
+Does data follow expected format and business rules? We review the data to determine if it conforms to the specified format and business rules. For example, if a text value is stored in a phone number field, it is not valid.
+
+![image](https://user-images.githubusercontent.com/68102477/119480732-4e844480-bd95-11eb-813b-6978988c09d4.png)
+
+![image](https://user-images.githubusercontent.com/68102477/119480942-81c6d380-bd95-11eb-82eb-dbcb8795b871.png)
 
 **Consistency**
 We review to check if the data in multiple places or systems are consistent. For example, if the order status is ‘Canceled’ but the Cancellation date is blank, it is not consistent.
 
+![image](https://user-images.githubusercontent.com/68102477/119481038-9c00b180-bd95-11eb-985a-480b60f2ca76.png)
+
+![image](https://user-images.githubusercontent.com/68102477/119481279-dc602f80-bd95-11eb-85f2-f65975c49796.png)
+
 **Accuracy**
 We review to determine if the data accurately reflects the event or object. For example, a customer asks for a return stating the product is defective, and in the return system, the return reason is blank for that order. In this case, this data is not accurate.
 
+![image](https://user-images.githubusercontent.com/68102477/119481392-fc8fee80-bd95-11eb-9ee6-3ca33b48da3b.png)
+
 **Uniqueness**
-We review whether data is duplicated in a given system or multiple systems. If data is duplicated, then the duplicates need to be eliminated.
+What data is duplicated or repeated ? We review whether data is duplicated in a given system or multiple systems. If data is duplicated, then the duplicates need to be eliminated.
+
+![image](https://user-images.githubusercontent.com/68102477/119481917-9a83b900-bd96-11eb-945c-e1406a25c28b.png)
 
 **Timeliness**
-We review to check if the data represent reality at a given time. For example, if the customer provided a change of address, which is not applied to the next customer bill, then the data is not timely.
+How recent is our data ? We review to check if the data represent reality at a given time. For example, if the customer provided a change of address, which is not applied to the next customer bill, then the data is not timely. Also if detials of a customer are not updated timely then he could be wrongly segemented. 
+
+![image](https://user-images.githubusercontent.com/68102477/119482039-c010c280-bd96-11eb-995b-efec68808186.png)
+
 
 ### New terms
 Data Quality Dimensions: Characteristics used to specify data quality expectations and requirements
@@ -114,5 +137,44 @@ Data Quality Dimensions: Characteristics used to specify data quality expectatio
 ### Further reading
 [additional examples of data quality dimensions](https://www.cdc.gov/ncbddd/hearingloss/documents/dataqualityworksheet.pdf)
 
-## 
+
+## Data Quality Remediation
+
+### There are several approaches to remediate data quality issues. The key ones are:
+
+![image](https://user-images.githubusercontent.com/68102477/119483441-509bd280-bd98-11eb-9493-85d989429199.png)
+
+### Implement application controls to prevent bad data from being entered. 
+
+This ensures that high-quality data flows into all the downstream systems that use this data.
+
+![image](https://user-images.githubusercontent.com/68102477/119483771-a83a3e00-bd98-11eb-84e4-1769ca5a535c.png)
+
+People make fewer mistakes if they have to select a value rather than enter data in a free form field. **Provide drop-down and selection lists** to guide the user to enter better quality data.
+
+When a user does not want to provide information, they enter some random data. So have a **data validation check to ensure the data entered is valid.**
+
+Users can inadvertently create some duplicate information. **Systematic checks** can prevent this issue.
+
+Implementing these changes in different systems across the enterprise that involves multiple project teams is not easy. **Governance policies and a governance team are needed to make this happen!!!**
+
+The root cause of some data quality issues can be inefficient business processes. You would need to refine business processes to remediate these issues. Some examples of inefficient business processes and remediation approaches:
+
+People in different teams and departments can handle the same data differently, resulting in inconsistencies. For example, some people can fill in the vendor name as ‘Staples,’ and others can fill in the vendor name as ‘Staples Inc.’ To prevent this from happening, a process must be implemented to pick the vendor name from a reference list.
+People can misunderstand what the data means and enter the wrong value. For example, some people think the price is the selling price, and others think the price is the purchase price and enter data incorrectly. To prevent this issue, what data to be captured in a field needs to be clearly communicated and documented.
+People input a random or placeholder value when they don’t know the details of some information. For example, EIN is short for Employer Identification Number, something you need to input when filing for tax return. Someone who doesn’t know what EIN is may input some random value. To prevent this issue, it’s necessary to provide a reference list of businesses and their Employer Identification Number.
+Refining business processes in multiple departments requires an enterprise-wide effort. Once again, a governance team needs to be in place, and governance policies need to be implemented to make these changes happen !!!
+
+Another approach is to perform data cleansing for fixing data quality issues. This ensures that high-quality data is available for business processes and analytics. Several data cleansing techniques can be used to remediate data quality issues:
+
+Enrichment is a process where the data is augmented with data from other systems, internal reference data, or external third-party vendors.
+Different variations like formats, spellings of the same data can exist in multiple places. Standardization is a process where this data is converted to a single form.
+Deduplication is a process that consolidates multiple instances of the same data into a single instance.
+Same data can exist in multiple systems and need to be synchronized to have the same values. Data quality checks are applied to compare data between the different systems to identify potential inconsistencies. If these checks identify discrepancies, data will be synchronized.
+New terms
+Data Cleansing: Process used to fix data quality issues
+
+
+
+## Data Quality Measurement and Monitoring
 
