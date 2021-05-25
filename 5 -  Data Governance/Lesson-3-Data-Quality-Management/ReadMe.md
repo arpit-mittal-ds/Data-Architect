@@ -84,5 +84,35 @@ Data Domain: is the subject area of the data.
 ### Further reading
 [the vendor tools available in the market for data profiling](https://analyticsindiamag.com/10-data-profiling-tools-every-developer-must-know/)
 
+## Data Quality Dimensions
 
+![image](https://user-images.githubusercontent.com/68102477/119469907-242d8980-bd8b-11eb-9d0f-1bdf74fb116b.png)
+
+Additional data profiling can be performed by further analyzing data based on several data quality dimensions - completeness, conformity, consistency, accuracy, uniqueness, and validity. This aids in identifying data quality issues like missing data, data inconsistencies, inaccuracies, and duplicates. Details of the six data quality dimensions:
+
+**Completeness**
+We review how much of the expected dataset is complete and what data is missing. For example, if among all the customers sign up for an account, only 20% filled in their phone number, we would say the dataset is 20% complete.
+
+**Validity**
+We review the data to determine if it conforms to the specified format and business rules. For example, if a text value is stored in a phone number field, it is not valid.
+
+**Consistency**
+We review to check if the data in multiple places or systems are consistent. For example, if the order status is ‘Canceled’ but the Cancellation date is blank, it is not consistent.
+
+**Accuracy**
+We review to determine if the data accurately reflects the event or object. For example, a customer asks for a return stating the product is defective, and in the return system, the return reason is blank for that order. In this case, this data is not accurate.
+
+**Uniqueness**
+We review whether data is duplicated in a given system or multiple systems. If data is duplicated, then the duplicates need to be eliminated.
+
+**Timeliness**
+We review to check if the data represent reality at a given time. For example, if the customer provided a change of address, which is not applied to the next customer bill, then the data is not timely.
+
+### New terms
+Data Quality Dimensions: Characteristics used to specify data quality expectations and requirements
+
+### Further reading
+[additional examples of data quality dimensions](https://www.cdc.gov/ncbddd/hearingloss/documents/dataqualityworksheet.pdf)
+
+## 
 
