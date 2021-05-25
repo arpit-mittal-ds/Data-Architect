@@ -37,10 +37,16 @@ Master data is critical to the business operations of the company. Imagine what 
 
 Master data is not transactional in nature. For example, sales transactions, orders, invoices are not master data.
 
-Master data usually has many versions in different systems. Golden Record is the best possible record in an Enterprise and is created by consolidating and correcting inaccurate and duplicated data in different systems. Golden Record is a single, unified version of the data. It is a trusted and accurate version of data and is also called the “Single Version of the truth”.
+Master data usually has many versions in different systems. **Golden Record is the best possible record in an Enterprise and is created by consolidating and correcting inaccurate and duplicated data in different systems. Golden Record is a single, unified version of the data. It is a trusted and accurate version of data and is also called the “Single Version of the truth”.
+
+![image](https://user-images.githubusercontent.com/68102477/119435921-802de900-bd5e-11eb-82ca-afc19bb38f92.png)
+
 
 **Master Data Management (also called MDM) system is a technology solution that gathers data from multiple systems, then consolidates the data using different algorithms to create the golden record.**
 The golden records for different master data entities are stored in a central database called Master Data Hub or Master Data Repository. MDM system also enables governance of master data by providing a mechanism for reviewal, approval, and rejection of the master data. Master data is distributed to all the different systems, and all the changes in different systems are synced back to the master data.
+
+![image](https://user-images.githubusercontent.com/68102477/119436250-2d086600-bd5f-11eb-8759-6248aa693c2c.png)
+
 
 ### New terms
 **Master Data:** Business-critical data that is shared across the enterprise.
@@ -59,6 +65,8 @@ You can find some examples of master data and MDM systems in this article:
 Implementing a Master Data Management System requires a HUGE investment of money and resources. There has to be a strong business justification for companies to undertake this effort.
 Some of the common drivers for building a Master Data Management System:
 
+![image](https://user-images.githubusercontent.com/68102477/119436481-94beb100-bd5f-11eb-8803-66b0fa32f824.png)
+
 1. Companies want to establish a **360° view of customers**, a comprehensive end-to-end picture of all the customer interactions with the company. This enables a customer-centric approach to business that allows companies to better target products and offerings and improve customer experience.
 
 2. Companies want to build a new **Enterprise Data Warehouse** or remediate an existing Enterprise Data Warehouse with some major data inconsistency issues. Master data management system serves as a foundation and greatly improves the data quality of the Enterprise Data Warehouse, enabling accurate reporting and analytics.
@@ -67,11 +75,16 @@ Some of the common drivers for building a Master Data Management System:
 
 Building a Master Data Management System requires **executive-level sponsorship** and is an enterprise-wide effort that requires collaboration across multiple business domains and IT systems.
 
+![image](https://user-images.githubusercontent.com/68102477/119437109-ce43ec00-bd60-11eb-9a86-cf7cc7dc3bf5.png)
+
+
 Many people who work in business departments take responsibility for data ownership. Developers and architects in the IT department own the implementation and maintenance of MDM.
 
 MDM is cross-functional in nature and requires alignment among multiple departments on business rules and governance policies.
+**Example: Marketing and Fiance Departments need to agree on a standard Product Hierarchy, which can be used for both customer segmentation and financial accounting.** 
 
 Existing business processes will need to be refined to enable the adoption of MDM.
+**Example: Someone in the vendor management department wants to create a new record for a new vendor: Prior to MDM in place, a new record can be created directly in the vendor management system. Now - new process: first work with Data Steward to get the data loaded in the MDM system, then vendor details will be loaded to the vendor management system.
 
 Different project teams and personnel supporting multiple IT systems are involved in MDM implementation and maintenance.
 
