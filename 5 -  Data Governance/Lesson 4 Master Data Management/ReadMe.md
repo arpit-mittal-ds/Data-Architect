@@ -14,11 +14,20 @@ Setup Master Data Governance processes.
 
 Understand the role of data stewards in Master Data Management.
 
+![image](https://user-images.githubusercontent.com/68102477/119435478-8ff8fd80-bd5d-11eb-8b52-f4f7bc116c3c.png)
+
+
 ## What Is Master Data Management
 
 **A common data problem is that the same data exists in more than one application in a company and is inconsistent. This creates a serious challenge for the business operations of the company. Master data and Master Data Management help solve this problem.**
 
+![image](https://user-images.githubusercontent.com/68102477/119435726-16adda80-bd5e-11eb-9472-c28c4ec6ac3e.png)
+
+
 **Some critical data, such as customer, product, and vendor, are shared across the enterprise for any business. We call this business-essential data master data. Key characteristics of master data:**
+
+![image](https://user-images.githubusercontent.com/68102477/119435766-2a594100-bd5e-11eb-8e67-0c907585900c.png)
+
 
 Master data entities are descriptive in nature—for example, customer master, product master, employee master, etc.
 
