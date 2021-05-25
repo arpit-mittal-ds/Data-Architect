@@ -158,23 +158,68 @@ Users can inadvertently create some duplicate information. **Systematic checks**
 
 Implementing these changes in different systems across the enterprise that involves multiple project teams is not easy. **Governance policies and a governance team are needed to make this happen!!!**
 
-The root cause of some data quality issues can be inefficient business processes. You would need to refine business processes to remediate these issues. Some examples of inefficient business processes and remediation approaches:
+**The root cause of some data quality issues can be inefficient business processes. You would need to refine business processes to remediate these issues.**
+### Some examples of inefficient business processes and remediation approaches:
 
-People in different teams and departments can handle the same data differently, resulting in inconsistencies. For example, some people can fill in the vendor name as ‘Staples,’ and others can fill in the vendor name as ‘Staples Inc.’ To prevent this from happening, a process must be implemented to pick the vendor name from a reference list.
+People in different teams and departments can handle the same data differently, resulting in inconsistencies. 
+For example, some people can fill in the vendor name as ‘Staples,’ and others can fill in the vendor name as ‘Staples Inc.’ 
+To prevent this from happening, **a process must be implemented** to pick the vendor name from a reference list.
+
 People can misunderstand what the data means and enter the wrong value. For example, some people think the price is the selling price, and others think the price is the purchase price and enter data incorrectly. To prevent this issue, what data to be captured in a field needs to be clearly communicated and documented.
+
 People input a random or placeholder value when they don’t know the details of some information. For example, EIN is short for Employer Identification Number, something you need to input when filing for tax return. Someone who doesn’t know what EIN is may input some random value. To prevent this issue, it’s necessary to provide a reference list of businesses and their Employer Identification Number.
-Refining business processes in multiple departments requires an enterprise-wide effort. Once again, a governance team needs to be in place, and governance policies need to be implemented to make these changes happen !!!
 
-Another approach is to perform data cleansing for fixing data quality issues. This ensures that high-quality data is available for business processes and analytics. Several data cleansing techniques can be used to remediate data quality issues:
+**Refining business processes in multiple departments requires an enterprise-wide effort. Once again, a governance team needs to be in place, and governance policies need to be implemented to make these changes happen !!!**
 
-Enrichment is a process where the data is augmented with data from other systems, internal reference data, or external third-party vendors.
-Different variations like formats, spellings of the same data can exist in multiple places. Standardization is a process where this data is converted to a single form.
-Deduplication is a process that consolidates multiple instances of the same data into a single instance.
+
+### Another approach is to perform data cleansing for fixing data quality issues. 
+
+This ensures that high-quality data is available for business processes and analytics. 
+
+**Several data cleansing techniques can be used to remediate data quality issues:**
+
+**Enrichment** is a process where the **data is augmented with data** from other systems, internal reference data, or external third-party vendors.
+
+Different variations like formats, spellings of the same data can exist in multiple places. **Standardization** is a process where this data is converted to a single form.
+
+**Deduplication** is a process that consolidates multiple instances of the same data into a single instance.
+
 Same data can exist in multiple systems and need to be synchronized to have the same values. Data quality checks are applied to compare data between the different systems to identify potential inconsistencies. If these checks identify discrepancies, data will be synchronized.
-New terms
-Data Cleansing: Process used to fix data quality issues
+
+### New terms
+**Data Cleansing:** Process used to fix data quality issues
 
 
 
 ## Data Quality Measurement and Monitoring
 
+Data quality can degrade over time as bad data is constantly being introduced due to business operations and system issues. We use data quality metrics to understand the data quality at a given point in time and identify areas of improvement. Data quality metrics contains two components:
+
+Data Quality Score is assigned to a data attribute/entity based on the data quality dimensions - completeness, validity, consistency, accuracy, uniqueness, and timeliness. The score is a number say on a scale of 1 to 100 that quantitatively measures the data quality. For example, if 1200 out of 5000 records miss a value in the phone number column, then the data quality score is (1- 1200/1500)*100 = 76.
+
+Data Quality Thresholds categorizes data into different quality levels and are set by the business based on the need and criticality of data. For example, thresholds can be set to less than 70, 70-80, and higher than 80, representing poor, medium, and high data quality. Data quality score above 80 is an acceptable range or green, data quality score between 70-80 is an alert to watch out or yellow. If the data quality score falls below 70, it is a red light indicating that you will start investigating significant issues.
+
+Data quality monitoring is performed using several techniques:
+
+Data quality dashboards that display data quality metrics across several data dimensions and data entities.
+
+Email notifications and alerts are set up to notify data stewards of data abnormalities and issues. They can also be created to notify users that the data quality process execution is completed and the dashboards and reports are ready for review.
+
+Exception reports display the list of data issues and exceptions identified based on a set of predefined business rules.
+
+Trend reports are used to review how the data quality is trending over time, for example, month over month, quarter over quarter, etc.
+
+Data Quality Measurement - part 1
+Play Video
+Data Quality Measurement - part 2
+Play Video
+Summary
+Here we looked at the data quality of the phone number column along the 6 data quality dimensions: completeness, validity, consistency, accuracy, uniqueness, and timeliness.
+
+For each data column, you calculate a separate data quality score for each dimension. Finally, you aggregate all these individual data quality scores to compute the overall data quality score for that column. Note that the overall data quality is not calculated as the simple average but by using the total records with one or more issues.
+
+New terms
+Data Quality Score: Quantitatively measures of data quality for a given data entity or attribute
+Data Quality Threshold: Categorizes data into different quality levels
+Further reading
+You can read more about data quality monitoring in this article
