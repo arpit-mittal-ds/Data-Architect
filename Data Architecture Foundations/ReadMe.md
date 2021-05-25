@@ -2,4 +2,4 @@ Learnt about the principles and the characteristics of good data architecture an
 
 Learnt Data Modelling: to design a data model, normalize data, and create a professional ERD. 
 
-Finally, I took everything that I had learnt and created a physical database using PostGreSQL.
+Finally, took everything that I had learnt and created a physical database using PostGreSQL.
