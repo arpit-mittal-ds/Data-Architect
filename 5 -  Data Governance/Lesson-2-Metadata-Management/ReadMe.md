@@ -57,3 +57,57 @@ Users review the different metadata in a Metadata Management System and rate the
 Metadata information that describes other data
 Metadata Repository is a database that stores metadata
 Enterprise Data Catalog is a consolidation or inventory of all the metadata
+
+## Why Metadata Management Is Important ?
+
+![image](https://user-images.githubusercontent.com/68102477/119643852-9bcce880-be5f-11eb-8b53-ee81764c4ff0.png)
+
+### Metadata management is critical to enabling good data governance.
+
+Metadata is information about your data. Metadata helps you understand different aspects of the data in your company. Some of the insights you can gain from metadata:
+
+What data exists in the company, and which IT system contains this data?
+
+What are the business level definition and descriptions of data elements?
+
+How good is the data quality of data elements and entities? What are the data quality thresholds?
+
+Who are the users of the data? What do they use the data for? Who are the data owners and data stewards?
+
+Who can access the data? What kind of access do they have?
+
+What are the business and data quality rules and transformations applied to the data?
+
+Where is the data created? Where is it stored? How is it published? Is it archived or deleted?
+
+### Some of the key impacts of a good metadata management system:
+
+With proper metadata management, companies **reduce the reliance on subject matter experts/IT personnel to identify the location of the information.**
+
+Metadata management enables the creation of enterprise-level data definitions, **proper documentation of business rules, usage, and policies**
+
+Metadata that was once scattered across the enterprise is now captured in a single repository that can be easily accessed by anyone in the company resulting in significant time savings and improved productivity
+
+Metadata management identifies and eliminates redundancies and inconsistencies in data and processes.
+
+### New terms
+Data Owner Person who is responsible for data in a particular Data Domain
+
+Data Quality Threshold Categorizes the data into different data quality levels
+
+### Further reading
+[role played by metadata in effective Data Governance](https://tdan.com/metadata-in-data-governance/1610)
+
+
+## Enterprise Data Model
+
+![image](https://user-images.githubusercontent.com/68102477/119646493-93c27800-be62-11eb-834b-fef687ec2be6.png)
+
+![image](https://user-images.githubusercontent.com/68102477/119646620-b9e81800-be62-11eb-873f-9d0b2efed826.png)
+
+![image](https://user-images.githubusercontent.com/68102477/119646657-c2405300-be62-11eb-9ddc-d19011bc40aa.png)
+
+![image](https://user-images.githubusercontent.com/68102477/119646670-c66c7080-be62-11eb-9433-189f341939ba.png)
+
+
+
