@@ -13,7 +13,8 @@ and transformed data from staging to ODS,
 and finally from ODS to data warehouse system. 
 
 
-Yelp source carries a list of businesses, restaurants, its reviews and ratings. 
+
+**Yelp** source carries a list of businesses, restaurants, its reviews and ratings. 
 
 Climatic data source keeps track of temperature and precipitation data. 
 
