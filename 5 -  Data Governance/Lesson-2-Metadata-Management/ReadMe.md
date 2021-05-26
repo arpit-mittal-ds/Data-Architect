@@ -12,7 +12,8 @@ Create an Enterprise Data Catalog
 
 ## What is Metadata Management
 
-Metadata provides information about data, such as definitions, rules, format, data types. 
+**Metadata** provides information about data, such as definitions, rules, format, data types. 
+
 **Metadata Management is about capturing metadata scattered across the enterprise in a central repository that can be easily accessed by anyone in the enterprise.**
 Business teams in different departments use the metadata management system in their day to day activities to find data, conduct processes, and create reports. 
 
