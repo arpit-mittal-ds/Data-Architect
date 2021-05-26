@@ -1,8 +1,23 @@
 # Notes - Metadata Management
 
+## Lesson Objectives:
+
+Create Conceptual and Logical Enterprise Data Models
+
+Understand the different types of metadata: business, technical and operational metadata
+
+Understand the capabilities and components of a Metadata Management System as well and the role of business and technical teams
+
+Create an Enterprise Data Catalog
+
+## What is Metadata Management
+
 Metadata provides information about data, such as definitions, rules, format, data types. 
 **Metadata Management is about capturing metadata scattered across the enterprise in a central repository that can be easily accessed by anyone in the enterprise.**
 Business teams in different departments use the metadata management system in their day to day activities to find data, conduct processes, and create reports. 
+
+![image](https://user-images.githubusercontent.com/68102477/119624670-b8135a00-be4c-11eb-8c5e-61d21d72a17d.png)
+
 
 ![image](https://user-images.githubusercontent.com/68102477/119623493-92d21c00-be4b-11eb-949d-76acdd678138.png)
 
