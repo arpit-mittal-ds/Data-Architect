@@ -15,7 +15,7 @@ Business teams in different departments use the metadata management system in th
 
 ![image](https://user-images.githubusercontent.com/68102477/119623973-08d68300-be4c-11eb-90d1-5fed2f2d9798.png)
 
-![Uploading image.png…]()
+![image](https://user-images.githubusercontent.com/68102477/119624191-37ecf480-be4c-11eb-8758-9a230cf0b735.png)
 
 
 **Enterprise Data Model** provides a holistic view of the data in a company. It contains information about the structure of data, like entities, attributes, and relationships. Typically you have conceptual and logical Enterprise Data Models. 
