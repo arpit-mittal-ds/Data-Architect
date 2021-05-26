@@ -110,4 +110,91 @@ Data Quality Threshold Categorizes the data into different data quality levels
 ![image](https://user-images.githubusercontent.com/68102477/119646670-c66c7080-be62-11eb-9433-189f341939ba.png)
 
 
+Enterprise Data Models provide a standardized and holistic view of data in the enterprise, which is the key to good data governance. To create an Enterprise Data Model, you need to have an understanding of the high-level business processes. This information can be gathered from various business process documents and interviewing people in different departments.
+
+Enterprise Conceptual Data Model consists of entities and relationships. Enterprise Logical Data Model expands on the enterprise conceptual data model by adding attributes, primary and foreign keys to each entity.
+
+You should create the Enterprise Data Models using the data modeling tool(s) available in your company. Steps to create an Enterprise Conceptual Data Model:
+
+Map out all the different subject areas in the company.
+Identify the different entities in each subject area.
+Identify the relationship between entities.
+Some entities can exist in multiple subject areas.
+Refine the data model by modifying the entities and relationships based on a review of data, DDLs, data models, and data dictionaries for each system.
+Part 2 - Enterprise Logical Data Model
+
+Correction: in the video, the instructor said: "Customer ID and Store ID are foreign keys that point to customer and order tables.". It should be "Customer ID and Store ID are foreign keys that point to customer and store tables."
+
+Example logical data model
+
+Example logical data model
+
+
+After you create the Enterprise Conceptual Data Model, you will expand on that work to create the Enterprise Logical Data Model. The information you collected from business process documents, interviews, data models, DDLs, and data dictionaries will be used as the basis for this exercise. Steps to create an Enterprise Logical Data Model:
+
+Add attributes to each entity.
+Add primary key and foreign key relationships.
+Add cardinalities such as one to one, zero to one, etc.
+New terms
+Enterprise Conceptual Data Model Provides a holistic view of all the data in an enterprise and consists of entities and relationships
+Enterprise Logical Data Model expands on the Enterprise Conceptual Data Model by adding attributes, primary and foreign keys, and cardinalities
+Entity is an object that represents a person, place, thing, event, or concept
+Primary Key uniquely identifies each record in a table
+Foreign Key set of attributes that refer (or links) to the primary key in another table
+Cardinality type of relationship(one or many) between a row of one table and a row of another table
+Subject Area is a business functional area or business domain
+
+### Further reading
+[examples of Enterprise Data Models](http://www.databaseanswers.org/downloads/tutorial_in_enterprise_data_modelling_by_example.pdf)
+
+
+
+## Types of Metadata
+
+There are three different types of metadata - business, technical, and operational.
+
+### Business Metadata
+
+Business metadata **provides the business context to the data.**
+
+Some key business metadata:
+
+**Business glossary** is a list of business terms and definitions.
+
+**Business rules** are applied to data to enable different business processes.
+
+**Data quality metrics** refers to the data quality score and thresholds assigned to different data elements and entities.
+
+**Data owner and data steward** for each data domain.
+
+**Classification** and tagging of data. Some of the common classifications are **data domain, security, and criticality.**
+
+**Access rights and privileges** define who can access the data, what kind of access they have like read, write..etc
+
+**Retention policy** describes how long the data should be kept for business needs.
+
+
+### Technical metadata
+
+Technical metadata describes **how the data is defined, organized, and processed from a database and technology standpoint.**
+
+**Some key technical metadata:**
+
+**Conceptual, logical, and physical data models** describe how the data is organized from a business and database standpoint.
+
+DDL or Data Definition Language is the script that creates the tables in the database. DDL is specific to the database.
+
+Data dictionary is used by the technical teams to understand the technical details of the data elements like table name, column name, data type, sample values, and constraints.
+
+Data lineage shows the details of which source table(s) and column(s) a given target column is loaded from.
+
+Transformations are applied to convert the data to a different structure or implement business and data quality rules.
+
+Based on the access policies defined in the business metadata, different access groups are created, and users are assigned to these access groups.
+
+
+
+[Azure Data Catalog](https://docs.microsoft.com/en-us/azure/data-catalog/overview)
+
+
 
