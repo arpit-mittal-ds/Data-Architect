@@ -193,8 +193,73 @@ Transformations are applied to convert the data to a different structure or impl
 Based on the access policies defined in the business metadata, different access groups are created, and users are assigned to these access groups.
 
 
+### Operational metadata
+Operational metadata describes the technical job execution details. 
 
+**Some key operational metadata:**
+
+List of data load jobs and the details of the tables into which these jobs load the data.
+
+Execution statistics of batch jobs such as when the job started, when it finished, job status, any errors, number of records loaded..etc.
+
+Usage metrics explain when someone queries a table and what query is executed.
+
+Job logs contain the details of all the processes executed during a batch job along with details of the error message, if any.
+
+List of backup and archival processes created based on requirements defined in the retention policies
+
+
+### New terms
+Business metadata provides the business context to the data.
+Technical metadata describes how the data is defined, organized, and processed from a database and technology standpoint.
+Operational metadata describes the technical job execution details.
+Business Glossary defines terms across a business domain.
+Data Dictionary contains information about columns in a data set.
+
+### Further reading
+[additional information on what to include in a good business glossary](https://tdwi.org/articles/2016/02/16/data-governance-glossary-missing-elements.aspx)
+
+
+## Review - Azure Data Catalog 
 [Azure Data Catalog](https://docs.microsoft.com/en-us/azure/data-catalog/overview)
+
+
+## Metadata Management System
+
+All the different metadata types are integrated and loaded into a Metadata Management System that can be easily accessed by anyone in the company. Some key uses of the Metadata Management System:
+
+Anyone in the company can search the metadata system to identify the location of data and reports they are looking for.
+
+All aspects of data like rules, definitions, lifecycle, lineage, ownership, quality, and usage are documented. This, in essence, provides a 360-degree view of data.
+
+Links business to technology by providing the ability to trace a business process to data entities and elements and the systems and tables where the data resides.
+
+To achieve the different capabilities and functionality of a metadata management system, you can either buy a vendor product or build your own custom technology solution. The technology solution for Metadata Management System has the following basic components:
+
+User interface is used by business, technical and governance teams to create, curate, govern, and search for metadata.
+
+Central repository, where all the metadata is stored.
+
+Connectors enables automated metadata ingestion from different documents, databases, reporting tools, data modeling tools, ETL tools, and applications.
+
+Processing engine receives and processes the requests from the user interface, retrieves the necessary metadata from the repository, and loads the data retrieved by the connectors.
+
+Steps involved in creating a Metadata Management System:
+
+Design an Enterprise Data Catalog based on the Enterprise Logical Data Model. This is done by identifying any existing business metadata, mapping each entity to all the systems where it resides, mapping attributes to tables and columns in different systems, and locating any existing technical metadata for the systems identified.
+
+Build an ingestion process to automatically parse and retrieve metadata from different sources and load it into the Metadata Management System.
+
+Curate the metadata in the user interface of the Metadata Management System to fill in the missing pieces that don't exist in the systems.
+
+Different people involved in a Metadata Management System have different roles and responsibilities. Business subject matter experts create business metadata. Technical developers and architects create technical and operational metadata and create automated processes to ingest existing metadata into the Metadata Management System. Data Stewards in the governance teams review and approve the metadata created by different people to ensure metadata is consistent and follows the standards.
+
+New terms
+Metadata Management System enables the consolidation, storage, and exploration of metadata.
+ETL abbreviation for Extraction, Transformation, and Load. Gathers data from multiple source systems, consolidates, and loads into a destination system.
+
+Further reading
+[understand the different vendor products available for metadata management](https://solutionsreview.com/data-management/the-best-metadata-management-tools/)
 
 
 
