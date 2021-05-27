@@ -15,13 +15,8 @@ The data architect also "provides a standard common business vocabulary, express
 
 **Established and emerging data technologies.** Data architects need to understand established data management and reporting technologies, and have some knowledge of columnar and NoSQL databases, predictive analytics, data visualization, and unstructured data.
 
-**Communication and political savvy.** Data architects need people skills. They must be articulate, persuasive, and good salespeople, Lambert says, and they must conceive and portray the big data picture to others.
+**Communication and political savvy.** Data architects need people skills. They must be articulate, persuasive, and good salespeople, Lambert says, and they must conceive and portray the big data picture to others
 
-
-![image](https://user-images.githubusercontent.com/68102477/119766066-b3f04680-bef7-11eb-9324-ffcf845bddb4.png)
-
-
-## 
 
 Data architecture goes way beyond database design. Technology is a big part of the role, but providing solutions to business problems, that is what is at the heart of data architecture.
 
@@ -42,7 +37,7 @@ It's time to step out of your IT comfort zone!
 
 The main characteristics are:
 
-**Business need**
+**Business needs First:** Use technology to solve Business Problems. Focus on Business Problem rather than Technology.
 
 **Data Governance:** Set of rules and standards designed to ensure proper stewardship of data. Remember: Who owns the data, Who manages the data, and Who can access the data
 
