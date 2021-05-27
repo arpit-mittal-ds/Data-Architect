@@ -1,5 +1,10 @@
 # Notes - Data Architecture Foundations
 
+
+![image](https://user-images.githubusercontent.com/68102477/119764114-2f4ff900-bef4-11eb-9c17-c98fa59fecc3.png)
+
+
+
 ### learning objectives:
 
 Explain the characteristics of good data architecture
