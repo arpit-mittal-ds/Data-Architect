@@ -45,13 +45,57 @@ The main characteristics are:
 
 ![image](https://user-images.githubusercontent.com/68102477/119765261-498ad680-bef6-11eb-95f7-fdc4841ea104.png)
 
+### Common business uses for databases
+
+Three of the most common types: transactional, reporting, and computational.
+
 ![image](https://user-images.githubusercontent.com/68102477/119782109-202a7480-bf0f-11eb-9658-2bdba7721873.png)
+
+
+**Transactional need:** the data is constantly being updated or added. 
+
+The Online Transaction Processing (OLTP) database is designed to fulfill the transactional need.
 
 ![image](https://user-images.githubusercontent.com/68102477/119782236-43edba80-bf0f-11eb-9085-a1835e913753.png)
 
+
+**Reporting need:** the need for reading. The data is not changed very frequently or rapidly. Online Analytical Processing (OLAP) database is designed to fulfill the reporting need. This kind of data exists in data warehouses where data may not be up to date but is stable for queries and reading tasks.
+
+
 ![image](https://user-images.githubusercontent.com/68102477/119782325-67b10080-bf0f-11eb-92ac-c5d15bc3a48e.png)
 
+
+**Computational need:** the data is designed to facilitate heavy calculations.
+
+![image](https://user-images.githubusercontent.com/68102477/119783596-b3b07500-bf10-11eb-91f9-60646d3c6046.png)
+
+
+**OLTP vs. OLAP**
+Think about how fast you want the data to be refreshed. If you need data to be refreshed rapidly and frequently, that is OLTP or transactional. If you don't need the data to be refreshed frequently, that's OLAP or reporting.
+
 ![image](https://user-images.githubusercontent.com/68102477/119782518-a0e97080-bf0f-11eb-8953-8f10c3cd8edc.png)
+
+**Further Reading**
+
+Below you will find a couple of great articles on OLAP vs OLTP databases.
+[article-1](https://www.datawarehouse4u.info/OLTP-vs-OLAP.html)
+[article-2](https://www.datawarehouse4u.info/OLTP-vs-OLAP.html)
+
+**New terms**
+
+Computational: a database designed to accommodate heavy or advanced mathematical calculations to be performed on the data
+
+OLAP: Online analytical processing - a database designed for reporting and warehousing. Designed with the stability of data in mind. Data often updated in batches, can lag behind live data by minutes, hours, days, or even weeks
+
+OLTP: Online transaction processing - a database designed for transactional needs. These databases are designed for constant updates and inputs of data
+
+Reporting: in database terminology, reporting covers everything from static reports to dashboards. Reporting databases follow OLAP design
+
+Transactional: a database designed with constant updating in mind. Follows OLTP design
+
+Warehouse: in database terminology, a warehouse is an OLAP platform. Data warehouses are structured, meaning the data exists in column and row formatting
+
+
 
 
 
