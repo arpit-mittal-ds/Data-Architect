@@ -46,9 +46,13 @@ The main characteristics are:
 
 ![image](https://user-images.githubusercontent.com/68102477/119765737-21e83e00-bef7-11eb-8885-000505fc2ac2.png)
 
+![image](https://user-images.githubusercontent.com/68102477/119767026-768cb880-bef9-11eb-8f81-57a50d759f70.png)
+
 ![image](https://user-images.githubusercontent.com/68102477/119765806-3af0ef00-bef7-11eb-83fa-bc5587ffd6d3.png)
 
 ![image](https://user-images.githubusercontent.com/68102477/119765841-48a67480-bef7-11eb-91db-68e40179557e.png)
+
+![image](https://user-images.githubusercontent.com/68102477/119767084-9623e100-bef9-11eb-8f93-e1138230bb79.png)
 
 
 
