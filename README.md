@@ -6,3 +6,8 @@ Created a relational database with PostGreSQL, designed an Online Analytical Pro
 Designed scalable data lake architecture that meets the needs of Big Data. 
 
 Finally, applied the principles of data governance to an organization’s data management system.
+
+
+
+![image](https://user-images.githubusercontent.com/68102477/119766180-e5691200-bef7-11eb-82da-60d84ca4c387.png)
+
