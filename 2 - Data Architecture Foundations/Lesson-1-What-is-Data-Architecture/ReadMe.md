@@ -40,29 +40,29 @@ The main characteristics are:
 
 ![image](https://user-images.githubusercontent.com/68102477/119765058-d08b7f00-bef5-11eb-99b1-e1713b45e523.png)
 
+
+## Business needs First
+
 ![image](https://user-images.githubusercontent.com/68102477/119765261-498ad680-bef6-11eb-95f7-fdc4841ea104.png)
 
-![image](https://user-images.githubusercontent.com/68102477/119765338-6d4e1c80-bef6-11eb-9237-d5da9e3d9d2f.png)
+![image](https://user-images.githubusercontent.com/68102477/119782109-202a7480-bf0f-11eb-9658-2bdba7721873.png)
+
+![image](https://user-images.githubusercontent.com/68102477/119782236-43edba80-bf0f-11eb-9085-a1835e913753.png)
+
+![image](https://user-images.githubusercontent.com/68102477/119782325-67b10080-bf0f-11eb-92ac-c5d15bc3a48e.png)
+
+![image](https://user-images.githubusercontent.com/68102477/119782518-a0e97080-bf0f-11eb-8953-8f10c3cd8edc.png)
+
+
+
+## Data Governance
 
 ![image](https://user-images.githubusercontent.com/68102477/119765737-21e83e00-bef7-11eb-8885-000505fc2ac2.png)
 
 ![image](https://user-images.githubusercontent.com/68102477/119767026-768cb880-bef9-11eb-8f81-57a50d759f70.png)
 
-![image](https://user-images.githubusercontent.com/68102477/119765806-3af0ef00-bef7-11eb-83fa-bc5587ffd6d3.png)
 
-![image](https://user-images.githubusercontent.com/68102477/119765841-48a67480-bef7-11eb-91db-68e40179557e.png)
-
-![image](https://user-images.githubusercontent.com/68102477/119767084-9623e100-bef9-11eb-8f93-e1138230bb79.png)
-
-
-
-The main solution to the data integrity issue is to ensure information is only entered once. In addition, assigning unique IDs as an identifier ensures that each row is unique. This also increases data flexibility.
-
-### Further Reading
-
-[10 characteristics of data architecture](https://www.eckerson.com/articles/ten-characteristics-of-a-modern-data-architecture)
-
-## Examples: 
+### Examples: 
 
 Approach of Data Modeling while ensuring Data Security
 
@@ -112,5 +112,82 @@ So for this question, the answer is to: **Revoke select rights on grade table fo
 ![image](https://user-images.githubusercontent.com/68102477/119777523-a17f0880-bf09-11eb-9aec-828151e3161f.png)
 
 Using the picture above as reference: If the teacher's Department ID does not match the Class Number's Department ID, then Grade for that Class Number should not be visible to the teacher.
+
+
+## Scalability and Flexibility
+
+![image](https://user-images.githubusercontent.com/68102477/119765806-3af0ef00-bef7-11eb-83fa-bc5587ffd6d3.png)
+
+## Scalability
+
+scalability is all about the amount of load, or demand, being given to the database. Whether it be more users, more data, or both, you need to be able to consider design options that will allow your database to scale up to the meet the need demand.
+
+![image](https://user-images.githubusercontent.com/68102477/119779179-b9578c00-bf0b-11eb-9541-ed5f291cd621.png)
+
+![image](https://user-images.githubusercontent.com/68102477/119779450-0b98ad00-bf0c-11eb-98bd-accc493ea06e.png)
+
+### There are two approaches to scalability: sharding and replicating.
+
+### Replicated database
+
+Replicated databases are copies of the original database on separate servers. It offloads the main database by sending users to the replicated databases. Replication is for reading, not writing. Replication has a lag time, so the copies will not be as up to date as the original.
+**If the issue is number of users - optimizing Reading** 
+
+![image](https://user-images.githubusercontent.com/68102477/119779707-59adb080-bf0c-11eb-806d-324c79717a79.png)
+
+
+### Sharded database
+
+Sharding means to split the data across multiple servers. It is a great method for writing and inputting data because you split the writing load onto multiple databases. But reading from sharded databases is very slow since you have to visit multiple databases to retrieve the information.
+
+**If the issue is amount of data - optimizing Writing**
+
+![image](https://user-images.githubusercontent.com/68102477/119779882-819d1400-bf0c-11eb-85e0-c4b7d583c811.png)
+
+![image](https://user-images.githubusercontent.com/68102477/119780042-ae512b80-bf0c-11eb-8b20-b82730ee3936.png)
+
+
+## Flexibility
+
+Flexibility is all about designing the database to meet multiple needs. This a is a common problem, so ask lots of questions in the early design phase to try to get a head start on this
+
+![image](https://user-images.githubusercontent.com/68102477/119779282-db510e80-bf0b-11eb-9506-f012867e0276.png)
+
+![image](https://user-images.githubusercontent.com/68102477/119780153-d17bdb00-bf0c-11eb-9af4-56b9a5d40029.png)
+
+**Further Reading**
+
+[Flexible relational schema](https://www.help.com/portfolio/tackling-flexible-schema-relational-database/)
+
+## Exercise: Scalability and Flexibility
+
+### Instruction
+
+The superintendents of two districts have been asked to allow both students and parents to have read access to the database this year. The superintendents estimate this will result in an additional 15,000 to 30,000 new users accessing the database. They are concerned that this will cause a problem with database performance. You have been asked to explain how you plan to scale the database up to meet this increased user demand.
+
+### Answer: 
+The answer to this question lies in the fact the superintendents are concerned about meeting the demand for 10's of thousands of new users who will be reading the data.
+
+And an increase in data reading demand should indicate database replication as the best solution to the problem. Remember, sharding is used when the amount of data being written to the system is the concern.
+
+
+## Retention
+
+![image](https://user-images.githubusercontent.com/68102477/119765841-48a67480-bef7-11eb-91db-68e40179557e.png)
+
+![image](https://user-images.githubusercontent.com/68102477/119767084-9623e100-bef9-11eb-8f93-e1138230bb79.png)
+
+
+
+## Data Integrity
+
+![image](https://user-images.githubusercontent.com/68102477/119765338-6d4e1c80-bef6-11eb-9237-d5da9e3d9d2f.png)
+
+The main solution to the data integrity issue is to ensure information is only entered once. In addition, assigning unique IDs as an identifier ensures that each row is unique. This also increases data flexibility.
+
+### Further Reading
+
+[10 characteristics of data architecture](https://www.eckerson.com/articles/ten-characteristics-of-a-modern-data-architecture)
+
 
 
