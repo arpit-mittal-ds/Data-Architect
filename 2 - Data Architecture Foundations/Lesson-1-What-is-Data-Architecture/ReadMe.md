@@ -96,6 +96,13 @@ Transactional: a database designed with constant updating in mind. Follows OLTP 
 Warehouse: in database terminology, a warehouse is an OLAP platform. Data warehouses are structured, meaning the data exists in column and row formatting
 
 
+### Handling new customer's requests - ML, AI, Blockchain etc.....cutting edge technologies
+
+Sometimes your client may send requests that don't fit their need. In this scenario, you can show them how much their idea would cost. You can also search for use cases similar and perform analysis to convince your client that their requests are not the best solution.
+
+**sometimes just finding out that no one else is doing anything similar is enough**
+
+![image](https://user-images.githubusercontent.com/68102477/119784935-0b9bab80-bf12-11eb-89c9-eb9c23218956.png)
 
 
 
@@ -232,6 +239,7 @@ The main solution to the data integrity issue is to ensure information is only e
 ### Further Reading
 
 [10 characteristics of data architecture](https://www.eckerson.com/articles/ten-characteristics-of-a-modern-data-architecture)
+
 
 
 
