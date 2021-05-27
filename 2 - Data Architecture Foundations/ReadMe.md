@@ -26,3 +26,4 @@ Create and populate a database/data repository platform, such as MySQL, PostgreS
 Develop and run SQL queries with CRUD operations against the database to test the data model and the data it maintains
 
 
+![image](https://user-images.githubusercontent.com/68102477/119766250-0b8eb200-bef8-11eb-8af6-1851416a84d8.png)
