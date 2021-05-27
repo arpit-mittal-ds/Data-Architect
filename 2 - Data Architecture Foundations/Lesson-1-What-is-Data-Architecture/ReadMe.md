@@ -1,6 +1,23 @@
 # Notes - What is Data Architecture
 
 
+Data architects are senior visionaries who translate business requirements into technology requirements and define data standards and principles. 
+
+The data architect is responsible for visualizing and designing an organization's enterprise data management framework. This framework describes the processes used to plan, specify, enable, create, acquire, maintain, use, archive, retrieve, control, and purge data. 
+
+The data architect also "provides a standard common business vocabulary, expresses strategic requirements, outlines high-level integrated designs to meet those requirements, and aligns with enterprise strategy and related business architecture
+
+## Data architect skills
+
+**A foundation in systems development.** Data architects must understand the system development life cycle, project management approaches, and requirements, design, and test techniques, Lambert says.
+
+**Data modeling and design.** This is the core skill of the data architect and the most requested skill in data architect job descriptions, according to Lambert, who notes that this often includes SQL development and database administration.
+
+**Established and emerging data technologies.** Data architects need to understand established data management and reporting technologies, and have some knowledge of columnar and NoSQL databases, predictive analytics, data visualization, and unstructured data.
+
+**Communication and political savvy.** Data architects need people skills. They must be articulate, persuasive, and good salespeople, Lambert says, and they must conceive and portray the big data picture to others.
+
+
 ![image](https://user-images.githubusercontent.com/68102477/119766066-b3f04680-bef7-11eb-9324-ffcf845bddb4.png)
 
 
