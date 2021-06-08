@@ -331,6 +331,8 @@ with all the SQL we loaded in a prior step.
 
 ![image](https://user-images.githubusercontent.com/68102477/121158693-e736bc00-c88d-11eb-9faf-8f9fa51e2aad.png)
 
+![image](https://user-images.githubusercontent.com/68102477/121164258-cfae0200-c892-11eb-90ff-1c8d0f765553.png)
+
 
 
 
