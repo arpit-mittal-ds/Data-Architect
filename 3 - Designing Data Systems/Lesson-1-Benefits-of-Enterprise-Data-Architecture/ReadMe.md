@@ -122,6 +122,108 @@ A multinational company is growing fast, establishing operations in multiple loc
 
  Many companies in todays climate are in jeopardy of losing their edge unless they embrace data architecture
  
+ ## Actionable Intelligence Insights
+Most organizations want systems to
+
+Help to identify opportunities to improve the productivity
+Cleanse bad data anomalies
+Use a Single Version of Truth to reduce or eliminate multiple copies(possibly inconsistent) of
+Data
+Reports
+Find hidden patterns
+Working towards an enterprise architecture
+
+Forces the distributed teams to work together by bringing their data together
+Integrates disconnected silo systems for a common purpose
+Increases professional and social collaboration helps build a strong business culture
+Helps to execute business strategies
+The Role of the Data Architect
+Ultimately, it is your job to help motivate data owners by showing them how a well-planned and implemented data architecture helps them meet their business goals, both for their department and the organization
+
+## Artifacts (Documents) of an Enterprise Data Architecture
+
+### What artifacts are needed to design a good Data Architecture strategy?
+
+To implement a good Data Architecture strategy, an organization has to create certain documents, known in the business as “artifacts”. Following is a list of the major documents to include:
+
+Data dictionary: helps to standardize business vocabulary
+Enterprise Data models: used to create an ODS (Operational Data Store). We will discuss ODS later in the course
+Data flow: enable a smooth transition of data movements crossing various silos. We will discuss data flows later in the course
+Data stewardship: specifies who can access what data
+Dimensional models: used to create a data warehouse structure for effective reporting and analytics
+Data sharing agreements: articulate who can access what data
+These documents help provide a route map for data flows
+
+**Business Artifacts**
+Alongside the data-related documents above, on the business side, there is also some documentation that is necessary:
+
+Business rules: Guard the boundaries of those data flows
+
+Business concepts:  Help everyone to be on the same page
+
+Business requirements: Help to decide and build reporting and analytics
+
+![image](https://user-images.githubusercontent.com/68102477/121126605-cb222300-c86b-11eb-92df-010f7e97f156.png)
+
+![image](https://user-images.githubusercontent.com/68102477/121127101-9d89a980-c86c-11eb-8e7f-b1bb94b62163.png)
+
+![image](https://user-images.githubusercontent.com/68102477/121127136-abd7c580-c86c-11eb-9404-7632b7ce5622.png)
+
+
+### Why are Artifacts important?
+
+Capture knowledge so new employees can be trained
+Document the tribal and institutional knowledge of experienced and critical employees, as well as existing employees
+Reduce business risk by documenting the business systems and processes. If some key employees leave the company, without having documentation of their knowledge, it is a big risk to the business.
+Reduce costs by understanding the data and business processes in order to avoid having ineffective and inefficient systems.
+Employee productivity increase with well-defined and understood systems and processes
+
+
+![image](https://user-images.githubusercontent.com/68102477/121126663-e12fe380-c86b-11eb-8276-42bdad153c5f.png)
+
+
+ 
+ ## Unknown Edge Cases
+Any organization is going to face scenarios they were not expecting or were unprepared for.
+
+How do we handle these? The two most important elements are:
+
+By being flexible
+By being adaptable
+A well-planned Data Architecture that keeps track of all inputs and outputs helps reduce the likelihood of those scenarios
+
+### Dynamic Definition of Data Architecture
+Those same unexpected scenarios and unknowns mentioned above are also part of the reason that there is not really a single, agreed-upon definition of Data Architecture.
+
+Think of all the components that make up a business
+
+Business models
+Strategies
+Personnel
+Processes
+Systems
+Technology
+These are constantly changing. Big Data adds even more complexity.
+
+Data Architecture must change along with that, hence the dynamic definition.
+ 
+ ### The benefits of data architecture to almost every company
+Eliminating silos
+Scaling
+Being adaptable
+Being flexible
+Reducing costs *Becoming more efficient
+
+ ### Tips to succeed in Data Architect:
+If you are not, learn to be a people person
+
+Learn how departmental business units work
+
+Be a continuous learner about newer technologies
+
+Master the craft of improving the performance and scalability
+
+
  
 ## Snowflake - Modern Cloud Data Warehouse Platform
 
