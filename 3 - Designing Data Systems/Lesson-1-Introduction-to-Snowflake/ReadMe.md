@@ -333,7 +333,16 @@ with all the SQL we loaded in a prior step.
 
 ![image](https://user-images.githubusercontent.com/68102477/121164258-cfae0200-c892-11eb-90ff-1c8d0f765553.png)
 
+### Step 3 For loading data, compute power is needed. So, create a Warehouse/Compute for Data Loading.
 
+Snowflake’s compute nodes are called Warehouses and they can be dynamically sized up or out according to workload, whether the workload be loading data, running a query, or performing a DML operation. And each workload can have its own data
+warehouse so there is no resource contention.
+
+![image](https://user-images.githubusercontent.com/68102477/121168823-b60eb980-c896-11eb-892e-02087af0d3da.png)
+
+### Step 4 Run a COPY command to load the data into the TRIPS table we created earlier
+
+![image](https://user-images.githubusercontent.com/68102477/121169273-2cabb700-c897-11eb-8cd5-1f69c37e1a81.png)
 
 
 
