@@ -59,6 +59,10 @@ Blockchain
 
 ![image](https://user-images.githubusercontent.com/68102477/121111914-082deb80-c853-11eb-9f24-741d94ae3c15.png)
 
+### In the Help section, you’ll find documentation
+
+**In the Education and Training section, there are many excellent tutorials**
+
 ![image](https://user-images.githubusercontent.com/68102477/121113478-72e02680-c855-11eb-9cf6-3c605a4e4d45.png)
 
 [Access Snowflake Account](https://hf07313.australia-east.azure.snowflakecomputing.com/)
@@ -70,14 +74,76 @@ Blockchain
 
 ![image](https://user-images.githubusercontent.com/68102477/121112490-d2d5cd80-c853-11eb-94df-b5c11ac1f978.png)
 
+
 ## Importance of Data Architecture
 
+Data Architecture provides a **Master Plan** of all assets related to data, systems, and process
 
+### Why is a Master Plan necessary?
 
+A Master Plan helps an organization take a hard look at what it is doing and how it is doing it
 
+**1. Helps manage data and data sources:**
 
+You probably know people who have some of the following on their own computers.
 
-In the Education and Training section, there are many excellent tutorials
-In the Help section, you’ll find documentation
+Spreadsheet data
+Text file or Presentation slides
+Stand-alone database
 
+**2. Helps in capturing institutional knowledge**
+The veterans in your organization have a vast amount of knowledge. Capturing that and incorporating it into the system preserves and takes advantage of that wealth of information.
 
+**3. Indicate problems with data resulting in ineffective analytics**
+
+### Important business trends
+
+**These trends reinforce the need for data architecture.**
+
+Data volumes are increasing
+
+Numer of data sources is increasing
+
+Many organizations are considering moving to the cloud
+
+Data from different sources is not in a compatible format for use in their system
+
+### What kinds of data systems can help?
+
+An ODS(Operational Data Store) system can centrally store all the transactional enterprise data.
+
+A DWH (data warehouse), by bringing all that data together into one system, can provide relative, up-to-date, and comprehensive information
+
+### How do those systems help decision-makers?
+
+This data provides information, at business stakeholder's fingertips, which enables them to execute business strategies and models. This can result in
+
+**Increased revenues through**
+
+Better customer service 
+
+Faster customer service
+
+Increased customer service
+
+Ability to offer new services
+
+**Decreased expenses through**
+
+Streamlining systems
+
+Eliminating duplicate efforts
+
+Reducing bottlenecks
+
+The hidden gem of designing data systems
+
+The research involved in design a data system forces people across the organization to talk to each other and collaborate. Those discussions are gold to an organization.
+
+### QUESTION
+A multinational company is growing fast, establishing operations in multiple locations. What kind of challenges does the company face if data architecture is not a part of their strategic decisions?
+1. Silo Bases Systems - Silo systems can result in multiple versions of data
+2. Not managing incoming and outgoing data can be a major cause of disfunction in a company
+3. Bad data quality can cause revenue loss
+
+ Many companies in todays climate are in jeopardy of losing their edge unless they embrace data architecture
