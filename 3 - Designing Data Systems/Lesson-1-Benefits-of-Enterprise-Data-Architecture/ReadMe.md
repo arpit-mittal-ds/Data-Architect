@@ -75,7 +75,7 @@ Blockchain
 ![image](https://user-images.githubusercontent.com/68102477/121112490-d2d5cd80-c853-11eb-94df-b5c11ac1f978.png)
 
 
-## Importance of Data Architecture
+## Importance of [Data Architecture](https://rusty-alderson.medium.com/enterprise-data-architecture-c5c579b54abe)
 
 Data Architecture provides a **Master Plan** of all assets related to data, systems, and process
 
@@ -147,3 +147,5 @@ A multinational company is growing fast, establishing operations in multiple loc
 3. Bad data quality can cause revenue loss
 
  Many companies in todays climate are in jeopardy of losing their edge unless they embrace data architecture
+ 
+ 
