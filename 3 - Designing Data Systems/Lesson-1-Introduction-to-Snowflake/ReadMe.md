@@ -319,7 +319,19 @@ Find your way to the Download button to get the Snowflake Client.
  
  ## [Complete Snowflake Tutorial Lab](https://s3.amazonaws.com/snowflake-workshop-lab/Snowflake_free_trial_LabGuide.pdf)
 
+### [CitiBike Data](https://www.citibikenyc.com/system-data)
+
+### Steps for the lab exercise:
+
 At the top of the Snowflake UI, click the Worksheets tab. You should see the worksheet
 with all the SQL we loaded in a prior step.
 ![image](https://user-images.githubusercontent.com/68102477/121143309-4392df00-c880-11eb-8260-da9789049aef.png)
+
+![image](https://user-images.githubusercontent.com/68102477/121157225-b5712580-c88c-11eb-8aa4-b995ef7b55ed.png)
+
+![image](https://user-images.githubusercontent.com/68102477/121158693-e736bc00-c88d-11eb-9faf-8f9fa51e2aad.png)
+
+
+
+
 
