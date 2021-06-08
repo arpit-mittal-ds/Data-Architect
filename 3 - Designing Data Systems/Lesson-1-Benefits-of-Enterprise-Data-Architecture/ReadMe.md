@@ -152,5 +152,10 @@ A multinational company is growing fast, establishing operations in multiple loc
 
 ## Getting Started in Snowflake
  
+### Download Snowflake Client
+Find your way to the Download button to get the Snowflake Client.
+
  ![image](https://user-images.githubusercontent.com/68102477/121123160-133e4700-c866-11eb-9b91-b55320ec7188.png)
+ 
+ ## [Complete Snowflake Tutorial Lab](https://s3.amazonaws.com/snowflake-workshop-lab/Snowflake_free_trial_LabGuide.pdf)
 
