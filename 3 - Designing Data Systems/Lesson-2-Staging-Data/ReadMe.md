@@ -17,8 +17,6 @@ Staging is similar to the preparation of bringing the material to the building s
 
 The staging area is where things get prepped before going into the 'big system'. It is a vital step because clean data in, clean data out. That philosophy helps ensure data integrity.
 
-![image](https://user-images.githubusercontent.com/68102477/120993208-a9229500-c7c6-11eb-86bb-a05b924289f9.png)
-
 ### Understand
 
 What the data is
@@ -93,7 +91,33 @@ End-of-day such as banking, retail, and fast food
 
 Weekly such as climate data archiving
 
+
+![image](https://user-images.githubusercontent.com/68102477/120993208-a9229500-c7c6-11eb-86bb-a05b924289f9.png)
+
+
 **One interesting factoid: Many organizations are moving to daily and intraday simply because it is possible, even though there may not be a business need.**
+
+## One Schema per Soursce System
+
+### What is a schema?
+A database table that provides a logical grouping of data tables using ER, or Entity-Relationship, models.
+
+How many schemas are there?
+Best practice suggests using a one-source, one-schema philosophy for any sources. Why?
+
+You can easily find out anything you need to know about any data source in the entire system
+In times of failure, changes can be easily localized or compartmentalized, with error impact to other parts of the system reduced
+It is much faster to react to source information updates & changes
+
+
+![image](https://user-images.githubusercontent.com/68102477/121105208-fe9e8680-c846-11eb-84a8-5ee29a368c99.png)
+
+![image](https://user-images.githubusercontent.com/68102477/121105283-28f04400-c847-11eb-8925-a64847321eae.png)
+
+![image](https://user-images.githubusercontent.com/68102477/121105331-43c2b880-c847-11eb-9c8a-4aaf46268e31.png)
+
+
+
 
 
 
