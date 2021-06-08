@@ -126,15 +126,21 @@ A multinational company is growing fast, establishing operations in multiple loc
 Most organizations want systems to
 
 Help to identify opportunities to improve the productivity
+
 Cleanse bad data anomalies
+
 Use a Single Version of Truth to reduce or eliminate multiple copies(possibly inconsistent) of
-Data
-Reports
+
+Data Reports
+
 Find hidden patterns
-Working towards an enterprise architecture
+
+**Working towards an enterprise architecture**
 
 Forces the distributed teams to work together by bringing their data together
+ 
 Integrates disconnected silo systems for a common purpose
+
 Increases professional and social collaboration helps build a strong business culture
 Helps to execute business strategies
 The Role of the Data Architect
@@ -147,11 +153,17 @@ Ultimately, it is your job to help motivate data owners by showing them how a we
 To implement a good Data Architecture strategy, an organization has to create certain documents, known in the business as “artifacts”. Following is a list of the major documents to include:
 
 Data dictionary: helps to standardize business vocabulary
+
 Enterprise Data models: used to create an ODS (Operational Data Store). We will discuss ODS later in the course
+
 Data flow: enable a smooth transition of data movements crossing various silos. We will discuss data flows later in the course
+
 Data stewardship: specifies who can access what data
+
 Dimensional models: used to create a data warehouse structure for effective reporting and analytics
+
 Data sharing agreements: articulate who can access what data
+
 These documents help provide a route map for data flows
 
 **Business Artifacts**
@@ -168,6 +180,52 @@ Business requirements: Help to decide and build reporting and analytics
 ![image](https://user-images.githubusercontent.com/68102477/121127101-9d89a980-c86c-11eb-8e7f-b1bb94b62163.png)
 
 ![image](https://user-images.githubusercontent.com/68102477/121127136-abd7c580-c86c-11eb-9404-7632b7ce5622.png)
+
+Standards are important for heterogeneous and distributed systems to communicate with each other. Standards help ensure data is effectively collected, maintained, and made available.
+
+### Types of Standards
+
+Data dictionaries standardize crucial details such as data fields, data types, and data lengths
+
+Business rules ensure all departments follow the same processes,
+ 
+Stewardship deals with data-sharing agreements among various departments, otherwise known as Governance
+
+Security ensures the data is used properly according to the CRUD model. CRUD stands for Create, Retrieve, Update, and Delete
+
+Standardizing vendor products and their interfaces minimize the friction when trying to connect disparate systems to move the data back and forth.
+
+As a result of implementing these standards, executive management and departmental heads are empowered to improve the business operations and execute new business strategies.
+
+### Benefits of Standards
+
+Avoids confusion and dissatisfaction of the stakeholders due to inconsistent and (possibly) incompatible/accessible data and information
+
+Prevents data anomalies that result in effective report creation and analytics for your decision-makers.
+
+Ensures compatibility when integrating data during mergers and acquisitions
+
+When data standards are not implemented, the resulting structure contributes to silos being formed.
+
+Addressing these issues is one of the key elements of importance in bringing Data Architecture into an enterprise.
+
+### Data Flow Models
+![image](https://user-images.githubusercontent.com/68102477/121127485-30c2df00-c86d-11eb-8ebe-7db4eb30e55d.png)
+
+![image](https://user-images.githubusercontent.com/68102477/121127534-42a48200-c86d-11eb-81cd-9c49985eec09.png)
+
+![image](https://user-images.githubusercontent.com/68102477/121127551-47693600-c86d-11eb-91e3-02970503d9d1.png)
+
+### Models
+
+**Conceptual models:** We are all familiar with social media. Data flows in these systems can be represented by conceptual models.
+
+Logical models represent business concepts within a relationship diagram. The primary relationships are 1 to 1, 1 to many, many to many. Think about how your Customer Rep has many Customers. Each of those Customers orders many different products, and can submit many orders
+
+ER models are physical implementations of Data Definition Language (DDL) statements given an RDBMS product, such as Oracle or Microsoft SQL Server. These are used in OLTP systems.
+
+Dimensional models(databases tables) provide descriptive key information, which should contain non-transactional data. Examples are Customer, Employee, Product, Date, Location, etc., but not the Order table. Dimensional models are used to design a data warehouse either using a Star schema or Snowflake schema. These are used in OLAP systems
+Once the system has been created, an analytical tool, such as Power BI or Tableau can be used to build an interactive analytical model for visualization.
 
 
 ### Why are Artifacts important?
