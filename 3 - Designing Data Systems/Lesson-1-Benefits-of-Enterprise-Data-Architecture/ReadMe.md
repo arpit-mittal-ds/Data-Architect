@@ -59,9 +59,20 @@ Blockchain
 
 ![image](https://user-images.githubusercontent.com/68102477/121111914-082deb80-c853-11eb-9f24-741d94ae3c15.png)
 
+![image](https://user-images.githubusercontent.com/68102477/121113478-72e02680-c855-11eb-9cf6-3c605a4e4d45.png)
+
+[Access Snowflake Account](https://hf07313.australia-east.azure.snowflakecomputing.com/)
+
+![image](https://user-images.githubusercontent.com/68102477/121113755-e97d2400-c855-11eb-9104-a5004f63422a.png)
+
+
 ![image](https://user-images.githubusercontent.com/68102477/121112412-b89bef80-c853-11eb-94d3-caefdc251930.png)
 
 ![image](https://user-images.githubusercontent.com/68102477/121112490-d2d5cd80-c853-11eb-94df-b5c11ac1f978.png)
+
+## Importance of Data Architecture
+
+
 
 
 
