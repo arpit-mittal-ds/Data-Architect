@@ -1,6 +1,6 @@
 # Notes - Importance of Data Architecture
 
-This lesson has 4 major topics:
+## Lesson Overview - This lesson has 4 major topics:
 
 1. The **importance** of data architecture and enterprise data systems to almost every company.
 
@@ -19,6 +19,54 @@ The diagram below shows how each step OLTP, ODS, and OLAP models play a part in 
 
 ![image](https://user-images.githubusercontent.com/68102477/121107045-8f2a9600-c84a-11eb-8820-87ad9e2bc452.png)
 
+## What is Data Architecture
 
+![image](https://user-images.githubusercontent.com/68102477/121109264-8fc52b80-c84e-11eb-91e8-37a5f674fda2.png)
+
+### Data Silos
+Why is this topic so important?
+
+They can occur when local employees and local departments manage their own data, transactions, and analytics. Many companies find themselves with this scenario, which can be a challenge for collaboration or scaling.
+
+Silos, both in people and in data, can lead to inefficient and ineffective business decisions.
+
+They are difficult to integrate and sometimes cause inconsistent, duplicate, and incorrect data.
+
+Costs and processes are also duplicated.
+
+### The changing landscape of data architecture
+As data grows in quantity and quality, what data architecture actually is evolves in definition based on changing data and technology landscape.
+
+With leading-edge technologies such as these which are massively dependant upon and producers of data, the need for data architecture and data system design becomes even more important.
+
+Internet of Things
+Cloud Computing
+Microservices
+Advanced Analytics
+Machine Learning
+Artificial Intelligence
+Blockchain
+
+## Snowflake - Modern Cloud Data Warehouse Platform
+
+### Snowflake Account Setup
+
+![image](https://user-images.githubusercontent.com/68102477/121111739-c309b980-c852-11eb-9cea-e88b96b0f997.png)
+
+![image](https://user-images.githubusercontent.com/68102477/121111774-d0bf3f00-c852-11eb-8c1a-aa1b8d34387c.png)
+
+![image](https://user-images.githubusercontent.com/68102477/121111816-e5033c00-c852-11eb-8780-dbcffee1ec0e.png)
+
+![image](https://user-images.githubusercontent.com/68102477/121111914-082deb80-c853-11eb-9f24-741d94ae3c15.png)
+
+![image](https://user-images.githubusercontent.com/68102477/121112412-b89bef80-c853-11eb-94d3-caefdc251930.png)
+
+![image](https://user-images.githubusercontent.com/68102477/121112490-d2d5cd80-c853-11eb-94df-b5c11ac1f978.png)
+
+
+
+
+In the Education and Training section, there are many excellent tutorials
+In the Help section, you’ll find documentation
 
 
