@@ -120,8 +120,20 @@ JSON_WEATHER_DATA table
 
 ### Step 4 - Create a View and query the semi-structured data using SQL dot notation
 
+A View allows the result of a query to be accessed as if it were a table.
+
+**Views can help you:** 
+- present data to end users in a cleaner manner (like in this lab we will present “ugly” JSON in a columnar format), 
+
+- limit what end users can view in a source table for privacy/security reasons, or write more modular SQL.
+
+There are also **Materialized Views** in which SQL results are stored, almost as though the results were a table. This allows faster access, but requires storage
+space. Materialized Views require Snowflake Enterprise Edition or higher.
+
+Use **SQL dot notation** to pull out values at lower levels in the JSON hierarchy. This allows us to treat each field as if it were a column in a relational table.
+
 
 ### Step 5 - Run a query that joins the JSON data to the TRIPS data
 
-
-### Step 6 - See how weather impacts trip counts
+We will now join the JSON weather data to our CITIBIKE.PUBLIC.TRIPS data to determine the
+answer to our original question of how weather impacts the number of rides.
