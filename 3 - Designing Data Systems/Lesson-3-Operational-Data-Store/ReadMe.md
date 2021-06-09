@@ -2,11 +2,15 @@
 
 ## Lesson Overview
 
-We will see how ER models bring together Data Dictionary, Data flows, events, and actions to allow the Data Architect to visualize the data in the enterprise
-We will look at using master data categories to help us get to a single version of data truth.
-We will look at how Normalization eliminates redundancies in data
-We will look a 2 ways of actually moving data from staging to ODS.
-And finally, we will see how to cleanse data anomalies
+Observed how ER models bring together Data Dictionary, Data flows, events, and actions to allow the Data Architect to visualize the data in the enterprise.
+
+Looked at using master data categories to help us get to a single version of data truth.
+
+Noticed how Normalization eliminates redundancies in data
+
+Implemented 2 ways of moving data from staging to ODS.
+
+Finally, learnt how to cleanse data anomalies
 
 
 ## Definitions
