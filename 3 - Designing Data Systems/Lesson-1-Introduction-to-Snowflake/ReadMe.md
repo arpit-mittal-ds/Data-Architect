@@ -1,7 +1,4 @@
-# Notes  Getting Started in Snowflake
-
-
-## Snowflake - Modern Cloud Data Warehouse Platform
+# Notes - Snowflake: Modern Cloud Data Warehouse Platform
 
 ### Snowflake Account Setup
 
@@ -88,6 +85,12 @@ Since Citi Bike already has a warehouse for data loading, let’s create a new w
 
 ![image](https://user-images.githubusercontent.com/68102477/121298312-fe7db400-c936-11eb-9acc-4490db5f10ef.png)
 
+![image](https://user-images.githubusercontent.com/68102477/121305725-499cc480-c941-11eb-920f-f92b9910e7ff.png)
+
+![image](https://user-images.githubusercontent.com/68102477/121305800-5e795800-c941-11eb-807c-c1acbfcba133.png)
+
+
+
 Snowflake has a result cache that holds the results of every query executed in the past 24 hours. These are available across warehouses, so query results returned to one user are available to any other user on the system who executes the same query, provided the underlying data has not changed. Not only do these repeated queries return extremely fast, but they also use no compute credits
 
 ### Step 3 - Load weather data in JSON format held in a public S3 bucket
@@ -108,6 +111,9 @@ use schema public;
 create table json_weather_data (v variant);
 **Semi-Structured Data Magic** - Snowflake’s **VARIANT** data type allows Snowflake to ingest semi-structured data without having to pre-define the schema.
 
+![image](https://user-images.githubusercontent.com/68102477/121305970-9bdde580-c941-11eb-973a-77f3e8e6450b.png)
+
+
 **Create an External Stage**
 
 Via the Worksheet create a stage from where the unstructured data is stored on AWS S3.
@@ -118,6 +124,15 @@ url = 's3://snowflake-workshop-lab/weather-nyc';
 Via the worksheet, run a COPY command to load the data into the
 JSON_WEATHER_DATA table
 
+copy into json_weather_data 
+from @nyc_weather 
+file_format = (type=json);
+
+select * from json_weather_data limit 10;
+
+![image](https://user-images.githubusercontent.com/68102477/121306157-d9427300-c941-11eb-99e3-fadbb18cda12.png)
+
+
 ### Step 4 - Create a View and query the semi-structured data using SQL dot notation
 
 A View allows the result of a query to be accessed as if it were a table.
@@ -127,13 +142,30 @@ A View allows the result of a query to be accessed as if it were a table.
 
 - limit what end users can view in a source table for privacy/security reasons, or write more modular SQL.
 
+![image](https://user-images.githubusercontent.com/68102477/121306332-0d1d9880-c942-11eb-9085-3530a6ca4288.png)
+
+
 There are also **Materialized Views** in which SQL results are stored, almost as though the results were a table. This allows faster access, but requires storage
 space. Materialized Views require Snowflake Enterprise Edition or higher.
 
 Use **SQL dot notation** to pull out values at lower levels in the JSON hierarchy. This allows us to treat each field as if it were a column in a relational table.
+
+![image](https://user-images.githubusercontent.com/68102477/121306617-6b4a7b80-c942-11eb-9473-893862344afe.png)
+
 
 
 ### Step 5 - Run a query that joins the JSON data to the TRIPS data
 
 We will now join the JSON weather data to our CITIBIKE.PUBLIC.TRIPS data to determine the
 answer to our original question of how weather impacts the number of rides.
+
+![image](https://user-images.githubusercontent.com/68102477/121306676-7b625b00-c942-11eb-9183-64fc370d555c.png)
+
+
+![image](https://user-images.githubusercontent.com/68102477/121306916-c41a1400-c942-11eb-8481-c56eee2d08de.png)
+
+The Citi Bike initial goal was to see if there was any correlation between the number of bike rides and weather by analyzing both ridership and weather data. Per the table
+above we have a clear answer. 
+As one would imagine, the number of trips is significantly higher when the weather is good! 
+Per the table above we have a clear answer. As one would imagine, the number of trips is significantly higher when the weather is good!
+
