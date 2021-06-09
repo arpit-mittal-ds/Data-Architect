@@ -116,8 +116,17 @@ It is much faster to react to source information updates & changes
 
 ![image](https://user-images.githubusercontent.com/68102477/121105331-43c2b880-c847-11eb-9c8a-4aaf46268e31.png)
 
+## Creating Database and Schemas in Snowflake
+
+![image](https://user-images.githubusercontent.com/68102477/121312371-a780da80-c948-11eb-811d-c37e0c628b7c.png)
+
+Loading data into the table
+
+![image](https://user-images.githubusercontent.com/68102477/121312331-9c2daf00-c948-11eb-8bd7-ecdaceb5a367.png)
 
 
+![image](https://user-images.githubusercontent.com/68102477/121313028-56251b00-c949-11eb-8bb4-49819bb3641d.png)
 
+Now depending on what format the file is in you can select that format.
 
 
