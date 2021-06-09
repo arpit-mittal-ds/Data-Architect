@@ -92,6 +92,31 @@ Snowflake has a result cache that holds the results of every query executed in t
 
 ### Step 3 - Load weather data in JSON format held in a public S3 bucket
 
+The JSON data consists of weather information provided by [OpenWeatherMap](https://openweathermap.org/) detailing the historical weather conditions of New York City from 2016-07-05 to 2019-06-25.
+
+**Create a Database and Table**
+
+create database weather;
+
+**Set the context appropriately within the Worksheet.**
+use role sysadmin;
+use warehouse compute_wh;
+use database weather;
+use schema public;
+
+
+create table json_weather_data (v variant);
+**Semi-Structured Data Magic** - Snowflake’s **VARIANT** data type allows Snowflake to ingest semi-structured data without having to pre-define the schema.
+
+**Create an External Stage**
+
+Via the Worksheet create a stage from where the unstructured data is stored on AWS S3.
+
+create stage nyc_weather
+url = 's3://snowflake-workshop-lab/weather-nyc';
+
+Via the worksheet, run a COPY command to load the data into the
+JSON_WEATHER_DATA table
 
 ### Step 4 - Create a View and query the semi-structured data using SQL dot notation
 
