@@ -67,11 +67,20 @@ with all the SQL we loaded in a prior step.
 **1.4 create a Warehouse/Compute for Data Loading.** 
 Snowflake’s compute nodes are called Warehouses and they can be dynamically sized up or out according to workload, whether the workload be loading data, running a query, or performing a DML operation. Each workload can have its own data warehouse so there is no resource contention.
 
+**The Warehouses tab** is where you set up and manage compute resources (virtual warehouses) to load or query data in Snowflake. Note a warehouse called “COMPUTE_WH (XL)” already exists in your environment.
+
+
 ![image](https://user-images.githubusercontent.com/68102477/121168823-b60eb980-c896-11eb-892e-02087af0d3da.png)
 
 **1.5 Run a COPY command to load the data into the TRIPS table we created earlier**
 
 ![image](https://user-images.githubusercontent.com/68102477/121169273-2cabb700-c897-11eb-8cd5-1f69c37e1a81.png)
 
+### Step 2 - Create a New Warehouse for Data Analytics
 
+Let’s assume the Citi Bike team wants to ensure no resource contention between their data loading/ETL workloads and the analytical end users using BI tools to query Snowflake. Snowflake can easily do this by assigning different, appropriately-sized warehouses to different workloads. 
+
+Since Citi Bike already has a warehouse for data loading, let’s create a new warehouse for the end users running analytics. We will then use this warehouse to perform analytics.
+
+![image](https://user-images.githubusercontent.com/68102477/121293598-3da80700-c92f-11eb-98e5-39e4a9f6069c.png)
 
