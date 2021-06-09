@@ -164,8 +164,7 @@ answer to our original question of how weather impacts the number of rides.
 
 ![image](https://user-images.githubusercontent.com/68102477/121306916-c41a1400-c942-11eb-8481-c56eee2d08de.png)
 
-The Citi Bike initial goal was to see if there was any correlation between the number of bike rides and weather by analyzing both ridership and weather data. Per the table
-above we have a clear answer. 
+The Citi Bike initial goal was to see if there was any correlation between the number of bike rides and weather by analyzing both ridership and weather data. 
+Per the table above we have a clear answer. 
 As one would imagine, the number of trips is significantly higher when the weather is good! 
-Per the table above we have a clear answer. As one would imagine, the number of trips is significantly higher when the weather is good!
 
