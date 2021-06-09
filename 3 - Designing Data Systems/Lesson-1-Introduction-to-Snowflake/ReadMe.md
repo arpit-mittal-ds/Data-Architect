@@ -84,3 +84,19 @@ Since Citi Bike already has a warehouse for data loading, let’s create a new w
 
 ![image](https://user-images.githubusercontent.com/68102477/121293598-3da80700-c92f-11eb-98e5-39e4a9f6069c.png)
 
+**Run the Query in Worksheet to look at some basic hourly statistics on Citi Bike usage**
+
+![image](https://user-images.githubusercontent.com/68102477/121298312-fe7db400-c936-11eb-9acc-4490db5f10ef.png)
+
+Snowflake has a result cache that holds the results of every query executed in the past 24 hours. These are available across warehouses, so query results returned to one user are available to any other user on the system who executes the same query, provided the underlying data has not changed. Not only do these repeated queries return extremely fast, but they also use no compute credits
+
+### Step 3 - Load weather data in JSON format held in a public S3 bucket
+
+
+### Step 4 - Create a View and query the semi-structured data using SQL dot notation
+
+
+### Step 5 - Run a query that joins the JSON data to the TRIPS data
+
+
+### Step 6 - See how weather impacts trip counts
