@@ -18,7 +18,13 @@ Once the data warehouse is up and running, then most importantly, you will write
 
 All the data that is collected and managed by an organization can be stored in a centrally accessed system. This system ensures a Single Version of Truth for your data and provides all users access to the same data. This system can be used to identify trends, patterns, and outliers in the data. Both standard queries and custom queries can be accessed.
 
+While a data warehouse offers many benefits, one of the key benefits is having a consistent, reliable, dependable central point of access for all the data in an organization
+
 ![image](https://user-images.githubusercontent.com/68102477/121470101-06a22600-ca01-11eb-8e03-edc9c9395784.png)
+
+![image](https://user-images.githubusercontent.com/68102477/121471335-d78cb400-ca02-11eb-996b-1f6b57759225.png)
+
+A data lake is a modern data warehouse with unstructured data also.
 
 ### Benefits of a DWH:
 
@@ -63,3 +69,7 @@ During the period of COVID, a top tech company doubled its market cap to $2 tril
 Yet, some companies lost revenue. How is that possible?
 
 One of the reasons some companies were able to thrive during COVID time was that their Data Architecture was in place and decision-makers had access to up-to-date data from all aspects of the organization. The Source of Truth data provided reports that allowed them to understand their exact situation, and could plan accordingly.
+
+## ETL Data from ODS to DWH
+
+
