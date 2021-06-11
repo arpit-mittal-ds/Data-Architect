@@ -70,6 +70,17 @@ Yet, some companies lost revenue. How is that possible?
 
 One of the reasons some companies were able to thrive during COVID time was that their Data Architecture was in place and decision-makers had access to up-to-date data from all aspects of the organization. The Source of Truth data provided reports that allowed them to understand their exact situation, and could plan accordingly.
 
+
+## Dimensional Modelling
+
+### [Fact table](https://en.wikipedia.org/wiki/Fact_table)
+
+A fact table consists of the measurements, metrics or facts of a business process. It is located at the center of a star schema or a snowflake schema surrounded by dimension tables. Where multiple fact tables are used, these are arranged as a fact constellation schema. A fact table typically has two types of columns: those that contain facts and those that are a foreign key to dimension tables. The primary key of a fact table is usually a composite key that is made up of all of its foreign keys. 
+
+
+
 ## ETL Data from ODS to DWH
+
+
 
 
