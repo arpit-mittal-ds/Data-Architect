@@ -43,6 +43,13 @@ Looks like our Staging layer is a Data Lake
 
 ### DataMarts
 
+A data mart is a subset of a data warehouse focused on a particular line of business, department, or subject area. Data marts make specific data available to a defined group of users, which allows those users to quickly access critical insights without wasting time searching through an entire data warehouse. 
+
+**The key differences between a data mart vs. a data warehouse include:**
+
+Data marts are smaller subsets of data from a data warehouse.
+Data marts are a repository of essential data for a specific subgroup or use case where access can be restricted to that subgroup or use case. Only a few users have access to the entire data warehouse.
+Data marts are less expensive and can analyze data faster because they are smaller subsets of the data warehouse that is slower and overloaded.
 
 ### DataHub
 [DataHub](https://en.wikipedia.org/wiki/Data_hub)
