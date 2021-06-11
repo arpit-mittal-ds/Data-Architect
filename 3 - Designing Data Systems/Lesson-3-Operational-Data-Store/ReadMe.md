@@ -229,18 +229,13 @@ X is said to functionally determine Y (written X → Y) if and only if each X va
 
 **Example**
 
-| Employee ID   | Employee name | Department ID  |
-| ------------- |:-------------:| --------------:|
-|      0001     | Arpit Mittal  |       1        |
-|      0002     | Sasi          |       2        |
-|      0003     | John          |       3        |
+| Employee ID   | Employee name | Department ID  | Department name |
+| ------------- |:-------------:| --------------:| ---------------:|
+|      0001     | Arpit Mittal  |       1        | Human Resources |
+|      0002     | Sasi          |       2        | Marketing       |
+|      0003     | John          |       3        | Sales           |
 
-			Department name
-	       John Doe	      1	           Human Resources
-	       Jane Doe	      2	           Marketing
-	       John Smith	    1	           Human Resources
-0004	       Jane Goodall	  3	           Sales
-
+	
 An employee can only be a member of one department.
 
 Employee ID → Employee Name
