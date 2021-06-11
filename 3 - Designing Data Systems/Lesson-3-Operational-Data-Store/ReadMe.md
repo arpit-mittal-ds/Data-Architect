@@ -404,4 +404,22 @@ Data redundancy increases.
 
 When read >> write
 
+Transforming Staging data into multiple columns for ODS
+We need to transform a 1-column structure into a 5-column structure
+
+Note: This assumes there is a table calledUDACITYPROJECT.STAGING.UserDetails that exists and is populated with data.
+
+In ODS schema, create a new table
+create table UserDetails (email string, firstname string , lastname string , Phone number, userID number);
+Refresh your screen to verify this
+To insert JSON data into this table correctly aligned
+insert into UserDetails select usersjson:emailAddress, usersjson:firstname, usersjson:lastname usersjson:Phone, usersjson:userID from UDACITYPROJECT.STAGING.UserDetails.
+Refresh your screen to verify this
+Here is our new Userdetails table created in the ODS schema with table data extracted from the JSON format.
+
+ETL data from staging schema into ODS schema
+Login into Snowflake. Review the ERD provided below. This exercise assumes you completed the Staging Area Exercise: Loading small data files where you successfully uploaded the 9 CSV files(Cleaning Testing Exercise Files). For this exercise, you will create relationships in the ODS table with respect to the diagram provided. If needed, those files (called Cleaning_Testing_Files-1) are also located in the resources section of this page.
+
+![image](https://user-images.githubusercontent.com/68102477/121681370-13f10a80-cafe-11eb-9324-ad6762768d14.png)
+
 
