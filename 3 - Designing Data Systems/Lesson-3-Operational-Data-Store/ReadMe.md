@@ -327,50 +327,67 @@ Every table in first normal form must have a **primary key.**
 
 ### Second Normal Form
 
-To appreciate second normal form, Let's revisit the idea of functional dependency. 
-
-A table has attributes (columns) StandardCharge, NumberOfTests, and TotalCharge that relate through the following equation:
-TotalCharge = StandardCharge * NumberOfTests
-TotalCharge is functionally dependent on both StandardCharge and NumberOfTests. If you know the values of StandardCharge and NumberOfTests, you can determine the value of TotalCharge.
-
-**To be in second normal form (2NF), all non-key attributes must depend on the entire key. Thus, every relation that is in 1NF with a single attribute primary key is automatically in second normal form.**
+**To be in second normal form (2NF), all non-key attributes must depend on the entire key. Thus, If the 1NF has a single-attribute primary key, then the table is automatically in 2NF.**
 
 **If a relation has a composite key, all non-key attributes must depend on all components of the key. If you have a table where some non-key attributes don’t depend on all components of the key, break the table up into two or more tables so that — in each of the new tables — all non-key attributes depend on all components of the primary key.**
 
-![image](https://user-images.githubusercontent.com/68102477/121632021-8d1f3c00-cac3-11eb-9b54-8ea491f27b5b.png)
+**To convert a table to 2nd Normal Form - Make New Tables to Eliminate Partial Dependencies**
 
+![image](https://user-images.githubusercontent.com/68102477/121640869-d2e30100-cad1-11eb-9f25-7200210470c2.png)
+
+![image](https://user-images.githubusercontent.com/68102477/121640877-d6768800-cad1-11eb-8f19-7a0eebd2a288.png)
+
+
+### Third Normal Form
+
+Tables in second normal form are especially vulnerable to some types of modification anomalies — in particular, those that come from transitive dependencies.
+
+**A transitive dependency occurs when one attribute depends on a second attribute, which depends on a third attribute. Deletions in a table with such a dependency can cause unwanted information loss. A relation in third normal form is a relation in second normal form with no transitive dependencies.**
+
+
+## quick summary
 
 1.	How to reach First Normal Form (1NF):
+
 •	Atomic values: each cell contains unique and single values
+
 •	Be able to add data without altering tables	
+
 •	Separate different relations into different tables
+
 •	Keep relationships between tables together with foreign keys
 
 
-
 2.	Second Normal Form (2NF):
+
 •	Have reached 1NF
+
 •	All columns in the table must rely on the Primary Key
+
 •	If there is a composite PK then no column should depend just on the part of PK…..each column should depend upon the whole PK.
 
 3.	Third Normal Form (3NF):
-•	Must be in 2nd Normal Form
-•	No transitive dependencies
-•	Remember, transitive dependencies you are trying to maintain is that to get from A-> C, you want to avoid going through B.
-When to use 3NF:
-•	When you want to update data, we want to be able to do in just 1 place. We want to avoid updating the table in the Customers Detail table (in the example in the lecture slide).
 
+•	Must be in 2nd Normal Form
+
+•	No transitive dependencies
+
+•	Remember, transitive dependencies you are trying to maintain is that to get from A-> C, you want to avoid going through B.
+
+**When to use 3NF:**
+
+When you want to update data, we want to be able to do in just 1 place. We want to avoid updating the table in the Customers Detail table 
 
 Third normal form is the maximum normal form that should be attempted while doing practical data modeling.
 
+Drawback of Normalization - Joins among tables causes queries, which read data from the tables, to run slowly. 
 
-## Denormalization
 
-Denormalization is the process of trying to improve the read performance of a database at the expense of losing some write performance by adding redundant copies of data.
-Citation for slides: https://en.wikipedia.org/wiki/Denormalization
+## [Denormalization](https://en.wikipedia.org/wiki/Denormalization)
+
+is the process improving the read performance of a database at the expense of losing some write performance by adding redundant copies of data.
 
 Drawback of denormalization: u may need to update at multiple places.
-
 
 JOINS on the database allow for outstanding flexibility but are extremely slow. If you are dealing with heavy reads on your database, you may want to think about de-normalizing your tables. You get your data into normalized form, and then you proceed with denormalization. So, denormalization comes after normalization.
 
