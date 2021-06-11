@@ -229,16 +229,16 @@ X is said to functionally determine Y (written X → Y) if and only if each X va
 
 **Example**
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| Employee ID   | Employee name | Department ID  |
+| ------------- |:-------------:| --------------:|
+|      0001     | Arpit Mittal  |       1        |
+|      0002     | Sasi          |       2        |
+|      0003     | John          |       3        |
 
-Employee ID	Employee name	Department ID	Department name
-0001	       John Doe	      1	           Human Resources
-0002	       Jane Doe	      2	           Marketing
-0003	       John Smith	    1	           Human Resources
+			Department name
+	       John Doe	      1	           Human Resources
+	       Jane Doe	      2	           Marketing
+	       John Smith	    1	           Human Resources
 0004	       Jane Goodall	  3	           Sales
 
 An employee can only be a member of one department.
