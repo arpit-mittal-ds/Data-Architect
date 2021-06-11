@@ -196,8 +196,7 @@ Administrators need to know about the status of processes in the ODS production 
 
 ## Data Normalization
 
-[Database Normalization](https://en.wikipedia.org/wiki/Database_normalization)
-Database normalization is the process of structuring a database, usually a relational database, in accordance with a series of so-called **normal forms** in order to **reduce data redundancy** and **improve data integrity**. 
+[Database Normalization](https://en.wikipedia.org/wiki/Database_normalization) is the process of **structuring a database**, usually a relational database, in accordance with a series of so-called **normal forms** in order to **reduce data redundancy** and **improve data integrity**. 
 
 Normalization divides larger tables into smaller tables and links them using relationships. 
 
@@ -205,7 +204,7 @@ Normalization divides larger tables into smaller tables and links them using rel
 
 When an attempt is made to modify (update, insert into, or delete from) a relation, the following undesirable side-effects may arise in relations that have not been sufficiently normalized:
 
-### Update anomaly. 
+### Update Anomaly
 
 ![image](https://user-images.githubusercontent.com/68102477/121621215-17a97080-caaf-11eb-8b57-ee1325a24d93.png)
 
@@ -227,16 +226,19 @@ Under certain circumstances, deletion of data representing certain facts necessi
 
 ## Keys 
 
-### [Superkey](https://en.wikipedia.org/wiki/Superkey) and ### [Candidate key](https://en.wikipedia.org/wiki/Candidate_key)
+### [Superkey](https://en.wikipedia.org/wiki/Superkey) and [Candidate key](https://en.wikipedia.org/wiki/Candidate_key)
 
-A superkey is a set of attributes within a table whose values can be used to uniquely identify a tuple. A candidate key is a minimal set of attributes necessary to identify a tuple; this is also called a minimal superkey. 
+A superkey is a set of attributes within a table whose values can be used to uniquely identify every record. 
 
-### [Primary Key]
+A candidate key is a minimal set of attributes necessary to identify each record; this is also called a minimal superkey. 
 
-In the relational model of databases, a primary key is a **specific choice of a minimal set of attributes (columns)** that uniquely specify a tuple (row) in a relation (table).
-Informally, a primary key is "which attributes identify a record", and in simple cases are simply a single attribute: a unique id. 
+### [Primary Key](https://en.wikipedia.org/wiki/Primary_key)
 
-More formally, a primary key is a **choice of candidate key (a minimal superkey)**; any other candidate key is an alternate key.
+A primary key is a **choice of candidate key (a minimal superkey)**; any other candidate key is an alternate key.
+
+### Composite Key
+
+A key consisting of more than one column is called a composite key. 
 
 ### Business Key / Natural Key vs Surrogate Key
 
@@ -246,6 +248,27 @@ A surrogate key is a system generated (could be GUID, sequence, etc.) value with
 
 Sometimes natural keys cannot be used to create a unique primary key of the table. This is when the data modeler or architect decides to use surrogate or helping keys for a table in the LDM.
 
+Source System Keys - Do not make any sense!! - A source system can change at any time due to business requirements and your data warehouse should be able to handle these changes without needing any updates. Should have used either IDM generated surrogate key (B2B Keys) or business keys.
+Problem with B2B Keys - How do you update them as foreign keys in other tables.
+
+When implementing a data warehouse, you have to use surrogate keys for your dimension and fact tables.
+
+**Natural Key Pros** 
+
+Key values have business meaning and can be used as a search key when querying the table
+
+**Natural Key Cons** 
+
+May need to change/rework key if business requirements change.  For example, if you used SSN for your employee as in the example above and your company expands outside of the United States not all employees would have a SSN so you would have to come up with a new key.
+
+Can't enter record until key value is known.  It's sometimes beneficial for an application to load a placeholder record in one table then load other tables and then come back and update the main table.
+
+**Surrogate Key Pros**
+
+No business logic in key so no changes based on business requirements.
+
+**Surrogate Key Cons**
+Key value has no relation to data so technically design breaks 3NF
 
 ## [Functional Dependency](https://en.wikipedia.org/wiki/Functional_dependency)
 
@@ -288,12 +311,38 @@ The dependency Y -> Z signals that a transitive dependency exists. Hence, throug
 
 ### First Normal Form
 
-![image](https://user-images.githubusercontent.com/68102477/121625439-d1f0a600-cab6-11eb-8bee-0d8b35ec7870.png)
+![image](https://user-images.githubusercontent.com/68102477/121629931-855d9880-cabf-11eb-8d88-8d4a165d9806.png)
+
+Here you see Movies Rented column has multiple values. 
+
+**Rules for first normal form**
+
+Each table **cell should contain a single value.**
+
+Each record needs to be unique - **No Duplicate Records.**
+
+Every table in first normal form must have a **primary key.**
+
+![image](https://user-images.githubusercontent.com/68102477/121629997-a7571b00-cabf-11eb-93ae-51b87d7eb9ac.png)
+
+### Second Normal Form
+
+To appreciate second normal form, Let's revisit the idea of functional dependency. 
+
+A table has attributes (columns) StandardCharge, NumberOfTests, and TotalCharge that relate through the following equation:
+TotalCharge = StandardCharge * NumberOfTests
+TotalCharge is functionally dependent on both StandardCharge and NumberOfTests. If you know the values of StandardCharge and NumberOfTests, you can determine the value of TotalCharge.
+
+**To be in second normal form (2NF), all non-key attributes must depend on the entire key. Thus, every relation that is in 1NF with a single attribute primary key is automatically in second normal form.**
+
+**If a relation has a composite key, all non-key attributes must depend on all components of the key. If you have a table where some non-key attributes don’t depend on all components of the key, break the table up into two or more tables so that — in each of the new tables — all non-key attributes depend on all components of the primary key.**
+
+![image](https://user-images.githubusercontent.com/68102477/121632021-8d1f3c00-cac3-11eb-9b54-8ea491f27b5b.png)
 
 
 1.	How to reach First Normal Form (1NF):
 •	Atomic values: each cell contains unique and single values
-•	Be able to add data without altering tables
+•	Be able to add data without altering tables	
 •	Separate different relations into different tables
 •	Keep relationships between tables together with foreign keys
 
