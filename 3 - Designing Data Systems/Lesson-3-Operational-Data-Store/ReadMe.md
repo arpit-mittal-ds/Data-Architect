@@ -223,9 +223,35 @@ There are circumstances in which certain facts cannot be recorded at all. For ex
 
 Under certain circumstances, deletion of data representing certain facts necessitates deletion of data representing completely different facts. The "Faculty and Their Courses" relation described in the previous example suffers from this type of anomaly, for if a faculty member temporarily ceases to be assigned to any courses, we must delete the last of the records on which that faculty member appears, effectively also deleting the faculty member, unless we set the Course Code to null. This phenomenon is known as a deletion anomaly.
 
+
+
+## Keys 
+
+### [Superkey](https://en.wikipedia.org/wiki/Superkey) and ### [Candidate key](https://en.wikipedia.org/wiki/Candidate_key)
+
+A superkey is a set of attributes within a table whose values can be used to uniquely identify a tuple. A candidate key is a minimal set of attributes necessary to identify a tuple; this is also called a minimal superkey. 
+
+### [Primary Key]
+
+In the relational model of databases, a primary key is a **specific choice of a minimal set of attributes (columns)** that uniquely specify a tuple (row) in a relation (table).
+Informally, a primary key is "which attributes identify a record", and in simple cases are simply a single attribute: a unique id. 
+
+More formally, a primary key is a **choice of candidate key (a minimal superkey)**; any other candidate key is an alternate key.
+
+### Business Key / Natural Key vs Surrogate Key
+
+A **natural key** is a column or set of columns that **already exist in the table** (e.g. they are attributes of the entity within the data model) and **uniquely identify a record** in the table.  Since these columns are attributes of the entity they obviously have **business meaning**. 
+
+A surrogate key is a system generated (could be GUID, sequence, etc.) value with no business meaning that is used to uniquely identify a record in a table. 
+
+Sometimes natural keys cannot be used to create a unique primary key of the table. This is when the data modeler or architect decides to use surrogate or helping keys for a table in the LDM.
+
+
 ## [Functional Dependency](https://en.wikipedia.org/wiki/Functional_dependency)
 
 X is said to functionally determine Y (written X → Y) if and only if each X value in R is associated with precisely one Y value in R; R is then said to satisfy the functional dependency X → Y. 
+
+The attribute B is fully functionally dependent on the attribute A if each value of A determines one and only one value of B. A -> B
 
 **Example**
 
@@ -238,19 +264,67 @@ X is said to functionally determine Y (written X → Y) if and only if each X va
 	
 An employee can only be a member of one department.
 
-Employee ID → Employee Name
-Employee ID → Department ID
-Department ID → Department Name
+Employee ID → Employee Name (Same Employee ID should not result in multiple Employee Names)
 
-## Keys 
+Employee ID → Department ID (Same Employee ID should not result in multiple Departments)
 
-### [Superkey](https://en.wikipedia.org/wiki/Superkey)
-A superkey of a relation schema is a set of attributes such that each instance relation of the relation schema does not have two distinct tuples with the same values for these attributes. It defines a functional dependency constraint from the superkey to all the attributes of the relation schema.
+Department ID → Department Name (Each Department ID is related to only one Department Name)
+
+### Two types of functional dependencies that are of special interest in normalization are - Prtial Dependencies and Transitive Dependencies. 
+
+**A partial dependency** exists when there is a functional dependence in which the determinant is only part of the primary key
+
+For example, if  (A, B) is the primary key and (A, B) ->  (C, D) however B ->  C, then the functional dependence B -> C is a partial dependency because only part of the primary key (B) is needed to determine the value of C. 
+
+Partial dependencies tend to be straightforward and easy to identify.
+
+**A transitive dependency** exists when there are functional dependencies such that X -> Y, Y -> Z, and X is the primary key. In that case, the dependency X -> Z is a transitive dependency because X determines the value of Z via Y. 
+
+Unlike partial dependencies, transitive dependencies are more **difficult to identify** among a set of data. Fortunately, there is an effective way to identify transitive dependencies: they occur only when a functional dependence exists among nonprime attributes. 
+
+The dependency Y -> Z signals that a transitive dependency exists. Hence, throughout the discussion of the normalization process, the existence of a functional dependence among nonprime attributes will be considered a sign of a transitive dependency. 
+
+## 3 Normal Forms
+
+### First Normal Form
+
+![image](https://user-images.githubusercontent.com/68102477/121625439-d1f0a600-cab6-11eb-8bee-0d8b35ec7870.png)
 
 
-### [Candidate key](https://en.wikipedia.org/wiki/Candidate_key)
-a candidate key, or simply a key, of a relation schema is a minimal superkey of the relation schema.[1] In other words, it is a set of attributes such that each instance relation of the relation schema does not have two distinct tuples with the same values for these attributes (which means that the set of attributes is a superkey) and there is no proper subset of these attributes which is a superkey of the relation schema (which means that the set is minimal). It defines a functional dependency constraint from the candidate key to all the attributes of the relation schema.
+1.	How to reach First Normal Form (1NF):
+•	Atomic values: each cell contains unique and single values
+•	Be able to add data without altering tables
+•	Separate different relations into different tables
+•	Keep relationships between tables together with foreign keys
 
-In the relational model of databases, a primary key is a specific choice of a minimal set of attributes (columns) that uniquely specify a tuple (row) in a relation (table).[a][1] Informally, a primary key is "which attributes identify a record", and in simple cases are simply a single attribute: a unique id. More formally, a primary key is a choice of candidate key (a minimal superkey); any other candidate key is an alternate key.
+
+
+2.	Second Normal Form (2NF):
+•	Have reached 1NF
+•	All columns in the table must rely on the Primary Key
+•	If there is a composite PK then no column should depend just on the part of PK…..each column should depend upon the whole PK.
+
+3.	Third Normal Form (3NF):
+•	Must be in 2nd Normal Form
+•	No transitive dependencies
+•	Remember, transitive dependencies you are trying to maintain is that to get from A-> C, you want to avoid going through B.
+When to use 3NF:
+•	When you want to update data, we want to be able to do in just 1 place. We want to avoid updating the table in the Customers Detail table (in the example in the lecture slide).
+
+
+Third normal form is the maximum normal form that should be attempted while doing practical data modeling.
+
+
+## Denormalization
+
+Denormalization is the process of trying to improve the read performance of a database at the expense of losing some write performance by adding redundant copies of data.
+Citation for slides: https://en.wikipedia.org/wiki/Denormalization
+
+Drawback of denormalization: u may need to update at multiple places.
+
+
+JOINS on the database allow for outstanding flexibility but are extremely slow. If you are dealing with heavy reads on your database, you may want to think about de-normalizing your tables. You get your data into normalized form, and then you proceed with denormalization. So, denormalization comes after normalization.
+
+De-Normalization – Done to increase performance. Data redundancy increases. …read >> write
 
 
