@@ -199,6 +199,10 @@ Administrators need to know about the status of processes in the ODS production 
 ![image](https://user-images.githubusercontent.com/68102477/121616097-8eda0700-caa5-11eb-9397-09adbe903cd8.png)
 
 
+![IMG-5876](https://user-images.githubusercontent.com/68102477/121616318-090a8b80-caa6-11eb-938d-9d9225167862.jpg)
+
+![IMG-5874](https://user-images.githubusercontent.com/68102477/121616343-145db700-caa6-11eb-93b5-0a73fcc48834.jpg)
+
 
 
 
