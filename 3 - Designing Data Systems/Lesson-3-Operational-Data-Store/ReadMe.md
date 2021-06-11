@@ -196,14 +196,62 @@ Administrators need to know about the status of processes in the ODS production 
 
 ## Data Normalization
 
-![image](https://user-images.githubusercontent.com/68102477/121616097-8eda0700-caa5-11eb-9397-09adbe903cd8.png)
 
 
-![IMG-5876](https://user-images.githubusercontent.com/68102477/121616318-090a8b80-caa6-11eb-938d-9d9225167862.jpg)
+[Database Normalization](https://en.wikipedia.org/wiki/Database_normalization)
+Database normalization is the process of structuring a database, usually a relational database, in accordance with a series of so-called normal forms in order to reduce data redundancy and improve data integrity. 
 
-![IMG-5874](https://user-images.githubusercontent.com/68102477/121616343-145db700-caa6-11eb-93b5-0a73fcc48834.jpg)
+Normalization divides larger tables into smaller tables and links them using relationships. 
+
+## Objectives of Normalization - Reduction of Anomalies and Data Redundancy
+
+When an attempt is made to modify (update, insert into, or delete from) a relation, the following undesirable side-effects may arise in relations that have not been sufficiently normalized:
+
+### Update anomaly. 
+
+![image](https://user-images.githubusercontent.com/68102477/121621215-17a97080-caaf-11eb-8b57-ee1325a24d93.png)
+
+The same information can be expressed on multiple rows; therefore updates to the relation may result in logical inconsistencies. For example, each record in an "Employees' Skills" relation might contain an Employee ID, Employee Address, and Skill; thus a change of address for a particular employee may need to be applied to multiple records (one for each skill). If the update is only partially successful – the employee's address is updated on some records but not others – then the relation is left in an inconsistent state. Specifically, the relation provides conflicting answers to the question of what this particular employee's address is. This phenomenon is known as an update anomaly.
+
+### Insertion Anomaly
+
+![image](https://user-images.githubusercontent.com/68102477/121621333-50e1e080-caaf-11eb-87ee-87a39f9a3ba5.png)
+
+There are circumstances in which certain facts cannot be recorded at all. For example, each record in a "Faculty and Their Courses" relation might contain a Faculty ID, Faculty Name, Faculty Hire Date, and Course Code. Therefore, we can record the details of any faculty member who teaches at least one course, but we cannot record a newly hired faculty member who has not yet been assigned to teach any courses, except by setting the Course Code to null. This phenomenon is known as an insertion anomaly.
+
+### Deletion Anomaly
+
+![image](https://user-images.githubusercontent.com/68102477/121621409-740c9000-caaf-11eb-9888-fb25e6a55317.png)
+
+Under certain circumstances, deletion of data representing certain facts necessitates deletion of data representing completely different facts. The "Faculty and Their Courses" relation described in the previous example suffers from this type of anomaly, for if a faculty member temporarily ceases to be assigned to any courses, we must delete the last of the records on which that faculty member appears, effectively also deleting the faculty member, unless we set the Course Code to null. This phenomenon is known as a deletion anomaly.
+
+## [Functional Dependency](https://en.wikipedia.org/wiki/Functional_dependency)
+
+X is said to functionally determine Y (written X → Y) if and only if each X value in R is associated with precisely one Y value in R; R is then said to satisfy the functional dependency X → Y. 
+
+**Example**
+
+Employee ID	Employee name	Department ID	Department name
+0001	       John Doe	      1	           Human Resources
+0002	       Jane Doe	      2	           Marketing
+0003	       John Smith	    1	           Human Resources
+0004	       Jane Goodall	  3	           Sales
+
+An employee can only be a member of one department.
+
+Employee ID → Employee Name
+Employee ID → Department ID
+Department ID → Department Name
+
+## Keys 
+
+### [Superkey](https://en.wikipedia.org/wiki/Superkey)
+A superkey of a relation schema is a set of attributes such that each instance relation of the relation schema does not have two distinct tuples with the same values for these attributes. It defines a functional dependency constraint from the superkey to all the attributes of the relation schema.
 
 
+### [Candidate key](https://en.wikipedia.org/wiki/Candidate_key)
+a candidate key, or simply a key, of a relation schema is a minimal superkey of the relation schema.[1] In other words, it is a set of attributes such that each instance relation of the relation schema does not have two distinct tuples with the same values for these attributes (which means that the set of attributes is a superkey) and there is no proper subset of these attributes which is a superkey of the relation schema (which means that the set is minimal). It defines a functional dependency constraint from the candidate key to all the attributes of the relation schema.
 
+In the relational model of databases, a primary key is a specific choice of a minimal set of attributes (columns) that uniquely specify a tuple (row) in a relation (table).[a][1] Informally, a primary key is "which attributes identify a record", and in simple cases are simply a single attribute: a unique id. More formally, a primary key is a choice of candidate key (a minimal superkey); any other candidate key is an alternate key.
 
 
