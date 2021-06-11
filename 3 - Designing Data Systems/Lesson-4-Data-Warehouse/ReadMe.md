@@ -77,6 +77,37 @@ One of the reasons some companies were able to thrive during COVID time was that
 
 A fact table consists of the measurements, metrics or facts of a business process. It is located at the center of a star schema or a snowflake schema surrounded by dimension tables. Where multiple fact tables are used, these are arranged as a fact constellation schema. A fact table typically has two types of columns: those that contain facts and those that are a foreign key to dimension tables. The primary key of a fact table is usually a composite key that is made up of all of its foreign keys. 
 
+**Grain** - Fact tables are often defined by their grain. The grain of a fact table represents the most atomic level by which the facts may be defined. The grain of a sales fact table might be stated as "sales volume by day by product by store". Each record in this fact table is therefore uniquely defined by a day, product and store. Other dimensions might be members of this fact table (such as location/region) but these add nothing to the uniqueness of the fact records. 
+
+Measure types
+Additive - measures that can be added across any dimension.
+Non-additive - measures that cannot be added across any dimension.
+Semi-additive - measures that can be added across some dimensions.
+
+A fact table might contain either detail level facts or facts that have been aggregated (fact tables that contain aggregated facts are often instead called summary tables).
+
+Special care must be taken when handling ratios and percentage. One good design rule[1] is to never store percentages or ratios in fact tables but only calculate these in the data access tool. Thus only store the numerator and denominator in the fact table, which then can be aggregated and the aggregated stored values can then be used for calculating the ratio or percentage in the data access tool.
+
+In the real world, it is possible to have a fact table that contains no measures or facts. These tables are called "factless fact tables", or "junction tables".
+
+The factless fact tables may be used for modeling many-to-many relationships or for capturing timestamps of events.[1]
+
+### Dimensions
+
+A dimension is a structure that categorizes facts and measures in order to enable users to answer business questions. Commonly used dimensions are people, products, place and time.
+
+The primary functions of dimensions are threefold: to provide filtering, grouping and labelling.
+
+These functions are often described as "slice and dice". A common data warehouse example involves sales as the measure, with customer and product as dimensions. In each sale a customer buys a product. The data can be sliced by removing all customers except for a group under study, and then diced by grouping by product.
+
+
+### Slowly changing dimensions
+
+Dimensions in data management and data warehousing contain relatively static data about such entities as geographical locations, customers, or products. 
+
+Data captured by Slowly Changing Dimensions (SCDs) change slowly but unpredictably, rather than according to a regular schedule.
+
+
 
 
 ## ETL Data from ODS to DWH
