@@ -345,9 +345,9 @@ Tables in second normal form are especially vulnerable to some types of modifica
 **A transitive dependency occurs when one attribute depends on a second attribute, which depends on a third attribute. Deletions in a table with such a dependency can cause unwanted information loss. A relation in third normal form is a relation in second normal form with no transitive dependencies.**
 
 
-## quick summary
+## Quick Summary
 
-1.	How to reach First Normal Form (1NF):
+### 1.  First Normal Form (1NF):
 
 •	Atomic values: each cell contains unique and single values
 
@@ -358,7 +358,7 @@ Tables in second normal form are especially vulnerable to some types of modifica
 •	Keep relationships between tables together with foreign keys
 
 
-2.	Second Normal Form (2NF):
+### 2.	Second Normal Form (2NF):
 
 •	Have reached 1NF
 
@@ -366,7 +366,7 @@ Tables in second normal form are especially vulnerable to some types of modifica
 
 •	If there is a composite PK then no column should depend just on the part of PK…..each column should depend upon the whole PK.
 
-3.	Third Normal Form (3NF):
+### 3.	Third Normal Form (3NF):
 
 •	Must be in 2nd Normal Form
 
@@ -391,6 +391,10 @@ Drawback of denormalization: u may need to update at multiple places.
 
 JOINS on the database allow for outstanding flexibility but are extremely slow. If you are dealing with heavy reads on your database, you may want to think about de-normalizing your tables. You get your data into normalized form, and then you proceed with denormalization. So, denormalization comes after normalization.
 
-De-Normalization – Done to increase performance. Data redundancy increases. …read >> write
+Done to increase performance.
+
+Data redundancy increases.
+
+When read >> write
 
 
