@@ -194,4 +194,6 @@ Administrators need to know about the status of processes in the ODS production 
 ![image](https://user-images.githubusercontent.com/68102477/121464589-78757200-c9f7-11eb-9975-1fb35abe045b.png)
 
 
+## Data Normalization
+
 
