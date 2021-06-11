@@ -196,10 +196,8 @@ Administrators need to know about the status of processes in the ODS production 
 
 ## Data Normalization
 
-
-
 [Database Normalization](https://en.wikipedia.org/wiki/Database_normalization)
-Database normalization is the process of structuring a database, usually a relational database, in accordance with a series of so-called normal forms in order to reduce data redundancy and improve data integrity. 
+Database normalization is the process of structuring a database, usually a relational database, in accordance with a series of so-called **normal forms** in order to **reduce data redundancy** and **improve data integrity**. 
 
 Normalization divides larger tables into smaller tables and links them using relationships. 
 
@@ -230,6 +228,12 @@ Under certain circumstances, deletion of data representing certain facts necessi
 X is said to functionally determine Y (written X → Y) if and only if each X value in R is associated with precisely one Y value in R; R is then said to satisfy the functional dependency X → Y. 
 
 **Example**
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 
 Employee ID	Employee name	Department ID	Department name
 0001	       John Doe	      1	           Human Resources
