@@ -2,29 +2,40 @@
 
 ## Lesson Overview
 
-![image](https://user-images.githubusercontent.com/68102477/121469653-37359000-ca00-11eb-8f1d-19a02cb07445.png)
+In previous lessons we learnt how to extract data from source systems into staging and then from staging to ODS.
+
+**1. Data Warehouse**
+
+**2. Dimensional Modelling - Facts and Dimensions**
+
+**3. ETL process from ODS to the data warehouse**
+
+**4. Star and Snowflake Schema**
+
+**5. Reporting** 
+Once the data warehouse is up and running, then most importantly, we will write SQL queries for the purpose of reporting. This reporting is vital for decision-makers and leaders to see patterns and intelligent insights.
 
 
-You have learned how to extract data from source systems into staging and then from staging to ODS.
+## 1. Data Warehouse
 
-In this lesson, You will learn
+All the data that is collected and managed by an organization can be stored in a centrally accessed system. 
 
-The extraction process from ODS to the data warehouse.
-The different types of schemas available when creating a data warehouse.
-Types of dimensions and fact tables and why and how are they different and important
-Once the data warehouse is up and running, then most importantly, you will write SQL queries for the purpose of reporting. This reporting is vital for decision-makers and leaders to see patterns and intelligent insights.
+This system ensures a Single Version of Truth for your data and provides all users access to the same data. 
 
-## Data Warehouse
-
-All the data that is collected and managed by an organization can be stored in a centrally accessed system. This system ensures a Single Version of Truth for your data and provides all users access to the same data. This system can be used to identify trends, patterns, and outliers in the data. Both standard queries and custom queries can be accessed.
+This system can be used to identify trends, patterns, and outliers in the data. Both standard queries and custom queries can be accessed.
 
 While a data warehouse offers many benefits, one of the key benefits is having a consistent, reliable, dependable central point of access for all the data in an organization
 
-![image](https://user-images.githubusercontent.com/68102477/121470101-06a22600-ca01-11eb-8e03-edc9c9395784.png)
+**Characterstics of a Data Warehouse:**
 
-![image](https://user-images.githubusercontent.com/68102477/121471335-d78cb400-ca02-11eb-996b-1f6b57759225.png)
+Subject Oriented
+Time Variant
+Non-Volatile
+Integrated
 
-A data lake is a modern data warehouse with unstructured data also.
+**Primary difference b/w a Data Warehouse and a Data Lake:**
+
+Data Lake can have structured, semi-structured and unstructured data also. In other words, s data lake is a modern data warehouse with unstructured data also.
 
 ### Benefits of a DWH:
 
@@ -43,7 +54,7 @@ The End is in Sight
 You have seen the diagram above in earlier lessons, but it makes sense to revisit it now. The data warehouse supports the reporting that is the ultimate goal of the Data Architect. We have said many times throughout the course, it is the pot at the end of the rainbow. Decision-makers can now dive deep into the data to find hidden trends and other valuable information.
 
 
-## Why Data Warehousing Matters
+### Why Data Warehousing Matters
 
 
 The Value of Data
