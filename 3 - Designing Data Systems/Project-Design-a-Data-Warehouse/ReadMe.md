@@ -1,8 +1,9 @@
 # Project - Design a Data Warehouse for Reporting and OLAP
 
-![image](https://user-images.githubusercontent.com/68102477/119745564-bcce2180-bed1-11eb-8997-9fe7771545e9.png)
+![image](https://user-images.githubusercontent.com/68102477/121981677-79304e80-cdd1-11eb-978c-bfe26d124ef7.png)
 
-![image](https://user-images.githubusercontent.com/68102477/119745582-c788b680-bed1-11eb-859a-fd6f9c610d3b.png)
+
+![image](https://user-images.githubusercontent.com/68102477/119745564-bcce2180-bed1-11eb-8997-9fe7771545e9.png)
 
 
 **Yelp** source carries a list of businesses, restaurants, its reviews and ratings. 
