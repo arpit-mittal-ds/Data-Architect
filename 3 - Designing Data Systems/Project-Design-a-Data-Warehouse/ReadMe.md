@@ -16,13 +16,62 @@ The data for temperature and precipitation observations are from the Global Hist
 
 I used a leading industry cloud-native data warehouse system called Snowflake for all aspects of the project and applied the skills that I had acquired in this Designing Data Systems Course to architect and design a Data Warehouse for the purpose of reporting and online analytical processing (OLAP).
 
+## Solution
 
+## Step 1 - Obtain and Ingest the data, used for the project, in Snowflake Staging schema
+
+In this project, I merged two massive, real-world datasets in order to draw conclusions about how weather affects Yelp reviews.
+
+### Quick overview of the datasets:
 
 **Yelp** source carries a list of businesses, restaurants, its reviews and ratings. 
 
-Climatic data source keeps track of temperature and precipitation data. 
+**Climatic data source** keeps track of temperature and precipitation data. 
 
 Both of these websites are independent sources and not related to each other. 
+
+[Yelp Dataset](https://www.yelp.com/dataset/download)
+
+I downloaded 2 files from - “JSON” and “COVID-19 Data”
+
+[Climate Dataset](https://crt-climate-explorer.nemac.org/)
+
+I downloaded the Historical Weather data (temperature data and precipitation data) for Las Vegas(Nevada) city (LAS VEGAS MCCARRAN INTL AP Station: USW00023169) since it had a large set of businesses listed in the Yelp dataset. 
+
+
+### Deliverables
+
+Screenshot of 6 tables created in Snowflake Staging Schema, upon upload of YELP data
+
+Screenshot of 2 tables created in Snowflake Staging Schema, upon upload of climate data
+
+
+## Step 2 - Integrate and move data from Staging to ODS
+
+
+### Deliverables
+
+SQL queries code that transforms data from staging to ODS. 
+
+SQL queries code that specifically uses JSON functions to transform data from a single JSON structure of staging to multiple columns of ODS. (similar to previous deliverable, but includes JSON functions)
+
+
+SQL queries code to integrate climate and Yelp data
+
+Screenshot of the table with three columns: raw files, staging, and ODS. (and sizes)
+
+
+## Step 3 - Data Warehouse 
+
+### Deliverables
+
+SQL queries code necessary to move the data from ODS to DWH.
+
+## Step 4 - Reporting
+
+SQL queries code that reports the business name, temperature, precipitation, and ratings.
+
+
 
 The final **objective** of this project was to write appropriate SQL to **find the impact of weather on restaurant ratings.**
 
