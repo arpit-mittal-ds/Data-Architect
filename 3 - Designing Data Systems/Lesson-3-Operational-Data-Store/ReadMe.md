@@ -2,15 +2,15 @@
 
 ## Lesson Overview
 
-Observed how ER models bring together Data Dictionary, Data flows, events, and actions to allow the Data Architect to visualize the data in the enterprise.
+Observed how **ER models** bring together Data Dictionary, Data flows, events, and actions to allow the Data Architect to visualize the data in the enterprise.
 
-Looked at using master data categories to help us get to a single version of data truth.
+Looked at using **Master Data categories** to help us get to a single version of data truth.
 
-Noticed how Normalization eliminates redundancies in data
+Noticed how **Normalization** eliminates redundancies in data
 
-Implemented 2 ways of moving data from staging to ODS.
+Implemented 2 ways of **moving data from staging to ODS**.
 
-Finally, learnt how to cleanse data anomalies
+Finally, learnt how to **cleanse data anomalies**
 
 
 ## Definitions
@@ -83,19 +83,25 @@ Since OLTP databases deal with transactional data, these system requires the imp
 
 ![image](https://user-images.githubusercontent.com/68102477/121461366-0baba900-c9f2-11eb-865f-7bb3934aa089.png)
 
-### ACID Refresher
+### [ACID Refresher](https://en.wikipedia.org/wiki/ACID)
 
 ACID provides the principles that database transactions that ensure data doesn’t become corrupt as a result of a failure in the middle of a transaction.
 
-ACID Definition
 
-Atomicity means all of the transaction succeeds or none of it does.
+**Atomicity means all of the transaction succeeds or none of it does.**
 
-Consistency ensures all data will be consistent, based on business rules, constraints of the business, and database
+Transactions are often composed of multiple statements. Atomicity guarantees that each transaction is treated as a single "unit", which either succeeds completely, or fails completely: if any of the statements constituting a transaction fails to complete, the entire transaction fails and the database is left unchanged. An atomic system must guarantee atomicity in each and every situation, including power failures, errors and crashes. A guarantee of atomicity prevents updates to the database occurring only partially, which can cause greater problems than rejecting the whole series outright. As a consequence, the transaction cannot be observed to be in progress by another database client. At one moment in time, it has not yet happened, and at the next it has already occurred in whole (or nothing happened if the transaction was cancelled in progress).
 
-Isolation ensures all transactions will occur in isolation, independent of other transactions. A transaction cannot use data from another transaction until it is 100% complete
+An example of an atomic transaction is a monetary transfer from bank account A to account B. It consists of two operations, withdrawing the money from account A and saving it to account B. Performing these operations in an atomic transaction ensures that the database remains in a consistent state, that is, money is neither debited nor credited if either of those two operations fail.
 
-Durability means that, once a transaction is committed, it is a permanent part of the data system.
+
+
+**Consistency** ensures all data will be consistent, based on business rules, constraints of the business and database (constraints, cascades, triggers). This prevents database corruption by an illegal transaction.
+
+**Isolation** ensures all transactions will occur in isolation, independent of other transactions. A transaction cannot use data from another transaction until it is 100% complete. Transactions are often executed concurrently. Isolation ensures that concurrent execution of transactions leaves the database in the same state that would have been obtained if the transactions were executed sequentially. 
+
+**Durability**  guarantees that once a transaction has been committed, it will remain committed even in the case of a system failure (e.g., power outage or crash). This usually means that completed transactions (or their effects) are recorded in non-volatile memory.
+
 
 ## Categorize Enterprise Data Sets (Types of Data Sets)
 
@@ -361,22 +367,32 @@ Data redundancy increases.
 
 When read >> write
 
-Transforming Staging data into multiple columns for ODS
+We will look denormalization in depth while modelling data in Data Warehouses.
+
+## ETL data from staging schema into ODS schema
+
+### Transforming Staging data into multiple columns for ODS
+
+### Exercise:
+
+In ODS schema, **create a new table**
+
 We need to transform a 1-column structure into a 5-column structure
+Note: This assumes there is a table called UDACITYPROJECT.STAGING.UserDetails that exists and is populated with data.
 
-Note: This assumes there is a table calledUDACITYPROJECT.STAGING.UserDetails that exists and is populated with data.
-
-In ODS schema, create a new table
 create table UserDetails (email string, firstname string , lastname string , Phone number, userID number);
-Refresh your screen to verify this
-To insert JSON data into this table correctly aligned
+
+To insert JSON data into this table correctly aligned 
+
 insert into UserDetails select usersjson:emailAddress, usersjson:firstname, usersjson:lastname usersjson:Phone, usersjson:userID from UDACITYPROJECT.STAGING.UserDetails.
-Refresh your screen to verify this
+
 Here is our new Userdetails table created in the ODS schema with table data extracted from the JSON format.
 
-ETL data from staging schema into ODS schema
+<insert image>
+	
+
 Login into Snowflake. Review the ERD provided below. This exercise assumes you completed the Staging Area Exercise: Loading small data files where you successfully uploaded the 9 CSV files(Cleaning Testing Exercise Files). For this exercise, you will create relationships in the ODS table with respect to the diagram provided. If needed, those files (called Cleaning_Testing_Files-1) are also located in the resources section of this page.
 
 ![image](https://user-images.githubusercontent.com/68102477/121681370-13f10a80-cafe-11eb-9324-ad6762768d14.png)
 
-
+## Cleanse Data Anomalies
