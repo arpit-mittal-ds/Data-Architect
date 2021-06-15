@@ -3,6 +3,8 @@
 ## Does the WEATHER affect HOW PEOPLE FEEL ABOUT A RESTAURANT? Lets find out!!
 ![image](https://user-images.githubusercontent.com/68102477/121981677-79304e80-cdd1-11eb-978c-bfe26d124ef7.png)
 
+![image](https://user-images.githubusercontent.com/68102477/121981834-c3193480-cdd1-11eb-90b0-ee3aad3185b1.png)
+
 
 ![image](https://user-images.githubusercontent.com/68102477/119745564-bcce2180-bed1-11eb-8997-9fe7771545e9.png)
 
