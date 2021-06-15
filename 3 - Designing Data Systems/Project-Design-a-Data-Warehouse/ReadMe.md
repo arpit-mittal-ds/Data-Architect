@@ -1,5 +1,6 @@
 # Project - Design a Data Warehouse for Reporting and OLAP
 
+## Does the WEATHER affect HOW PEOPLE FEEL ABOUT A RESTAURANT? Lets find out!!
 ![image](https://user-images.githubusercontent.com/68102477/121981677-79304e80-cdd1-11eb-978c-bfe26d124ef7.png)
 
 
