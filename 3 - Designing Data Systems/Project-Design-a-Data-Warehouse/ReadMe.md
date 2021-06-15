@@ -69,24 +69,27 @@ SQL queries code necessary to move the data from ODS to DWH.
 
 ## Step 4 - Reporting
 
+The final **objective** of this project was to write appropriate SQL to **find the impact of weather on restaurant ratings.**
+
+### Deliverables
+
+Data Architecture Diagram
+
 SQL queries code that reports the business name, temperature, precipitation, and ratings.
 
 
 
-The final **objective** of this project was to write appropriate SQL to **find the impact of weather on restaurant ratings.**
+## Summary
 
-use actual YELP and climate datasets in order to analyze the effects the weather has on customer reviews of restaurants. The data for temperature and precipitation observations are from the Global Historical Climatology Network-Daily (GHCN-D) database. Students will use a leading industry cloud-native data warehouse system called Snowflake for all aspects of the project.
+In this project, I created end to end data architecture, 
 
-Students will then apply the skills they have acquired in the preceding Designing Data Systems Course to architect and design a Data Warehouse DWH for the purpose of reporting and online analytical processing (OLAP).
-
-In this project, 
-
-I created end to end data architecture, 
-
-built ingestion of data from Yelp and Climatic source systems, 
+built ingestion pipeline of data from Yelp and Climatic source systems, 
 
 designed Operational Data Store and Data warehouse systems, 
 
 and transformed data from staging to ODS,
 
-and finally from ODS to data warehouse system. 
+and then from ODS to data warehouse system. 
+
+Finally I ran queries to establish the relation between climate and user sratings.
+
