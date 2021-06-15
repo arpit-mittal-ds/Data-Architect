@@ -18,20 +18,57 @@ Once the data warehouse is up and running, then most importantly, we will write 
 
 ## 1. Data Warehouse
 
-All the data that is collected and managed by an organization can be stored in a centrally accessed system. 
+The complexity and range of information required to support business decisions has increased, and operational database structures were unable to support all of these requirements. Therefore, a new data storage facility, called a data warehouse, developed. The data warehouse extracts its data from operational databases as
+well as from external sources, providing a more comprehensive data pool.
 
-This system ensures a Single Version of Truth for your data and provides all users access to the same data. 
-
-This system can be used to identify trends, patterns, and outliers in the data. Both standard queries and custom queries can be accessed.
+All the data that is collected and managed by an organization can be stored in this centrally accessed system. This system ensures a Single Version of Truth for your data and provides all users access to the same data. This system can be used to identify trends, patterns, and outliers in the data. Both standard queries and custom queries can be accessed.
 
 While a data warehouse offers many benefits, one of the key benefits is having a consistent, reliable, dependable central point of access for all the data in an organization
 
-**Characterstics of a Data Warehouse:**
 
-Subject Oriented
-Time Variant
-Non-Volatile
-Integrated
+### The Need for Data Analysis
+
+Analyzing the company data can provide insightful information about short-term tactical evaluations and strategic questions, such as: 
+
+**Are our sales promotions working? 
+
+**What market percentage are we controlling?
+
+**Are we attracting new customers?**
+
+Note that to answer such question historial data needs to be analysed. Also data from different divisions (such as Marketing, Sales, Billing etc.) and their operational databses needs to be integrated.
+
+Decision makers can no longer wait a couple of days for a report to be generated; they are compelled to make **quick decisions** if they want to **remain competitive**. Every day, TV ads offer low-price warranties, instant price matching, and so on. 
+How can companies survive on lower margins and still make a profit? The key is in **having the right data at the right time to support the decision-making process.**
+
+Companies and software vendors first addressed these multilevel decision support needs by creating autonomous applications for particular groups of users, such as those in finance, customer management, human resources, and product support. Applications were also tailored to different industries such as education, retail, health care, and finance. **This approach worked well for some time, but changes in the business world, such as globalization, expanding markets, mergers and acquisitions, increased regulation, and new technologies, called for new ways of integrating and managing decision support across levels, sectors, and geographic locations.** This more comprehensive and integrated decision support framework within organizations became known as **Business Intelligence**, with DW at it's core.
+
+BI is not a product by itself, but a **framework of concepts, practices, tools, and technologies** that help a business better understand its core capabilities, provide snapshots of the company situation, and identify key opportunities to create competitive advantage. In general, BI provides a framework for:
+
+• **Collecting and storing** operational data (ODS)
+• **Aggregating the operational data** into decision support data (Data Warehouse)
+• **Analyzing** decision support data to generate information
+• **Presenting** such information to the end user to support business decisions Making business decisions, which in turn generate more data that is collected, stored,
+and so on (restarting the process)
+• **Monitoring** results to evaluate outcomes of the business decisions, which again provides more data to be collected, stored, and so on
+• **Predicting** future behaviors and outcomes with a high degree of accuracy (ML)
+
+
+### Characterstics of a Data Warehouse
+
+**Subject Oriented**
+
+Data warehouse data is organized and summarized by topic, such as sales, marketing, finance, distribution, and transportation. For each topic, the data warehouse contains specific subjects of interest—products, customers, departments, regions, promotions, and so on. This form of data organization is quite different from the more functional or process-oriented organization of typical transaction systems. 
+
+For example, an invoicing system designer concentrates on designing normalized data structures to support the business process by storing invoice components in two tables: INVOICE and INVLINE. In contrast, the data warehouse has a subject orientation. Data warehouse designers focus specifically on the data rather than on the processes that modify the data. (After all, data warehouse data is not subject to numerous real-time data updates!) Therefore, instead of storing an invoice, the data warehouse stores its “sales by product” and “sales by customer” components because decision support activities require the retrieval of sales summaries by product or customer.
+
+**Time Variant**
+
+**Non-Volatile**
+
+**Integrated**
+The data warehouse is a centralized, consolidated database that integrates data derived from the entire organization and from multiple sources with diverse formats.
+
 
 **Primary difference b/w a Data Warehouse and a Data Lake:**
 
