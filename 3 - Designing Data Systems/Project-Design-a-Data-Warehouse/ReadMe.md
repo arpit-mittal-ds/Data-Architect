@@ -34,9 +34,15 @@ Both of these websites are independent sources and not related to each other.
 
 I downloaded 2 files from - “JSON” and “COVID-19 Data”
 
+![image](https://user-images.githubusercontent.com/68102477/122263537-e6e79200-cf19-11eb-8c1a-d68621913bde.png)
+
+
 [Climate Dataset](https://crt-climate-explorer.nemac.org/)
 
 I downloaded the Historical Weather data (temperature data and precipitation data) for Las Vegas(Nevada) city (LAS VEGAS MCCARRAN INTL AP Station: USW00023169) since it had a large set of businesses listed in the Yelp dataset. 
+
+![image](https://user-images.githubusercontent.com/68102477/122263481-d7684900-cf19-11eb-849c-70a69e50a325.png)
+
 
 
 ### Deliverables
