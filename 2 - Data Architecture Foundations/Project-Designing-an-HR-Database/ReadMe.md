@@ -1,5 +1,5 @@
 # Project: Designing an HR Database
-Architect a database based on the business requirements for a Human Resources Department, combining all the skills, learnt so far!
+Architect a database based on the business requirements for a Human Resources Department.
 
 ## Project Overview
 In this project, I designed, built, and populated a database for the Human Resources (HR) Department at the imaginary Tech ABC Corp, a video game company. 
@@ -8,7 +8,7 @@ This project started with a request from the HR Manager. From there, I designed 
 
 ## Business Scenario
 
-### Business requirement
+### Business requirement 
 Tech ABC Corp saw explosive growth with a sudden appearance onto the gaming scene with its new AI-powered video game console. As a result, they have gone from a small 10-person operation to 200 employees and 5 locations in under a year. HR is having trouble keeping up with the growth since they are still maintaining employee information in a spreadsheet. While that worked for ten employees, it has become increasingly cumbersome to manage as the company expands.
 As such, the HR department has tasked me, as the new data architect, to design and build a database capable of managing their employee information.
 
@@ -19,10 +19,10 @@ The HR dataset I worked with is an Excel workbook consisting of 206 records, wit
 The IT Department has certain Best Practices policies for databases that I had followed, are detailed in the Best Practices document.
 
 ### Project Steps
-The project is broken down into four major steps. The project was designed to mimic the flow of a real-world database design project.
+The project was broken down into four major steps. The project was designed to mimic the flow of a real-world database design project.
 
 #### Step 1: 
-This step is all about information gathering and putting it down on paper. In this step, I was expected to complete both business and technical proposal documents required to begin the database design process.
+This step was all about information gathering and putting it down on paper. In this step, I created business and technical proposal documents required to begin the database design process.
 
 #### Step 2: 
 I gave a walk through for the design process. I used Lucidchart to create database diagrams that were used to build an actual database.
@@ -31,4 +31,4 @@ I gave a walk through for the design process. I used Lucidchart to create databa
 It was time to start coding. I used SQL DDL commands to create a database. I then populated the database with the HR dataset. From there, I demonstrated the effectiveness of my database by completing some SQL CRUD exercises.
 
 #### Step 4: 
-In the last optional I used some ideas on how to make my completed project stand out from the rest - adding items like views, stored procedures, and security.
+In the last optional step, I used some ideas on how to make my completed project stand out from the rest - adding items like views, stored procedures, and security.
