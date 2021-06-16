@@ -8,9 +8,9 @@ In previous lessons we learnt how to extract data from source systems into stagi
 
 **2. Dimensional Modelling - Facts and Dimensions**
 
-**3. ETL process from ODS to the data warehouse**
+**3. Star and Snowflake Schema**
 
-**4. Star and Snowflake Schema**
+**4. ETL process from ODS to the data warehouse**
 
 **5. Reporting** 
 Once the data warehouse is up and running, then most importantly, we will write SQL queries for the purpose of reporting. This reporting is vital for decision-makers and leaders to see patterns and intelligent insights.
@@ -155,7 +155,17 @@ Dimensions in data management and data warehousing contain relatively static dat
 
 Data captured by Slowly Changing Dimensions (SCDs) change slowly but unpredictably, rather than according to a regular schedule.
 
+[SCD Types Later](https://adatis.co.uk/introduction-to-slowly-changing-dimensions-scd-types/)
 
+## Star Schema
+
+### Star Schema Representation
+The fact table is related to each dimension table in a many-to-one (M:1) relationship.
+In other words, many fact rows are related to each dimension row.
+
+Because the fact table is related to many dimension tables, the primary key of the fact table is a composite primary key.
+
+![image](https://user-images.githubusercontent.com/68102477/122004297-9415b980-cdf7-11eb-838e-2a07921cdc13.png)
 
 
 ## ETL Data from ODS to DWH
