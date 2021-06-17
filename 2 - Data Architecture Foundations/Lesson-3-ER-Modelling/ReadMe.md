@@ -4,11 +4,15 @@
 
 ![image](https://user-images.githubusercontent.com/68102477/122386003-c28ac480-cfb0-11eb-996c-4851274c3e5c.png)
 
+## Lucid Chart
+
 ![image](https://user-images.githubusercontent.com/68102477/122386037-ccacc300-cfb0-11eb-85e0-a13d3517f5ad.png)
 
 ![image](https://user-images.githubusercontent.com/68102477/122386067-d6362b00-cfb0-11eb-8216-487b24239eae.png)
 
 ![image](https://user-images.githubusercontent.com/68102477/122386121-e5b57400-cfb0-11eb-9e6e-9b4d9cfe9361.png)
+
+## Conceptual ERD
 
 ![image](https://user-images.githubusercontent.com/68102477/122386169-f2d26300-cfb0-11eb-8afb-1ffa80fc8dcb.png)
 
