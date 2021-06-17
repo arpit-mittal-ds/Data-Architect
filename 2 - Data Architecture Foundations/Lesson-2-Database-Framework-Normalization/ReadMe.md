@@ -112,4 +112,104 @@ Data is not refreshed often
 
 ## Normal Forms
 
+### First Normal Form
+![image](https://user-images.githubusercontent.com/68102477/122348066-1637e680-cf8e-11eb-9205-d70e3170255d.png)
+
+![image](https://user-images.githubusercontent.com/68102477/122348092-1f28b800-cf8e-11eb-9fa5-e550e462445f.png)
+
+### No Repeated Groupings
+![image](https://user-images.githubusercontent.com/68102477/122348348-6adb6180-cf8e-11eb-98ec-896fe849932f.png)
+
+### First Normal form Solution
+![image](https://user-images.githubusercontent.com/68102477/122348430-7fb7f500-cf8e-11eb-9ac4-6aad2a4284e8.png)
+
+1NF: ensure atomic values, no repeated groupings, and no reduplicated rows
+### Second Normal Form
+
+![image](https://user-images.githubusercontent.com/68102477/122349493-a88cba00-cf8f-11eb-8d7e-4cd4d0c4d390.png)
+
+![image](https://user-images.githubusercontent.com/68102477/122349666-cce89680-cf8f-11eb-90c5-a46bc6f37c95.png)
+
+ID is just a surrogate key - actual business key or the data that we have modelled in this table is Name, hence partial dependencies are looked from Name perspective.
+Breed and Species are completely separate and do not have any relationship with the Name or Id of the dog, hence moving them to separate table will remove depandant columns and make the tables in second normal form.
+
+![image](https://user-images.githubusercontent.com/68102477/122349434-99a60780-cf8f-11eb-8863-4a0f0767ca33.png)
+
+### Third Normal Form
+
+![image](https://user-images.githubusercontent.com/68102477/122350317-762f8c80-cf90-11eb-9ceb-bc4ed057967c.png)
+
+3NF: bring 2NF and remove transitive dependencies (ID, species, and breed)
+
+![image](https://user-images.githubusercontent.com/68102477/122350528-a24b0d80-cf90-11eb-8537-68ab35aab707.png)
+
+
+### Example
+
+![image](https://user-images.githubusercontent.com/68102477/122355662-6c5c5800-cf95-11eb-9d0b-e63a87df8380.png)
+
+**1 NF** - have atomic value, no repeated groupings, and no repeated rows
+
+![image](https://user-images.githubusercontent.com/68102477/122355755-8007be80-cf95-11eb-81e7-58cb899e284c.png)
+
+![image](https://user-images.githubusercontent.com/68102477/122356119-d543d000-cf95-11eb-8416-061448b46b3f.png)
+
+![image](https://user-images.githubusercontent.com/68102477/122356181-e4c31900-cf95-11eb-8389-477ac075b032.png)
+
+![image](https://user-images.githubusercontent.com/68102477/122356197-e7be0980-cf95-11eb-9d53-c24eff5dcfab.png)
+
+![image](https://user-images.githubusercontent.com/68102477/122356267-f86e7f80-cf95-11eb-9010-1052f23d7212.png)
+
+![image](https://user-images.githubusercontent.com/68102477/122356298-00c6ba80-cf96-11eb-9f45-b87e3753decf.png)
+
+**2NF: bring 1NF, ensure no duplicates and every column depends on the unique ID**
+Assumming customers can have only 1 car.
+
+![image](https://user-images.githubusercontent.com/68102477/122356743-6dda5000-cf96-11eb-8b76-e717c107be64.png)
+
+
+![image](https://user-images.githubusercontent.com/68102477/122357020-af6afb00-cf96-11eb-9332-8b6decd3f0b7.png)
+
+![image](https://user-images.githubusercontent.com/68102477/122357137-cf022380-cf96-11eb-845d-70ddd1895562.png)
+
+![image](https://user-images.githubusercontent.com/68102477/122357439-1a1c3680-cf97-11eb-8125-5d06c035b615.png)
+
+![image](https://user-images.githubusercontent.com/68102477/122357529-315b2400-cf97-11eb-8b0b-6405391eb35c.png)
+
+Summary
+To normalize data to 3NF, follow these steps
+
+Check if tables are in 1NF
+
+Tables should have atomic value, no repeated groupings, and no repeated rows. If any of the 1NF rules is not met, you are not in 1NF. You can create new entities to solve the problem.
+
+Develop a data hierarchy
+
+Hierarchy can help you determine how many entities to start with and how they relate. Based on the hierarchy, you can group data into different entities with attributes.
+
+Make sure all the entities are still in 1NF and also follow 2NF rules
+
+2NF requires that no duplicates and every column depends on the unique ID. In most cases, you can add unique IDs and create new entities to meet the 2NF requirements.
+
+Transform the entities from 2NF to 3NF
+
+You can complete this by checking if there are any transitive dependencies. If there is, you should create another entity to hold the transitive column.
+
+Reminder: After each normal form, don't forget to add relationships to entities so that all the information is linked together.
+
+Note: the goal of normalization is improving performance. Adding too many entities would reduce performance. In the real world, there are many cases where it makes sense to not create many entities although it doesn't meet the normalization rules. The rule of thumb is - if you won't run into the risk of duplicates, then you don’t need to split the data into another entity.
+
+### Exercise: 
+
+![image](https://user-images.githubusercontent.com/68102477/122374485-c2d19280-cfa5-11eb-9d37-a7f0be9808d4.png)
+
+**Follow these steps to normalize to 3NF.**
+
+Build a Hierarchy first, then group data to create basic entities (tables) based on the hierarchy.
+
+Think about the dependencies, duplications, and transitive dependency issues of each column in an entity to decide if a column should be moved out.
+
+Decide the relationships among entities.
+
+
 
