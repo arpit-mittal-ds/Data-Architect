@@ -151,6 +151,7 @@ Values ('Bob', 'Browns', 'Quarterback'),
 **Following are the ODS tables where data is in 3NF**
 
 **-- create a Team table**
+
 Create table Team (
 team_id serial primary key,
 team_nm varchar(50));
