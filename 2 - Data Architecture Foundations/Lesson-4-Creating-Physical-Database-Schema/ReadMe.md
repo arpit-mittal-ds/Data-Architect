@@ -65,11 +65,18 @@ Cache is a place to store commonly used data in high-performance memory so the f
 
 ![image](https://user-images.githubusercontent.com/68102477/122493566-44b7cf00-d02b-11eb-830f-c3318a8e38eb.png)
 
+### Heap
+
 ![image](https://user-images.githubusercontent.com/68102477/122493607-56997200-d02b-11eb-8e10-e589e345e7d8.png)
+
+### Hash Buckets
 
 ![image](https://user-images.githubusercontent.com/68102477/122493703-7c267b80-d02b-11eb-908d-9043750cd855.png)
 
+### B+ Trees
+
 ![image](https://user-images.githubusercontent.com/68102477/122493771-99f3e080-d02b-11eb-82d0-be6668fd72f5.png)
+
 
 ### Further Reading
 
@@ -221,6 +228,8 @@ student_id int REFERENCES Student(student_id),
 teacher_id int REFERENCES Teacher(teacher_id),
 class_id int REFERENCES Class(class_id),
 primary key (student_id, teacher_id, class_id));
+
+**Mapping tables such as Class_Sch and Player helps in removing duplicate data from other tables**
 
 ### Questions: schedule ??
 should we have separate pipeline / job to load staging tables and ODS tables ?....Or shud we have one job with first task to update staging tables and then next task to update ODS table.
