@@ -6,21 +6,17 @@
 
 2. Storage and File Systems
 
-2. Use DDL to Build A Database 
+3. Use DDL to Build A Database 
 
-3. ETL, Direct Feed, Pipeline, API: common data ingestion methods
+4. ETL, Direct Feed, Pipeline, API: common data ingestion methods
 
-4. Database CRUD Operations
+5. Database CRUD Operations
 
 ![image](https://user-images.githubusercontent.com/68102477/122392980-bce4ad00-cfb7-11eb-8269-8e38d6b33096.png)
 
-## Build a functioning database
 
-DDL: Data definition language - a set of SQL commands used to create, modify, and delete database objects such as tables, views, and stored procedures
 
-DML: Data manipulation language - a set of SQL commands used to manipulate data inside of a database
-
-## Database Performance
+## 1. Factors that affect Database Performance
 
 ![image](https://user-images.githubusercontent.com/68102477/122393886-b60a6a00-cfb8-11eb-820b-da8fad93ca4d.png)
 
@@ -28,33 +24,31 @@ DML: Data manipulation language - a set of SQL commands used to manipulate data 
 
 ### Cache and Indexing
 
-Factors that can harm database performance:
+While many of the aspects affecting database performance are generally out of the hands of data architect, we focused on two common aspects you should be aware of:
 
-Massive amounts of data
-Complex joins
-Complex queries
-Insufficient hardware
-Poor network performance
+Cache and Indexing.
 
-While many of the aspects affecting database performance are generally out of the hands of data architect, we focused on two common aspects you should be aware of: 
-Cache and Indexing. 
 Both can improve database performance, and you should be aware of the uses of both technologies.
 
-Cache
-Cache is a place to store commonly used data in high-performance memory so the future queries for that data can be run faster.
-
-There are three types of cache:
-
-Internal cache: internal device, limited size, fastest memory, very expensive financially.
-
-External cache: external device, high-speed memory, upgrading the size of memory is more affordable than internal cache.
-
-Enterprise cache: external device, designed to work for multiple databases, very expensive.
-Indexing
 
 ![image](https://user-images.githubusercontent.com/68102477/122394699-9e7fb100-cfb9-11eb-8489-ecc85287b89f.png)
 
+
+**Cache**
+
+Cache is a place to store commonly used data in high-performance memory so the future queries for that data can be run faster.
+
+### There are three types of cache:
+
 ![image](https://user-images.githubusercontent.com/68102477/122394908-cd962280-cfb9-11eb-95ed-b886104772fb.png)
+
+**Internal cache:** internal device, limited size, fastest memory, very expensive financially.
+
+**External cache:** external device, high-speed memory, upgrading the size of memory is more affordable than internal cache.
+
+**Enterprise cache:** external device, designed to work for multiple databases, very expensive.
+
+**Indexing**
 
 ![image](https://user-images.githubusercontent.com/68102477/122395036-ef8fa500-cfb9-11eb-92a0-ca8802bba943.png)
 
@@ -84,8 +78,17 @@ Hash Buckets: reading 1 and reading 2
 B+ Trees: reading 1, reading 2
 
 
+## 3. Build a functioning database
+
+DDL: Data definition language - a set of SQL commands used to create, modify, and delete database objects such as tables, views, and stored procedures
+
+DML: Data manipulation language - a set of SQL commands used to manipulate data inside of a database
 
 ## Use DDL to Create A Database
+
+
+
+
 
 ### Further reading
 
