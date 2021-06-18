@@ -1,25 +1,38 @@
 
 ![image](https://user-images.githubusercontent.com/68102477/121683183-5f0c1d00-cb00-11eb-89e7-41d96fbe00f5.png)
 
-What is a Data Lake
-Big Data represent large amounts of data. A Data Lake represents where and that data is stored
+## What is a Data Lake
 
-Machine Learning, Analytics, and data all come together in a Data Lake. Many Silos that form as a natural consequence of organizational and data structure suddenly have a chance to be broken down.
+Big Data represent large amounts of data. A Data Lake represents where that data is stored
+
+Machine Learning, Analytics, and data all come together in a Data Lake. 
+
+Many Silos that form as a natural consequence of organizational and data structure suddenly have a chance to be broken down.
 
 ![image](https://user-images.githubusercontent.com/68102477/121683623-fcffe780-cb00-11eb-9cab-b970c41b71d9.png)
 
 
-Data Lake is a central place where we can bring together data, Machine Learning, and Analytics
-Data can store data of any type, including unstructured, semi-structured, and structured
-Can handle scaling of any size
+Data Lake is a central place where we can bring together data, Machine Learning, and Analytics.
 
-Breaks data silos
+Data Lake can store data of any type, including unstructured, semi-structured, and structured.
 
-To understand data silo - consider this example. Let say a media and telecom company has multiple products. Say they have internet services, table TV services, home security, and monitoring services. Customers can buy each of these products individually or in bulk. Now in reality what happens is that each of these products is actually handled by a totally different team or a department in an organization. Each product uses its own storage and database systems to store the required data. This makes it incredibly hard to analyze the customer from a 360 perspective. You really want to understand customer behavior across all of your product lines. But since each organization manage each product and have their own system of storing data, this creates data silos. Data Lake solves this problem, by Data Lake brings all the crucial enterprise data under one centralized system. This makes it easy for different organizations within a company to collaborate.
-Schema on Read
+It Can handle scaling of any size
 
-Data Lakes use Schema on Read technique. Meaning you keep writing the data in the data lake maintaining its original raw format. And enforce the schema when you need to read this data back. This is a different approach than Data Warehousing. In data warehousing (just like in relational DBs) you need to specify the schema first. This makes the process of writing different types of data to data lake at scale very hard to achieve as schema generally evolves very quickly.
-Enables Analytics Use Cases
+**Breaks data silos**
+
+To understand data silo - consider this example. 
+
+Let say a media and telecom company has multiple products. Say they have internet services, table TV services, home security, and monitoring services. Customers can buy each of these products individually or in bulk. Now in reality what happens is that **each of these products is actually handled by a totally different team or a department** in an organization. Each product uses its **own storage and database systems** to store the required data. This makes it incredibly **hard to analyze the customer from a 360 perspective.** You really want to understand customer behavior across all of your product lines. But since each organization manage each product and have their own system of storing data, this **creates data silos**. Data Lake solves this problem, by bringing all the crucial enterprise data under one centralized system. This makes it easy for different organizations within a company to collaborate.
+
+**Schema on Read**
+
+Data Lakes use Schema on Read technique. 
+
+Meaning you **keep writing the data in the data lake maintaining its original raw format and enforce the schema when you need to read this data back.** 
+
+This is a different approach than Data Warehousing. In data warehousing (just like in relational DBs) you need to specify the schema first. This makes the process of writing different types of data to data lake at scale very hard to achieve as schema generally evolves very quickly.
+
+**Enables Analytics Use Cases**
 
 The Data Lake democratizes data and is a cost-effective way to store all data of an organization for later processing. Data Analysts within the company can focus on finding meaningful patterns in data with more visibility and easy access to the required data.
 
@@ -27,16 +40,22 @@ Data lakes store data cheaply and can be used before you have an optimized use c
 
 ![image](https://user-images.githubusercontent.com/68102477/121683591-f07b8f00-cb00-11eb-8af5-c2fb6fb7e171.png)
 
-Why Data Lakes?
+## Why Data Lakes?
 
 Data Lake promotes organizations where
 
 Innovation is enabled
+
 Real-time, integrated-data Analytics is possible
+
 Data silos are broken, which allows new collaboration and interactions
+
 Companies can be ready for the unknown use case
+
 Data, even new data, can be dynamic, easy to incorporate, and quick to access
+
 Self-service access instead of weeks months of work to get what they need
+
 Companies can readily identify new revenue streams, recognize patterns, provide new types of previously unknown(or unattainable) information to make strategic decisions
 
 
@@ -44,9 +63,12 @@ Companies can readily identify new revenue streams, recognize patterns, provide 
 ## Big Data Format Considerations
 
 
-As a Data Architect, you have full control over how exactly you store the data in the data lake. This is in contrast to RDBMS systems where the engine stores the data internally in a proprietary format. As a Data Architect, you will have to take into consideration multiple elements of a given data format such as type of storage format (row-oriented vs columnar oriented), size of the data, schema evolution capabilities, splitability, and compression. In this section, we will explore some of these elements. As a Data Architect, the design decision you make around selecting the data format is one of the most crucial ones with long-term impacts on cost, performance as well as maintenance overhead of the data lake storage.
+As a Data Architect, you have **full control over how exactly you store the data in the data lake.** This is in contrast to RDBMS systems where the engine stores the data internally in a proprietary format. As a Data Architect, you will have to take into consideration multiple elements of a given data format such as type of storage format (row-oriented vs columnar oriented), size of the data, schema evolution capabilities, splitability, and compression. In this section, we will explore some of these elements. 
 
-Consideration 1: File Size
+As a Data Architect, the design decision you make around selecting the data format is one of the most crucial ones with long-term impacts on cost, performance as well as maintenance overhead of the data lake storage.
+
+### Consideration 1: File Size
+
 One major consideration is the general size of each file in your data lake. As we learned in lesson 2, HDFS stores data into 128 MB (default size in most environments ) chunks. Every file is represented by multiple blocks (also called "Objects", or "Chunks") in the Hadoop cluster. As we learned in lesson 2, these blocks reside on the data node. Each block is registered with a name node ("metadata"). Each metadata entry for each block residing in the name node consumes about 150 bytes. Too many small files in a data lake with a large volume of data will lead to a large number of files and hence the amount of metadata that the name node is holding will also increase.
 
 Imagine this way: If you have a book of 500 pages, however, the "Table of Contents" of the book itself is 250 pages, the table of content becomes less useful and it will take you much longer to find out the exact page number for the lesson you wanna read.
