@@ -61,7 +61,7 @@ Cache is a place to store commonly used data in high-performance memory so the f
 [Database Indexing](https://www.geeksforgeeks.org/indexing-in-databases-set-1/)
 
 
-## Storage and File Systems
+## 2. Storage and File Systems
 
 ![image](https://user-images.githubusercontent.com/68102477/122493566-44b7cf00-d02b-11eb-830f-c3318a8e38eb.png)
 
@@ -99,6 +99,17 @@ Here is the official [PostGreSQL documentation on DDL](https://www.postgresql.or
 ### Use DDL to Create A Database 
 
 ## ETL, Direct Feed, Pipeline, API
+
+### Data ingestion 
+
+Data ingestion is just as important as database design, perhaps more so. An empty database is not much of use to anybody. In this section, we covered four of the most common methods of data ingestion.
+
+Few of the different data ingestion methods include API, ETL, Pipeline, and direct connection.
+
+**ETL**
+ETL is short for extract, transform, load. ETL starts with data from an external source, then the data is extracted and put into a staging area such as a table, the data is then transformed to meet the requirements of the destination. Finally, the data is loaded into a destination database.
+
+ETL is the most common data ingestion method. It is usually be done as a batch job to move data from any format into a database. It is great for large loads of data.
 
 
 
