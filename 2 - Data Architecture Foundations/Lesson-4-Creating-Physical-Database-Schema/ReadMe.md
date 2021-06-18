@@ -172,9 +172,13 @@ position_id int references Position(position_id));
 Insert into Team(team_nm)
 Select distinct team from Stg;
 
+**no need to insert value for id, it will be auto-incremented.
+
 **--load data into Position table**
 Insert into Position(position_nm)
 Select distinct position from Stg;
+
+**since player table has foriegn keys to poistion and team tables, position and team tables should be loaded first.** 
 
 **--insert into Player table**
 Insert into Player(player_nm, team_id, position_id)
@@ -185,8 +189,42 @@ On s.team = t.team_nm
 Join position as p 
 On s.position = p.position_nm;
 
+### Another small example
+
+![image](https://user-images.githubusercontent.com/68102477/122521171-d76e6300-d057-11eb-8814-313f1ff97954.png)
+
+**Convert to 3NF**
+create new database objects based on the 3NF transformation
+move the data from the stage_table to the new objects you created
+
+**Business Rules**
+every student will take more than one class, so a mapping table will be needed to make this database work
+
+**Solution**
+
+![image](https://user-images.githubusercontent.com/68102477/122521642-6ed3b600-d058-11eb-8745-cb92f8515c9d.png)
+
+CREATE TABLE Student (
+student_id SERIAL primary key,
+student_name varchar(50));
+
+CREATE TABLE Teacher (
+teacher_id  SERIAL primary key,
+teacher_name varchar(50));
+
+CREATE TABLE Class (
+class_id  SERIAL primary key,
+class_name varchar(50));
+
+CREATE TABLE Class_Sch (
+student_id int REFERENCES Student(student_id),
+teacher_id int REFERENCES Teacher(teacher_id),
+class_id int REFERENCES Class(class_id),
+primary key (student_id, teacher_id, class_id));
+
 ### Questions: schedule ??
 should we have separate pipeline / job to load staging tables and ODS tables ?....Or shud we have one job with first task to update staging tables and then next task to update ODS table.
+should we have foreign key constraints in ODS with big data ??
 
 **Further reading**
 
