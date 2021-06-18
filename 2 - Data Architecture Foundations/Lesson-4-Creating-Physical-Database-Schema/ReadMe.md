@@ -2,11 +2,15 @@
 
 ## Lesson Overview - 3 main topics: 
 
-Database performance, 
+1. Factors that affect Database Performance. Solutions: caching and indexing. 
 
-DDL and DML (SQL command groups used to create database objects and manipulate the data in the database, 
+2. Storage and File Systems
 
-and common data ingestion methods.
+2. Use DDL to Build A Database 
+
+3. ETL, Direct Feed, Pipeline, API: common data ingestion methods
+
+4. Database CRUD Operations
 
 ![image](https://user-images.githubusercontent.com/68102477/122392980-bce4ad00-cfb7-11eb-8269-8e38d6b33096.png)
 
@@ -73,13 +77,55 @@ Indexing
 
 ![image](https://user-images.githubusercontent.com/68102477/122493771-99f3e080-d02b-11eb-82d0-be6668fd72f5.png)
 
+### Further Reading
+
+Heap Files: reading 1, reading 2
+Hash Buckets: reading 1 and reading 2
+B+ Trees: reading 1, reading 2
 
 
 
+## Use DDL to Create A Database
+
+### Further reading
+
+Here are is an [overview article of DDL, DML, and even DCL and TCL](https://www.tutorialgateway.org/sql-dml-ddl-dcl-and-tcl-commands/)
+
+Here is the official [PostGreSQL documentation on DDL](https://www.postgresql.org/docs/8.4/ddl.html)
+
+### Use DDL to Create A Database 
+
+## ETL, Direct Feed, Pipeline, API
 
 
 
+### Further Reading
 
+This link will take you to an article on creating a direct connection between servers using MS SQL Server. (Note, direct connections in MS SQL Server are called Linked Servers). Direct Connection: [Microsoft SQL Server Linked Servers](https://analytics4all.org/2018/03/30/sql-server-linked-servers)
+
+Here is a brief set of articles on ETL using Microsoft SSIS (SQL Server Integration Services) as the ETL tool. ETL: [Microsoft SSIS](https://analytics4all.org/etl-ssis/)
+
+Here is a look at AWS data pipeline tool. Pipeline: [AWS data pipeline](https://www.edureka.co/blog/aws-data-pipeline-tutorial/)
+
+
+## CRUD
+
+### Further reading
+Below you will find a series of articles on basic SQL functions need to complete this section and your final project. Note, these articles are written for MS SQL Server, but they cover the main topics.
+
+[Select function](https://analytics4all.org/2016/04/13/sql-select-statement/)
+
+Select functions [count, distinct, max, min](https://analytics4all.org/2016/04/14/sql-select-functions-top-count-distinct-max-min/)
+
+The [where clause](https://analytics4all.org/2016/04/18/sql-where-clause/)
+
+Aggregates [group by, having](https://analytics4all.org/2016/04/26/sql-aggregates-group-by-and-having/)
+
+[Case statements](https://analytics4all.org/2017/01/09/sql-case-statement/)
+
+[Intro to Joins](https://analytics4all.org/2016/04/28/sql-intro-to-joins/)
+
+[4 types of joins](https://analytics4all.org/2016/05/04/sql-4-types-of-joins/)
 
 
 
