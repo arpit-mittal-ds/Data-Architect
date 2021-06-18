@@ -63,26 +63,52 @@ Cache is a place to store commonly used data in high-performance memory so the f
 
 ## 2. Storage and File Systems
 
+**Storage algorithm**
+
+It is purely academic. As a data architect, you will not be developing or designing data storage algorithms, but knowing the basics of the most common data storage approaches may come in handy in the interview one day.
+
 ![image](https://user-images.githubusercontent.com/68102477/122493566-44b7cf00-d02b-11eb-830f-c3318a8e38eb.png)
 
 ### Heap
+
+**Heap files:** Heap files are a group of unordered lists of records where new records are appended to the end of the existing lists. This algorithm allows very fast writing and is perfect for the bulk loading of data. But it has poor sorting performance since the data is not ordered, which makes retrieving specific data very slow.
+
+Great for bulk record ingestion, but not great for lookups
 
 ![image](https://user-images.githubusercontent.com/68102477/122493607-56997200-d02b-11eb-8e10-e589e345e7d8.png)
 
 ### Hash Buckets
 
+Buckets divide memory into pages and when a record comes in, a hash function (math function) is calculated to determine which page it goes on. This algorithm ensures more even distribution of records across the memory. It is **good for locating specific records (allow for fast lookup based on keys)** since it creates a kind of key index. But it is not good for large data retrieval, since it has no sequential storage (meaning records are not stored in order, one after the other, they are instead stored across multiple pages based on their hash value).
+
 ![image](https://user-images.githubusercontent.com/68102477/122493703-7c267b80-d02b-11eb-908d-9043750cd855.png)
 
 ### B+ Trees
 
+B+ tree is the **most commonly used storage algorithm.** It stores records in pages as well, but it indexes the record in a binary tree. It allows fast search due to the full index and binary design. It can also be easily scaled up for large databases. However, for stable, not volatile data, a heap file may work better since heap has less overhead.
+
 ![image](https://user-images.githubusercontent.com/68102477/122493771-99f3e080-d02b-11eb-82d0-be6668fd72f5.png)
+
+### Data Storage hardware
+
+**Storage media**
+
+**Tape:** Tape is the earliest form of storage, and it is the slowest. It is nowadays usually relegated to **archive data only.**
+
+**Hard drive** (spinning disc, SSD): Hard drive is the most common storage option. SSD is multiple times faster than a spinning disc.
+
+**In-memory (RAM)**: In-memory data is very fast but very expensive. You need to limit the use of in-memory storage to the application that really requires it.
+
+![image](https://user-images.githubusercontent.com/68102477/122529420-d1c94b00-d060-11eb-9a2d-8353fcfdf1d0.png)
+
+![image](https://user-images.githubusercontent.com/68102477/122533353-d1cb4a00-d064-11eb-8fd4-5b1adf4a3100.png)
 
 
 ### Further Reading
 
-Heap Files: reading 1, reading 2
-Hash Buckets: reading 1 and reading 2
-B+ Trees: reading 1, reading 2
+Heap Files: [reading 1](http://pages.cs.wisc.edu/~dbbook/openAccess/Minibase/spaceMgr/heap_file.html), [reading 2](https://www.geeksforgeeks.org/file-organization-in-dbms-set-1/)
+Hash Buckets: [reading 1](https://www.tutorialspoint.com/dbms/dbms_hashing.htm) and [reading 2](https://www.youtube.com/watch?v=MfhjkfocRR0)
+B+ Trees: [reading 1](https://www.geeksforgeeks.org/introduction-of-b-tree/), [reading 2](https://www.guru99.com/introduction-b-plus-tree.html)
 
 
 ## 3. Build a functioning database
@@ -93,9 +119,20 @@ DML: Data manipulation language - a set of SQL commands used to manipulate data 
 
 ## Use DDL to Create A Database
 
+![image](https://user-images.githubusercontent.com/68102477/122534538-fa077880-d065-11eb-8e42-78f51efa6c87.png)
+
+![image](https://user-images.githubusercontent.com/68102477/122534573-04297700-d066-11eb-93be-cdbe8b86d78a.png)
+
+![image](https://user-images.githubusercontent.com/68102477/122534655-16a3b080-d066-11eb-8a51-971289d0ee9b.png)
+
+![image](https://user-images.githubusercontent.com/68102477/122534820-3fc44100-d066-11eb-915b-d38536b4006c.png)
+
+![image](https://user-images.githubusercontent.com/68102477/122534893-55d20180-d066-11eb-8dfe-69f624d9e02f.png)
 
 
 
+
+### Use DDL to Create A Database 
 
 ### Further reading
 
@@ -103,9 +140,8 @@ Here are is an [overview article of DDL, DML, and even DCL and TCL](https://www.
 
 Here is the official [PostGreSQL documentation on DDL](https://www.postgresql.org/docs/8.4/ddl.html)
 
-### Use DDL to Create A Database 
 
-## Common Data ingestion Methods: ETL, Direct Feed, Pipeline, API
+## 4. Common Data ingestion Methods: ETL, Direct Feed, Pipeline, API
 
 Data ingestion is just as important as database design, perhaps more so. An empty database is not much of use to anybody. In this section, we covered four of the most common methods of data ingestion.
 
@@ -267,7 +303,7 @@ Here is a brief set of articles on ETL using Microsoft SSIS (SQL Server Integrat
 Here is a look at AWS data pipeline tool. Pipeline: [AWS data pipeline](https://www.edureka.co/blog/aws-data-pipeline-tutorial/)
 
 
-## CRUD
+## 5. CRUD
 
 ### Further reading
 Below you will find a series of articles on basic SQL functions need to complete this section and your final project. Note, these articles are written for MS SQL Server, but they cover the main topics.
