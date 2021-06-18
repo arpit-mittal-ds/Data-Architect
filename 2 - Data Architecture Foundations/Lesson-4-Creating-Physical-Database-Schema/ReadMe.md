@@ -130,9 +130,9 @@ DML: Data manipulation language - a set of SQL commands used to manipulate data 
 ![image](https://user-images.githubusercontent.com/68102477/122534893-55d20180-d066-11eb-8dfe-69f624d9e02f.png)
 
 
-
-
 ### Use DDL to Create A Database 
+
+
 
 ### Further reading
 
@@ -304,6 +304,8 @@ Here is a look at AWS data pipeline tool. Pipeline: [AWS data pipeline](https://
 
 
 ## 5. CRUD
+
+
 
 ### Further reading
 Below you will find a series of articles on basic SQL functions need to complete this section and your final project. Note, these articles are written for MS SQL Server, but they cover the main topics.
