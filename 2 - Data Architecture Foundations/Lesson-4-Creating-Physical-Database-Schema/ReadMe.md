@@ -56,4 +56,30 @@ Indexing
 
 ![image](https://user-images.githubusercontent.com/68102477/122395218-1bab2600-cfba-11eb-8ce2-86a7199ee3eb.png)
 
+### Further Reading
+
+[DB Caching - AWS Whitepaper](https://d0.awsstatic.com/whitepapers/Database/database-caching-strategies-using-redis.pdf)
+
+[Database Indexing](https://www.geeksforgeeks.org/indexing-in-databases-set-1/)
+
+
+## Storage and File Systems
+
+![image](https://user-images.githubusercontent.com/68102477/122493566-44b7cf00-d02b-11eb-830f-c3318a8e38eb.png)
+
+![image](https://user-images.githubusercontent.com/68102477/122493607-56997200-d02b-11eb-8e10-e589e345e7d8.png)
+
+![image](https://user-images.githubusercontent.com/68102477/122493703-7c267b80-d02b-11eb-908d-9043750cd855.png)
+
+![image](https://user-images.githubusercontent.com/68102477/122493771-99f3e080-d02b-11eb-82d0-be6668fd72f5.png)
+
+
+
+
+
+
+
+
+
+
 
