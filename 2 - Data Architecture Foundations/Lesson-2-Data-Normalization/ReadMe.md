@@ -312,6 +312,33 @@ Althought the data is already in first normal form. however the data has repeati
 ![image](https://user-images.githubusercontent.com/68102477/123604872-9a1b8980-d83e-11eb-8ab1-fc9f31208f73.png)
 
 
+## Example LIVE Dashboard
+
+
+Not all real-world problems can be solved in a straightforward manner. Normalized and denormalized relational models are guidelines and provide great stepping off points, but often, you will find yourself having to design something a little more in the middle space between the two models.
+
+So learn and internalized the 3NF as a standard transactional relational model, but know it is only a guide.
+
+![image](https://user-images.githubusercontent.com/68102477/123608422-16639c00-d842-11eb-84bd-e3f4e14af06a.png)
+
+### Problems
+
+![image](https://user-images.githubusercontent.com/68102477/123608585-385d1e80-d842-11eb-9390-03004d38ee6b.png)
+
+### Solution
+
+![image](https://user-images.githubusercontent.com/68102477/123608697-5165cf80-d842-11eb-8ae3-a43db45d2c65.png)
+
+
+![image](https://user-images.githubusercontent.com/68102477/123608635-427f1d00-d842-11eb-9743-7ce0e1cce5bd.png)
+
+![image](https://user-images.githubusercontent.com/68102477/123608805-6cd0da80-d842-11eb-89ba-616981823be1.png)
+
+
+![image](https://user-images.githubusercontent.com/68102477/123608361-08ae1680-d842-11eb-8cba-93eb5b783650.png)
+
+
+
 
 
 
