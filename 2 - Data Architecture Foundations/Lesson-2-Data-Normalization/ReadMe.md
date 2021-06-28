@@ -293,9 +293,24 @@ Decide the relationships among entities.
 
 ### Solution
 
-1. Business Rules:
-2. Entities, Relationships, PK, FK, Attributes
-3. Check whether it is in 3NF
+1. Write Business Rules or Build a Hierarchy first
+2. Group data to create basic entities (tables) based on the hierarchy.
+3. Identify PK, FK, Attributes
+4. Check whether it is in 3NF
+
+
+https://user-images.githubusercontent.com/68102477/123607362-2af36480-d841-11eb-8e04-d1d22483c1e4.mp4
+
+
+Althought the data is already in first normal form. however the data has repeating values and hence we need to break it up into entities to achieve 2nd and 3rd normal forms.
+![image](https://user-images.githubusercontent.com/68102477/123606388-309c7a80-d840-11eb-90e1-47094bb9afce.png)
+
+![image](https://user-images.githubusercontent.com/68102477/123606670-7bb68d80-d840-11eb-8045-dfbdb329ec5c.png)
+
+![image](https://user-images.githubusercontent.com/68102477/123607160-f384b800-d840-11eb-9fd8-519474c1eb8e.png)
+
+![image](https://user-images.githubusercontent.com/68102477/123604872-9a1b8980-d83e-11eb-8ab1-fc9f31208f73.png)
+
 
 
 
