@@ -1,5 +1,9 @@
 # Notes
 
+**Relational databases are basically of two types: transactional databases and data warehouse. In this lesson we will look at ER Modelling, used in transactional databases.**
+
+Data Model -- representations of a real object; abstract model created to structure data into a format that can be used to define a real-world object or concept.
+
 ![image](https://user-images.githubusercontent.com/68102477/122385951-b56dd580-cfb0-11eb-9b73-8b3bb3044a95.png)
 
 ![image](https://user-images.githubusercontent.com/68102477/122386003-c28ac480-cfb0-11eb-996c-4851274c3e5c.png)
