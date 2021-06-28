@@ -57,6 +57,35 @@ Schema has rigid rules:
 Here are some articles on the database schema. The first one is from the LucidChart website (the ERD design tool we will be using later in the course): [article 1](https://www.lucidchart.com/pages/database-diagram/database-schema) and [article 2](https://beginnersbook.com/2015/04/instance-and-schema-in-dbms/)
 
 
+# DATA NORMALIZATION
+
+[Database Normalization](https://en.wikipedia.org/wiki/Database_normalization) is the process of **structuring a database**, usually a relational database, in accordance with a series of so-called **normal forms** in order to **reduce data redundancy** and **improve data integrity**. 
+
+Normalization divides larger tables into smaller tables and links them using relationships. 
+
+## Objectives of Normalization - Reduction of Anomalies and Data Redundancy
+
+When an attempt is made to modify (update, insert into, or delete from) a relation, the following undesirable side-effects may arise in relations that have not been sufficiently normalized:
+
+## Update Anomaly
+
+![image](https://user-images.githubusercontent.com/68102477/121621215-17a97080-caaf-11eb-8b57-ee1325a24d93.png)
+
+The same information can be expressed on multiple rows; therefore updates to the relation may result in logical inconsistencies. For example, each record in an "Employees' Skills" relation might contain an Employee ID, Employee Address, and Skill; thus a change of address for a particular employee may need to be applied to multiple records (one for each skill). If the update is only partially successful – the employee's address is updated on some records but not others – then the relation is left in an inconsistent state. Specifically, the relation provides conflicting answers to the question of what this particular employee's address is. This phenomenon is known as an update anomaly.
+
+## Insertion Anomaly
+
+![image](https://user-images.githubusercontent.com/68102477/121621333-50e1e080-caaf-11eb-87ee-87a39f9a3ba5.png)
+
+There are circumstances in which certain facts cannot be recorded at all. For example, each record in a "Faculty and Their Courses" relation might contain a Faculty ID, Faculty Name, Faculty Hire Date, and Course Code. Therefore, we can record the details of any faculty member who teaches at least one course, but we cannot record a newly hired faculty member who has not yet been assigned to teach any courses, except by setting the Course Code to null. This phenomenon is known as an insertion anomaly.
+
+## Deletion Anomaly
+
+![image](https://user-images.githubusercontent.com/68102477/121621409-740c9000-caaf-11eb-9888-fb25e6a55317.png)
+
+Under certain circumstances, deletion of data representing certain facts necessitates deletion of data representing completely different facts. The "Faculty and Their Courses" relation described in the previous example suffers from this type of anomaly, for if a faculty member temporarily ceases to be assigned to any courses, we must delete the last of the records on which that faculty member appears, effectively also deleting the faculty member, unless we set the Course Code to null. This phenomenon is known as a deletion anomaly.
+
+
 
 # NORMAL FORMS
 
