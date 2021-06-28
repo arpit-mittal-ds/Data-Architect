@@ -62,6 +62,70 @@ Schema has rigid rules:
 ### Further Reading
 Here are some articles on the database schema. The first one is from the LucidChart website (the ERD design tool we will be using later in the course): [article 1](https://www.lucidchart.com/pages/database-diagram/database-schema) and [article 2](https://beginnersbook.com/2015/04/instance-and-schema-in-dbms/)
 
+
+
+# NORMAL FORMS
+
+## FIRST NORMAL FORM
+![image](https://user-images.githubusercontent.com/68102477/122348066-1637e680-cf8e-11eb-9205-d70e3170255d.png)
+
+![image](https://user-images.githubusercontent.com/68102477/122348092-1f28b800-cf8e-11eb-9fa5-e550e462445f.png)
+
+### No Repeated Groupings
+![image](https://user-images.githubusercontent.com/68102477/122348348-6adb6180-cf8e-11eb-98ec-896fe849932f.png)
+
+![image](https://user-images.githubusercontent.com/68102477/121629931-855d9880-cabf-11eb-8d88-8d4a165d9806.png)
+
+Here you see Movies Rented column has multiple values. 
+
+**Rules for first normal form**
+
+Each table **cell should contain a single value.**
+
+Each record needs to be unique - **No Duplicate Records.**
+
+Every table in first normal form must have a **primary key.**
+
+![image](https://user-images.githubusercontent.com/68102477/121629997-a7571b00-cabf-11eb-93ae-51b87d7eb9ac.png)
+
+### First Normal form Solution
+![image](https://user-images.githubusercontent.com/68102477/122348430-7fb7f500-cf8e-11eb-9ac4-6aad2a4284e8.png)
+
+1NF: ensure atomic values, no repeated groupings, and no reduplicated rows
+
+## SECOND NORMAL FORM
+
+**To be in second normal form (2NF), all non-key attributes must depend on the entire key. Thus, If the 1NF has a single-attribute primary key, then the table is automatically in 2NF.**
+
+**If a relation has a composite key, all non-key attributes must depend on all components of the key. If you have a table where some non-key attributes don’t depend on all components of the key, break the table up into two or more tables so that — in each of the new tables — all non-key attributes depend on all components of the primary key.**
+
+**To convert a table to 2nd Normal Form - Make New Tables to Eliminate Partial Dependencies**
+
+![image](https://user-images.githubusercontent.com/68102477/121640869-d2e30100-cad1-11eb-9f25-7200210470c2.png)
+
+![image](https://user-images.githubusercontent.com/68102477/121640877-d6768800-cad1-11eb-8f19-7a0eebd2a288.png)
+
+![image](https://user-images.githubusercontent.com/68102477/122349493-a88cba00-cf8f-11eb-8d7e-4cd4d0c4d390.png)
+
+![image](https://user-images.githubusercontent.com/68102477/122349666-cce89680-cf8f-11eb-90c5-a46bc6f37c95.png)
+
+ID is just a surrogate key - actual business key or the data that we have modelled in this table is Name, hence partial dependencies are looked from Name perspective.
+Breed and Species are completely separate and do not have any relationship with the Name or Id of the dog, hence moving them to separate table will remove depandant columns and make the tables in second normal form.
+
+![image](https://user-images.githubusercontent.com/68102477/122349434-99a60780-cf8f-11eb-8863-4a0f0767ca33.png)
+
+## THIRD NORMAL FORM
+
+Tables in second normal form are especially vulnerable to some types of modification anomalies — in particular, those that come from transitive dependencies.
+
+**A transitive dependency occurs when one attribute depends on a second attribute, which depends on a third attribute. Deletions in a table with such a dependency can cause unwanted information loss. A relation in third normal form is a relation in second normal form with no transitive dependencies.**
+
+![image](https://user-images.githubusercontent.com/68102477/122350317-762f8c80-cf90-11eb-9ceb-bc4ed057967c.png)
+
+3NF: bring 2NF and remove transitive dependencies (ID, species, and breed)
+
+![image](https://user-images.githubusercontent.com/68102477/122350528-a24b0d80-cf90-11eb-8537-68ab35aab707.png)
+
 ## Data Normalization
 
  a method of reorganizing data for use in a relational database. 
@@ -106,42 +170,23 @@ Data is not refreshed often
 [article 3](https://www.geeksforgeeks.org/third-normal-form-3nf/)
 
 
-## De-Normalization
+## [Denormalization](https://en.wikipedia.org/wiki/Denormalization)
+
+is the process improving the read performance of a database at the expense of losing some write performance by adding redundant copies of data.
+
+Drawback of denormalization: u may need to update at multiple places.
+
+JOINS on the database allow for outstanding flexibility but are extremely slow. If you are dealing with heavy reads on your database, you may want to think about de-normalizing your tables. You get your data into normalized form, and then you proceed with denormalization. So, denormalization comes after normalization.
+
+Done to increase performance.
+
+Data redundancy increases.
+
+When read >> write
+
+We will look denormalization in depth while modelling data in Data Warehouses.
 
 ![image](https://user-images.githubusercontent.com/68102477/122331535-568c6a00-cf78-11eb-8769-61ba1c20984a.png)
-
-## Normal Forms
-
-### First Normal Form
-![image](https://user-images.githubusercontent.com/68102477/122348066-1637e680-cf8e-11eb-9205-d70e3170255d.png)
-
-![image](https://user-images.githubusercontent.com/68102477/122348092-1f28b800-cf8e-11eb-9fa5-e550e462445f.png)
-
-### No Repeated Groupings
-![image](https://user-images.githubusercontent.com/68102477/122348348-6adb6180-cf8e-11eb-98ec-896fe849932f.png)
-
-### First Normal form Solution
-![image](https://user-images.githubusercontent.com/68102477/122348430-7fb7f500-cf8e-11eb-9ac4-6aad2a4284e8.png)
-
-1NF: ensure atomic values, no repeated groupings, and no reduplicated rows
-### Second Normal Form
-
-![image](https://user-images.githubusercontent.com/68102477/122349493-a88cba00-cf8f-11eb-8d7e-4cd4d0c4d390.png)
-
-![image](https://user-images.githubusercontent.com/68102477/122349666-cce89680-cf8f-11eb-90c5-a46bc6f37c95.png)
-
-ID is just a surrogate key - actual business key or the data that we have modelled in this table is Name, hence partial dependencies are looked from Name perspective.
-Breed and Species are completely separate and do not have any relationship with the Name or Id of the dog, hence moving them to separate table will remove depandant columns and make the tables in second normal form.
-
-![image](https://user-images.githubusercontent.com/68102477/122349434-99a60780-cf8f-11eb-8863-4a0f0767ca33.png)
-
-### Third Normal Form
-
-![image](https://user-images.githubusercontent.com/68102477/122350317-762f8c80-cf90-11eb-9ceb-bc4ed057967c.png)
-
-3NF: bring 2NF and remove transitive dependencies (ID, species, and breed)
-
-![image](https://user-images.githubusercontent.com/68102477/122350528-a24b0d80-cf90-11eb-8537-68ab35aab707.png)
 
 
 ### Example
@@ -211,5 +256,42 @@ Think about the dependencies, duplications, and transitive dependency issues of 
 
 Decide the relationships among entities.
 
+
+## Quick Summary
+
+### 1.  First Normal Form (1NF):
+
+•	Atomic values: each cell contains unique and single values
+
+•	Be able to add data without altering tables	
+
+•	Separate different relations into different tables
+
+•	Keep relationships between tables together with foreign keys
+
+
+### 2.	Second Normal Form (2NF):
+
+•	Have reached 1NF
+
+•	All columns in the table must rely on the Primary Key
+
+•	If there is a composite PK then no column should depend just on the part of PK…..each column should depend upon the whole PK.
+
+### 3.	Third Normal Form (3NF):
+
+•	Must be in 2nd Normal Form
+
+•	No transitive dependencies
+
+•	Remember, transitive dependencies you are trying to maintain is that to get from A-> C, you want to avoid going through B.
+
+**When to use 3NF:**
+
+When you want to update data, we want to be able to do in just 1 place. We want to avoid updating the table in the Customers Detail table 
+
+Third normal form is the maximum normal form that should be attempted while doing practical data modeling.
+
+Drawback of Normalization - Joins among tables causes queries, which read data from the tables, to run slowly. 
 
 
