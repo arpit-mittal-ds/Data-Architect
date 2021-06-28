@@ -22,13 +22,57 @@ Data Model -- representations of a real object; abstract model created to struct
 
 ![image](https://user-images.githubusercontent.com/68102477/122386202-fcf46180-cfb0-11eb-957e-bd5a5b525c64.png)
 
-## Keys
+# KEYS
 
-### Primary Key
+## [Superkey](https://en.wikipedia.org/wiki/Superkey) and [Candidate key](https://en.wikipedia.org/wiki/Candidate_key)
+
+A superkey is a set of attributes within a table whose values can be used to uniquely identify every record. 
+
+A candidate key is a minimal set of attributes necessary to identify each record; this is also called a minimal superkey. 
+
+
+## [Primary Key](https://en.wikipedia.org/wiki/Primary_key)
+
+A primary key is a **choice of candidate key (a minimal superkey)**; any other candidate key is an alternate key.
 
 ![image](https://user-images.githubusercontent.com/68102477/122386348-244b2e80-cfb1-11eb-894e-abfdd8e700b4.png)
 
-### Foreign Key
+
+## Composite Key
+
+A key consisting of more than one column is called a composite key. 
+
+## Business Key / Natural Key vs Surrogate Key
+
+A **natural key** is a column or set of columns that **already exist in the table** (e.g. they are attributes of the entity within the data model) and **uniquely identify a record** in the table.  Since these columns are attributes of the entity they obviously have **business meaning**. 
+
+A surrogate key is a system generated (could be GUID, sequence, etc.) value with no business meaning that is used to uniquely identify a record in a table. 
+
+Sometimes natural keys cannot be used to create a unique primary key of the table. This is when the data modeler or architect decides to use surrogate or helping keys for a table in the LDM.
+
+Source System Keys - Do not make any sense!! - A source system can change at any time due to business requirements and your data warehouse should be able to handle these changes without needing any updates. Should have used either IDM generated surrogate key (B2B Keys) or business keys.
+Problem with B2B Keys - How do you update them as foreign keys in other tables.
+
+When implementing a data warehouse, you have to use surrogate keys for your dimension and fact tables.
+
+**Natural Key Pros** 
+
+Key values have business meaning and can be used as a search key when querying the table
+
+**Natural Key Cons** 
+
+May need to change/rework key if business requirements change.  For example, if you used SSN for your employee as in the example above and your company expands outside of the United States not all employees would have a SSN so you would have to come up with a new key.
+
+Can't enter record until key value is known.  It's sometimes beneficial for an application to load a placeholder record in one table then load other tables and then come back and update the main table.
+
+**Surrogate Key Pros**
+
+No business logic in key so no changes based on business requirements.
+
+**Surrogate Key Cons**
+Key value has no relation to data so technically design breaks 3NF
+
+## Foreign Key
 
 ![image](https://user-images.githubusercontent.com/68102477/122386411-34630e00-cfb1-11eb-8ebe-526193feb9c4.png)
 
