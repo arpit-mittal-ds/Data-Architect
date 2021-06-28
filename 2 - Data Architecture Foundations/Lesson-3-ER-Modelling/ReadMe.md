@@ -62,10 +62,13 @@ Schema has rigid rules:
 Here are some articles on the database schema. The first one is from the LucidChart website (the ERD design tool we will be using later in the course): [article 1](https://www.lucidchart.com/pages/database-diagram/database-schema) and [article 2](https://beginnersbook.com/2015/04/instance-and-schema-in-dbms/)
 
 
-
+# ERD
 
 
 ![image](https://user-images.githubusercontent.com/68102477/122386003-c28ac480-cfb0-11eb-996c-4851274c3e5c.png)
+
+![image](https://user-images.githubusercontent.com/68102477/123614303-8c1e3680-d847-11eb-87c3-6c551ed707fe.png)
+
 
 ## Lucid Chart
 
