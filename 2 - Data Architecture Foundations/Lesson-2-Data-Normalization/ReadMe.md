@@ -199,23 +199,28 @@ We will look denormalization in depth while modelling data in Data Warehouses.
 ![image](https://user-images.githubusercontent.com/68102477/122331535-568c6a00-cf78-11eb-8769-61ba1c20984a.png)
 
 
+
+
 ### Example
 
 ![image](https://user-images.githubusercontent.com/68102477/122355662-6c5c5800-cf95-11eb-9d0b-e63a87df8380.png)
 
 **1 NF** - have atomic value, no repeated groupings, and no repeated rows
 
+It is reasonable to tell customer that we are only gonna track 2 phone numbers, so the table is not expected to grow and hence this is not considered as repeating groups. 
+Data and Use of data shoul drive the modelling decisions. 
 ![image](https://user-images.githubusercontent.com/68102477/122355755-8007be80-cf95-11eb-81e7-58cb899e284c.png)
 
 ![image](https://user-images.githubusercontent.com/68102477/122356119-d543d000-cf95-11eb-8416-061448b46b3f.png)
 
-![image](https://user-images.githubusercontent.com/68102477/122356181-e4c31900-cf95-11eb-8389-477ac075b032.png)
+![image](https://user-images.githubusercontent.com/68102477/123602658-545dc180-d83c-11eb-9a88-565346b335e9.png)
 
 ![image](https://user-images.githubusercontent.com/68102477/122356197-e7be0980-cf95-11eb-9d53-c24eff5dcfab.png)
 
 ![image](https://user-images.githubusercontent.com/68102477/122356267-f86e7f80-cf95-11eb-9010-1052f23d7212.png)
 
 ![image](https://user-images.githubusercontent.com/68102477/122356298-00c6ba80-cf96-11eb-9f45-b87e3753decf.png)
+
 
 **2NF: bring 1NF, ensure no duplicates and every column depends on the unique ID**
 Assumming customers can have only 1 car.
@@ -254,17 +259,7 @@ Reminder: After each normal form, don't forget to add relationships to entities 
 
 Note: the goal of normalization is improving performance. Adding too many entities would reduce performance. In the real world, there are many cases where it makes sense to not create many entities although it doesn't meet the normalization rules. The rule of thumb is - if you won't run into the risk of duplicates, then you don’t need to split the data into another entity.
 
-### Exercise: 
 
-![image](https://user-images.githubusercontent.com/68102477/122374485-c2d19280-cfa5-11eb-9d37-a7f0be9808d4.png)
-
-**Follow these steps to normalize to 3NF.**
-
-Build a Hierarchy first, then group data to create basic entities (tables) based on the hierarchy.
-
-Think about the dependencies, duplications, and transitive dependency issues of each column in an entity to decide if a column should be moved out.
-
-Decide the relationships among entities.
 
 
 ## Quick Summary
@@ -303,5 +298,25 @@ When you want to update data, we want to be able to do in just 1 place. We want 
 Third normal form is the maximum normal form that should be attempted while doing practical data modeling.
 
 Drawback of Normalization - Joins among tables causes queries, which read data from the tables, to run slowly. 
+
+### Exercise: 
+
+![image](https://user-images.githubusercontent.com/68102477/122374485-c2d19280-cfa5-11eb-9d37-a7f0be9808d4.png)
+
+**Follow these steps to normalize to 3NF.**
+
+Build a Hierarchy first, then group data to create basic entities (tables) based on the hierarchy.
+
+Think about the dependencies, duplications, and transitive dependency issues of each column in an entity to decide if a column should be moved out.
+
+Decide the relationships among entities.
+
+### Solution
+
+1. Business Rules:
+2. Entities, Relationships, PK, FK, Attributes
+3. Check whether it is in 3NF
+
+
 
 
