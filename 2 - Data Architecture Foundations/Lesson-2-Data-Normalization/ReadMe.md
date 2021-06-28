@@ -329,15 +329,14 @@ So learn and internalized the 3NF as a standard transactional relational model, 
 
 ![image](https://user-images.githubusercontent.com/68102477/123608697-5165cf80-d842-11eb-8ae3-a43db45d2c65.png)
 
-
-![image](https://user-images.githubusercontent.com/68102477/123608635-427f1d00-d842-11eb-9743-7ce0e1cce5bd.png)
-
-![image](https://user-images.githubusercontent.com/68102477/123608805-6cd0da80-d842-11eb-89ba-616981823be1.png)
-
-
 ![image](https://user-images.githubusercontent.com/68102477/123608361-08ae1680-d842-11eb-8cba-93eb5b783650.png)
 
+## Further reading
+Below you can find two articles on data modeling. The second one dives into the normalization, which we will cover in coming sections, but may serve as a nice introduction to the concept for you: [article 1](https://www.guru99.com/data-modelling-conceptual-logical.html#:~:text=Data%20modeling%20data%20modelling%20is,data%20objects%2C%20and%20the%20rules) and [article 2](https://analytics4all.org/2016/04/02/data-modeling/)
 
+Here are some articles on the database schema. The first one is from the LucidChart website (the ERD design tool we will be using later in the course): [article 1](https://www.lucidchart.com/pages/database-diagram/database-schema) and [article 2](https://beginnersbook.com/2015/04/instance-and-schema-in-dbms/)
+
+Normalization can be a confusing subject for some people, so here are a few more explanations on the 3NF. If you had trouble following my explanation, maybe one of the following articles will help. [article 1](https://www.essentialsql.com/get-ready-to-learn-sql-11-database-third-normal-form-explained-in-simple-english/), [article 2](https://www.guru99.com/database-normalization.html) and [article 3](https://www.guru99.com/database-normalization.html)
 
 
 
