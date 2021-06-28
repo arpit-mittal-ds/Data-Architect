@@ -1,11 +1,6 @@
 
 # Notes - Data Architecture Foundations
 
-
-![image](https://user-images.githubusercontent.com/68102477/119764114-2f4ff900-bef4-11eb-9c17-c98fa59fecc3.png)
-
-
-
 ### learning objectives:
 
 Explain the characteristics of good data architecture
@@ -14,9 +9,9 @@ Take business and functional requirements and turn them into preliminary (non-te
 
 Describe different types of storage systems and formats
 
-Develop the conceptual, logical, and physical data model utilizing data integrity, cardinality principles
-
 Design a normalized relational model and its underlying schema in 3NF, given a set of business requirements.
+
+Develop the conceptual, logical, and physical data model utilizing data integrity, cardinality principles
 
 Create a structural diagram (ERD) for database design using visual tools such as Lucidchart
 
