@@ -82,6 +82,21 @@ Here are some articles on the database schema. The first one is from the LucidCh
 
 ![image](https://user-images.githubusercontent.com/68102477/122386202-fcf46180-cfb0-11eb-957e-bd5a5b525c64.png)
 
+**Follow these steps to build conceptual ERDs:**
+
+Determine the type of database to be designed
+
+Evaluate data (if provided)
+
+Put data into 3NF
+
+Place entities on the diagram
+
+Connect entities with a relationship line
+
+![image](https://user-images.githubusercontent.com/68102477/123623126-72cdb800-d850-11eb-9e5d-f31ee3979961.png)
+
+
 # KEYS
 
 ## [Superkey](https://en.wikipedia.org/wiki/Superkey) and [Candidate key](https://en.wikipedia.org/wiki/Candidate_key)
