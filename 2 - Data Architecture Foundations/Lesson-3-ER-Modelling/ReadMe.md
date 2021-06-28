@@ -62,7 +62,7 @@ Schema has rigid rules:
 Here are some articles on the database schema. The first one is from the LucidChart website (the ERD design tool we will be using later in the course): [article 1](https://www.lucidchart.com/pages/database-diagram/database-schema) and [article 2](https://beginnersbook.com/2015/04/instance-and-schema-in-dbms/)
 
 
-# ERD
+# [ERD](https://www.lucidchart.com/pages/er-diagrams)
 
 
 ![image](https://user-images.githubusercontent.com/68102477/122386003-c28ac480-cfb0-11eb-996c-4851274c3e5c.png)
@@ -151,6 +151,7 @@ Key value has no relation to data so technically design breaks 3NF
 
 ![image](https://user-images.githubusercontent.com/68102477/122386411-34630e00-cfb1-11eb-8ebe-526193feb9c4.png)
 
+
 ## Logical ERD
 
 ![image](https://user-images.githubusercontent.com/68102477/122386492-49d83800-cfb1-11eb-954c-d0c71fabeeff.png)
@@ -177,3 +178,5 @@ Key value has no relation to data so technically design breaks 3NF
 
 ![image](https://user-images.githubusercontent.com/68102477/122387706-7c366500-cfb2-11eb-92a3-8b2e15e29c89.png)
 
+
+![datamodelling](https://user-images.githubusercontent.com/68102477/121794559-98ea3a00-cc4c-11eb-8ef0-06c0f43acfae.png)
