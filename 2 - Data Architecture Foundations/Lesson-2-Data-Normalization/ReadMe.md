@@ -2,12 +2,6 @@
 
 ![image](https://user-images.githubusercontent.com/68102477/122208382-90ad2b80-cee6-11eb-9778-0e2c15a73b47.png)
 
-Relational databases are basically of two types: transactional databases and data warehouse. In this lesson we will look at ER Modelling, used in transactional databases.
-
-
-
-Data Model -- representations of a real object; abstract model created to structure data into a format that can be used to define a real-world object or concept.
-
 Normalization -- Process of organizing data into a structure usable by a relational database
 
 3rd Normal Form-- A common level of data normalization found in transactional relational databases. A data organization method.
