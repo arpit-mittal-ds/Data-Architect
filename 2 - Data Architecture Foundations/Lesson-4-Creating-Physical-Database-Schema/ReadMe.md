@@ -1,6 +1,6 @@
 # Notes
 
-## Lesson Overview - 3 main topics: 
+## Lesson Overview
 
 1. Factors that affect Database Performance. Solutions: caching and indexing. 
 
