@@ -86,6 +86,43 @@ There are circumstances in which certain facts cannot be recorded at all. For ex
 Under certain circumstances, deletion of data representing certain facts necessitates deletion of data representing completely different facts. The "Faculty and Their Courses" relation described in the previous example suffers from this type of anomaly, for if a faculty member temporarily ceases to be assigned to any courses, we must delete the last of the records on which that faculty member appears, effectively also deleting the faculty member, unless we set the Course Code to null. This phenomenon is known as a deletion anomaly.
 
 
+## [Functional Dependency](https://en.wikipedia.org/wiki/Functional_dependency)
+
+X is said to functionally determine Y (written X → Y) if and only if each X value in R is associated with precisely one Y value in R; R is then said to satisfy the functional dependency X → Y. 
+
+The attribute B is fully functionally dependent on the attribute A if each value of A determines one and only one value of B. A -> B
+
+**Example**
+
+| Employee ID   | Employee name | Department ID  | Department name |
+| ------------- |:-------------:| --------------:| ---------------:|
+|      0001     | Arpit Mittal  |       1        | Human Resources |
+|      0002     | Sasi          |       2        | Marketing       |
+|      0003     | John          |       3        | Sales           |
+
+	
+An employee can only be a member of one department.
+
+Employee ID → Employee Name (Same Employee ID should not result in multiple Employee Names)
+
+Employee ID → Department ID (Same Employee ID should not result in multiple Departments)
+
+Department ID → Department Name (Each Department ID is related to only one Department Name)
+
+### Two types of functional dependencies that are of special interest in normalization are - Prtial Dependencies and Transitive Dependencies. 
+
+**A partial dependency** exists when there is a functional dependence in which the determinant is only part of the primary key
+
+For example, if  (A, B) is the primary key and (A, B) ->  (C, D) however B ->  C, then the functional dependence B -> C is a partial dependency because only part of the primary key (B) is needed to determine the value of C. 
+
+Partial dependencies tend to be straightforward and easy to identify.
+
+**A transitive dependency** exists when there are functional dependencies such that X -> Y, Y -> Z, and X is the primary key. In that case, the dependency X -> Z is a transitive dependency because X determines the value of Z via Y. 
+
+Unlike partial dependencies, transitive dependencies are more **difficult to identify** among a set of data. Fortunately, there is an effective way to identify transitive dependencies: they occur only when a functional dependence exists among nonprime attributes. 
+
+The dependency Y -> Z signals that a transitive dependency exists. Hence, throughout the discussion of the normalization process, the existence of a functional dependence among nonprime attributes will be considered a sign of a transitive dependency. 
+
 
 # NORMAL FORMS
 
