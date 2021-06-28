@@ -236,33 +236,13 @@ Assumming customers can have only 1 car.
 
 ![image](https://user-images.githubusercontent.com/68102477/122357529-315b2400-cf97-11eb-8b0b-6405391eb35c.png)
 
-Summary
-To normalize data to 3NF, follow these steps
+## Summary 
 
-Check if tables are in 1NF
-
-Tables should have atomic value, no repeated groupings, and no repeated rows. If any of the 1NF rules is not met, you are not in 1NF. You can create new entities to solve the problem.
-
-Develop a data hierarchy
-
-Hierarchy can help you determine how many entities to start with and how they relate. Based on the hierarchy, you can group data into different entities with attributes.
-
-Make sure all the entities are still in 1NF and also follow 2NF rules
-
-2NF requires that no duplicates and every column depends on the unique ID. In most cases, you can add unique IDs and create new entities to meet the 2NF requirements.
-
-Transform the entities from 2NF to 3NF
-
-You can complete this by checking if there are any transitive dependencies. If there is, you should create another entity to hold the transitive column.
+![image](https://user-images.githubusercontent.com/68102477/123603586-5ecc8b00-d83d-11eb-9f5c-300476eee8a2.png)
 
 Reminder: After each normal form, don't forget to add relationships to entities so that all the information is linked together.
 
 Note: the goal of normalization is improving performance. Adding too many entities would reduce performance. In the real world, there are many cases where it makes sense to not create many entities although it doesn't meet the normalization rules. The rule of thumb is - if you won't run into the risk of duplicates, then you don’t need to split the data into another entity.
-
-
-
-
-## Quick Summary
 
 ### 1.  First Normal Form (1NF):
 
