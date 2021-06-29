@@ -148,11 +148,34 @@ No business logic in key so no changes based on business requirements.
 Key value has no relation to data so technically design breaks 3NF
 
 ## Foreign Key
+The foreign key is a corresponding column in a table that references a primary key from another table. The PK - FK pair establish the relationship between two or more entities.
+
+**The main rules of the foreign key are:**
+
+It must correspond to PK in another table
+
+It can be Null
+
+PK - FK pair defines the relationships between tables
 
 ![image](https://user-images.githubusercontent.com/68102477/122386411-34630e00-cfb1-11eb-8ebe-526193feb9c4.png)
 
 
 ## Logical ERD
+
+### Follow these steps to build logical ERDs:
+
+1. Take the conceptual ERD
+
+2. Identify attributes
+
+3. Identify PK and FK
+
+4. Draw relationships among entities using PK-FK pair
+
+![image](https://user-images.githubusercontent.com/68102477/123718254-0a1f2380-d8c2-11eb-95ee-5f90bea21a5f.png)
+
+In Data Model we call Entities, however in Databse we call them Tables.
 
 ![image](https://user-images.githubusercontent.com/68102477/122386492-49d83800-cfb1-11eb-954c-d0c71fabeeff.png)
 
@@ -163,6 +186,8 @@ Key value has no relation to data so technically design breaks 3NF
 ![image](https://user-images.githubusercontent.com/68102477/122386666-72f8c880-cfb1-11eb-8e35-e0e1f5498f2c.png)
 
 ![image](https://user-images.githubusercontent.com/68102477/122387494-43968b80-cfb2-11eb-96db-e2c22ebce60d.png)
+
+It's common that you need to go back to change your conceptual ERDs once attributes, primary keys, and foreign keys start to be added. Building ERDs is an iterative process so be prepared to go back and forth to make changes.
 
 ## Cardinality
 
