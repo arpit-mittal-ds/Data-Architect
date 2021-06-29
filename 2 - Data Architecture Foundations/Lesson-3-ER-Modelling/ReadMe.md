@@ -189,6 +189,22 @@ In Data Model we call Entities, however in Databse we call them Tables.
 
 It's common that you need to go back to change your conceptual ERDs once attributes, primary keys, and foreign keys start to be added. Building ERDs is an iterative process so be prepared to go back and forth to make changes.
 
+## Exercise Conceptual And Logical ERD Walkthrough
+![image](https://user-images.githubusercontent.com/68102477/123720091-903d6900-d8c6-11eb-927c-31a55fbdff54.png)
+
+sometimes we will not have the data, just the description of data. In this case we can create sample data, get it verified with business stakeholders and then use it to creat the data model.
+
+![image](https://user-images.githubusercontent.com/68102477/123720184-d4306e00-d8c6-11eb-9fbf-4d21b2eeccb4.png)
+
+**Mapping Entity** that maps out the complex relations between drivers, limos, and jobs. Remember, when you encounter a complex relationship, you may consider using a mapping entity as a pivotal table to straighten it.
+
+![image](https://user-images.githubusercontent.com/68102477/123720275-0b9f1a80-d8c7-11eb-93df-bbda42e25e03.png)
+
+![image](https://user-images.githubusercontent.com/68102477/123720210-e5797a80-d8c6-11eb-9582-df1c0f6f3652.png)
+
+![image](https://user-images.githubusercontent.com/68102477/123720236-f1653c80-d8c6-11eb-8f52-b2cc77339b6e.png)
+
+
 ## Cardinality
 
 ![image](https://user-images.githubusercontent.com/68102477/122387553-5315d480-cfb2-11eb-8a35-78ec4be9b53b.png)
@@ -205,3 +221,40 @@ It's common that you need to go back to change your conceptual ERDs once attribu
 
 
 ![datamodelling](https://user-images.githubusercontent.com/68102477/121794559-98ea3a00-cc4c-11eb-8ef0-06c0f43acfae.png)
+
+
+# PHYSICAL ERDs
+
+Building out physical ERDs is the last step in ERD development. This is usually done after the DBMS has been decided on, allowing for the correct data types to be selected, although, it could be done beforehand using generic data types.
+
+### The main points to remember here are:
+
+Add data types
+
+Use computer-friendly labels
+
+Add cardinality notation (in our case, Crow's Foot)
+
+Follow ERD best practices
+
+![image](https://user-images.githubusercontent.com/68102477/123720925-8a488780-d8c8-11eb-8830-425a41a8c4d0.png)
+
+
+## Edge Case: PK-FK Within a Table
+
+Sometimes your foreign key (FK) will reference the Primary Key (PK) of the same table/entity. This is not an uncommon event and is completely acceptable as a database design
+
+![image](https://user-images.githubusercontent.com/68102477/123720963-a3513880-d8c8-11eb-8603-80f96b002c2a.png)
+
+
+## Exercise
+
+build 3 ERDs (Conceptual, Logical, and Physical) from the data set below. Make sure you follow the ERD best practices.
+
+Note the Start Date and End Date columns in this data. It shows a historical view of players' past teams and positions.
+
+This is a new challenge for you. Try to have fun and be creative with this challenge. And don't cheat by peeking at the solution until you are done.
+
+![image](https://user-images.githubusercontent.com/68102477/123721000-b532db80-d8c8-11eb-9db1-53cac20292fa.png)
+
+
