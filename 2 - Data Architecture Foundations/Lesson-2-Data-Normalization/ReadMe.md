@@ -38,9 +38,7 @@ Under certain circumstances, deletion of data representing certain facts necessi
 
 ## [Functional Dependency](https://en.wikipedia.org/wiki/Functional_dependency)
 
-X is said to functionally determine Y (written X → Y) if and only if each X value in R is associated with precisely one Y value in R; R is then said to satisfy the functional dependency X → Y. 
-
-The attribute B is fully functionally dependent on the attribute A if each value of A determines one and only one value of B. A -> B
+The attribute B is functionally dependent on the attribute A if each value of A determines one and only one value of B. A -> B
 
 **Example**
 
@@ -51,13 +49,16 @@ The attribute B is fully functionally dependent on the attribute A if each value
 |      0003     | John          |       3        | Sales           |
 
 	
-An employee can only be a member of one department.
+### 1. Department ID  -> Department name
+If we know the "department_id" value then we would know the "department_name" value as well. For example, if we have following new record:
 
-Employee ID → Employee Name (Same Employee ID should not result in multiple Employee Names)
+|      XXX     | XXX          |       1        |       ??     |
 
-Employee ID → Department ID (Same Employee ID should not result in multiple Departments)
+we can infer that "Department name" value in above record has to be "Human Resources". So Department name is functionally dependent on Department ID.
+Note that DepartmentName is not functionally dependent on Employee ID. For example even if we know an employee id we CANNOT infer the Department Name:
 
-Department ID → Department Name (Each Department ID is related to only one Department Name)
+|      004     | Pomana          |              |      ??     |
+
 
 ### Two types of functional dependencies that are of special interest in normalization are - Prtial Dependencies and Transitive Dependencies. 
 
@@ -67,12 +68,25 @@ For example, if  (A, B) is the primary key and (A, B) ->  (C, D) however B ->  C
 
 Partial dependencies tend to be straightforward and easy to identify.
 
+In the following example, primary key is a composite key of TEACHER_ID and SUBJECT. However **non-key attribute TEACHER_AGE is dependent only on just TEACHER_ID**
+
+| TEACHER_ID    | SUBJECT       | TEACHER_AGE    | 
+| ------------- |:-------------:| --------------:| 
+|      01       | Chemistry     |       30       | 
+|      02       | Biology       |       25       | 
+|      01       | English       |       30       | 
+
+	
+
 **A transitive dependency** exists when there are functional dependencies such that X -> Y, Y -> Z, and X is the primary key. In that case, the dependency X -> Z is a transitive dependency because X determines the value of Z via Y. 
 
-Unlike partial dependencies, transitive dependencies are more **difficult to identify** among a set of data. Fortunately, there is an effective way to identify transitive dependencies: they occur only when a functional dependence exists among nonprime attributes. 
+Unlike partial dependencies, transitive dependencies are more **difficult to identify** among a set of data. Fortunately, there is an effective way to identify transitive dependencies: they occur **only when a functional dependence exists among non-prime attributes.**
 
-The dependency Y -> Z signals that a transitive dependency exists. Hence, throughout the discussion of the normalization process, the existence of a functional dependence among nonprime attributes will be considered a sign of a transitive dependency. 
+**The dependency Y -> Z signals that a transitive dependency exists. Hence, throughout the discussion of the normalization process, the existence of a functional dependence among nonprime attributes will be considered a sign of a transitive dependency. **
 
+![image](https://user-images.githubusercontent.com/68102477/123750907-761d7e00-d8fa-11eb-86f9-79e044fc1e86.png)
+
+Since "Bank" values are dependent on just non-key attribute Bank_code this is a transitive dependency
 
 # NORMAL FORMS
 
