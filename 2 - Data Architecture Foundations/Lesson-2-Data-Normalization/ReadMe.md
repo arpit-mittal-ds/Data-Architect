@@ -119,11 +119,12 @@ Every table in first normal form must have a **primary key.**
 
 ## SECOND NORMAL FORM
 
-**To be in second normal form (2NF), all non-key attributes must depend on the entire key. Thus, If the 1NF has a single-attribute primary key, then the table is automatically in 2NF.**
-
 **If a relation has a composite key, all non-key attributes must depend on all components of the key. If you have a table where some non-key attributes don’t depend on all components of the key, break the table up into two or more tables so that — in each of the new tables — all non-key attributes depend on all components of the primary key.**
 
+If a relation does not have a composite PK then all the attributes should only reply on the primary key. 
+
 **To convert a table to 2nd Normal Form - Make New Tables to Eliminate Partial Dependencies**
+
 
 ![image](https://user-images.githubusercontent.com/68102477/121640869-d2e30100-cad1-11eb-9f25-7200210470c2.png)
 
