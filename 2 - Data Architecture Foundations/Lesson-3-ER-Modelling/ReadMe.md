@@ -327,19 +327,22 @@ Follow ERD best practices
 
 ## Edge Case: PK-FK Within a Table
 
+![image](https://user-images.githubusercontent.com/68102477/123957007-a6464900-d9ee-11eb-98d1-dbb5f84019f5.png)
+
 Sometimes your foreign key (FK) will reference the Primary Key (PK) of the same table/entity. This is not an uncommon event and is completely acceptable as a database design
 
-![image](https://user-images.githubusercontent.com/68102477/123720963-a3513880-d8c8-11eb-8603-80f96b002c2a.png)
+![image](https://user-images.githubusercontent.com/68102477/123957021-acd4c080-d9ee-11eb-844f-2ce5565663c3.png)
 
 
 ## Exercise
 
-build 3 ERDs (Conceptual, Logical, and Physical) from the data set below. Make sure you follow the ERD best practices.
+
+![image](https://user-images.githubusercontent.com/68102477/123721000-b532db80-d8c8-11eb-9db1-53cac20292fa.png)
+
+
+Build 3 ERDs (Conceptual, Logical, and Physical) from the data set below. Make sure you follow the ERD best practices.
 
 Note the Start Date and End Date columns in this data. It shows a historical view of players' past teams and positions.
 
 This is a new challenge for you. Try to have fun and be creative with this challenge. And don't cheat by peeking at the solution until you are done.
-
-![image](https://user-images.githubusercontent.com/68102477/123721000-b532db80-d8c8-11eb-9db1-53cac20292fa.png)
-
 
