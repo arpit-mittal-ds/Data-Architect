@@ -318,6 +318,12 @@ Follow ERD best practices
 
 ![image](https://user-images.githubusercontent.com/68102477/123720925-8a488780-d8c8-11eb-8830-425a41a8c4d0.png)
 
+![image](https://user-images.githubusercontent.com/68102477/123950489-14870d80-d9e7-11eb-9519-dbd9c3050034.png)
+
+### Previous Exercise - Physical ERD
+
+![image](https://user-images.githubusercontent.com/68102477/123950612-37b1bd00-d9e7-11eb-9502-93a3eca6cb91.png)
+
 
 ## Edge Case: PK-FK Within a Table
 
