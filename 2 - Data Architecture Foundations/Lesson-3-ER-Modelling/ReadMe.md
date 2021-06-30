@@ -252,9 +252,11 @@ When a complicated relationship is involved among several tables, you should use
 
 ## Cardinality
 
+Cardinality defines the relationship of one entity to another. Crow's Foot notation is one of the notation methods commonly used to denote cardinality in an ERD.
+
 ![image](https://user-images.githubusercontent.com/68102477/122387553-5315d480-cfb2-11eb-8a35-78ec4be9b53b.png)
 
-### Crow's Foot
+## Crow's Foot
 
 ![image](https://user-images.githubusercontent.com/68102477/122387631-6628a480-cfb2-11eb-9304-4e8ef576cb8d.png)
 
@@ -267,6 +269,38 @@ When a complicated relationship is involved among several tables, you should use
 
 ![datamodelling](https://user-images.githubusercontent.com/68102477/121794559-98ea3a00-cc4c-11eb-8ef0-06c0f43acfae.png)
 
+### Previous Exercise - Logical ERD with Crow's Foot Notation
+
+![image](https://user-images.githubusercontent.com/68102477/123921007-e8a95f00-d9c9-11eb-8a13-f26ec3979589.png)
+
+
+### Further Reading - [Article 1](http://www2.cs.uregina.ca/~bernatja/crowsfoot.html) and [Article 2](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning)
+
+## ERD Best Practices
+
+Remember an ERD is a professional diagram used by many data professionals. These are not the simple back of the napkin sketches used internally. Many ERD will be circulated to management or used in documentation. Ensure your ERD look professional by following the best practices of ERD design.
+
+**Highlight entity name**
+
+**Ensure proper space among entities**
+
+
+![image](https://user-images.githubusercontent.com/68102477/123922849-c9abcc80-d9cb-11eb-9c4c-b41d228e6829.png)
+
+![image](https://user-images.githubusercontent.com/68102477/123922906-d7615200-d9cb-11eb-8943-3167395567f3.png)
+
+**Carefully place the relationship lines**
+
+Relationship lines should be b/w PK and FK attributes in logical and physical data models. They should be between entities in conceptual data model.
+
+**Proper labeling of elements (PK and FK)**
+
+![image](https://user-images.githubusercontent.com/68102477/123923190-1b545700-d9cc-11eb-9ec7-b7567964fc20.png)
+
+
+**Use clear naming practices**
+
+**Ensure cardinality**
 
 # PHYSICAL ERDs
 
