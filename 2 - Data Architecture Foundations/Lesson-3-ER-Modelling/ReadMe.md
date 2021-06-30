@@ -204,6 +204,51 @@ sometimes we will not have the data, just the description of data. In this case 
 
 ![image](https://user-images.githubusercontent.com/68102477/123720236-f1653c80-d8c6-11eb-8f52-b2cc77339b6e.png)
 
+## Exercise #2
+
+![image](https://user-images.githubusercontent.com/68102477/123917323-ff4db700-d9c5-11eb-9f1f-cf962e85031a.png)
+
+### Create Conceptual and Logical ERDs
+
+The Conceptual ERD need only list Entities and how they will relate to each other. This is the highest level ERD and is designed to serve only as a framework to build upon.
+
+The Logical ERD builds upon the conceptual model by adding more details, such as Entities, Attributes, Relationship lines, and Primary and Foreign Keys
+
+## Solution
+ 
+### Step 1  Write business rules on the basis of sample data (in real world take inputs from business stakeholders)
+
+Students will take more than one class and each class will have more than one student -- many to many relationship - mapping table needed.
+
+Teacher will teach more than one class, but one class will be taught by only one teacher.
+
+There will be more than one class for each subject, but only onse subject will be taught in a class.
+
+Each class number correlates to a single subject and a single teacher, -- so while we will need to find a way for these three entities (Class, Subject, and Teacher) to correlate, we don't necessarily need a mapping table. We will use FKs to relate the entities.
+
+### Step 2 Conceptual Data Model based on the entities created using above business rules
+
+![image](https://user-images.githubusercontent.com/68102477/123918124-e8f42b00-d9c6-11eb-9137-8e6b1c451880.png)
+
+While the solution shows Subject and Teacher entities feeding into the Class entity, we would have been entirely correct to have left out the Subject and Teacher Entities all together.
+
+A **Parent-Child entity** is a pairing of 2 or more entities that depend upon each other in some way. Another term for it would be - hierarchical. When dealing with Parent-Child entities, the **Child entities are often not depicted in Conceptual ERDs ** (this is especially true in massive database build-outs).
+
+**So in the example above, the Class entity would be the parent entity, and it would have Child entities Subject and Teacher connected to provide the needed information to fully describe the Class.**
+
+Also, note the complicated relationship between class and student -- one student can take many classes and one class can hold many students, which cause heavy data integrity problem. To solve this, I created a Class list mapping table so there are no duplicates in the Class and the Student table.
+
+![image](https://user-images.githubusercontent.com/68102477/123919227-142b4a00-d9c8-11eb-924b-f94b1227bb8b.png)
+
+### Logical
+
+Unlike the conceptual ERD, this should include all entities in the database, as well as their respective attributes. Primary/Foreign key assignments and relationship lines show the relational logic for the database. Note in the Class List entity, Class ID and Student ID are labeled as FK PK. They are FK because both of them come from other entities. They also serve as a combined PK as they uniquely identify each row when combined.
+
+### Notes to remember
+
+Typically Primary keys are listed first in their table.
+Make sure your relationship lines match up between primary and foreign keys. Some ERDs will not have the primary key and foreign marked, so following the relationship lines is how you would read the ERD.
+When a complicated relationship is involved among several tables, you should use a mapping table (Class list in this exercise) to solve this problem.
 
 ## Cardinality
 
