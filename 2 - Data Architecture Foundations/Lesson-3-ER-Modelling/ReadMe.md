@@ -4,7 +4,7 @@
 
 Data Model -- representations of a real object; abstract model created to structure data into a format that can be used to define a real-world object or concept.
 
-![image](https://user-images.githubusercontent.com/68102477/122385951-b56dd580-cfb0-11eb-9b73-8b3bb3044a95.png)
+![image](https://user-images.githubusercontent.com/68102477/124073096-04be0680-da85-11eb-9435-3fe3aa0bb764.png)
 
 
 Normalization -- Process of organizing data into a structure usable by a relational database
@@ -345,4 +345,12 @@ Build 3 ERDs (Conceptual, Logical, and Physical) from the data set below. Make s
 Note the Start Date and End Date columns in this data. It shows a historical view of players' past teams and positions.
 
 This is a new challenge for you. Try to have fun and be creative with this challenge. And don't cheat by peeking at the solution until you are done.
+
+### Solution
+
+![image](https://user-images.githubusercontent.com/68102477/124072992-dccea300-da84-11eb-8d8e-b81623b3ddf1.png)
+
+![image](https://user-images.githubusercontent.com/68102477/124073006-e0622a00-da84-11eb-90d8-0933519ef2ca.png)
+
+![image](https://user-images.githubusercontent.com/68102477/124073014-e3f5b100-da84-11eb-923d-a94cbead24a7.png)
 
