@@ -305,6 +305,116 @@ Here is a look at AWS data pipeline tool. Pipeline: [AWS data pipeline](https://
 
 ## 5. CRUD
 
+**Create**
+
+Create object_type object-name 
+(parameters);
+
+-- example
+
+Create table Test (
+Column_a int,
+Column_b varchar(50));
+
+### Read
+
+-- select all
+
+Select *
+From Test;
+
+-- select column
+
+Select Column_A
+From Test;
+
+-- limit result
+
+Select *
+From Test
+Where Column_B = ‘Hello’
+
+**Update**
+
+-- insert, add data to a table
+
+Insert into Test (Column_A, Column_B)
+Values (1, ‘Hello’),
+(2, ‘Good-bye’);
+
+-- update, change existing values in a table
+
+Update Test 
+Set Column_B = ‘Bonjour’
+Where Column_A = 1;
+
+**Delete**
+-- delete individual records
+
+Delete from Test
+Where Column_A = 1;
+
+-- delete everything from the table
+
+Truncate table Test;
+
+![image](https://user-images.githubusercontent.com/68102477/124079623-b9a7f180-da8c-11eb-844b-9b75a46fa1d7.png)
+
+First partner with Subject Matter Expert to understand the data.
+
+ETL steps
+Create Tables
+
+CREATE TABLE Grade_lvl (
+grade_lvl_id SERIAL primary key,
+grade_lvl int);
+
+CREATE TABLE Student (
+student_id SERIAL primary key,
+student_name varchar(50),
+grade_lvl_id int REFERENCES Grade_lvl (grade_lvl_id));
+
+CREATE TABLE Teacher (
+teacher_id  SERIAL primary key,
+teacher_name varchar(50));
+
+CREATE TABLE Class (
+class_id  SERIAL primary key,
+class_name varchar(50));
+
+CREATE TABLE Grade (
+grade varchar(2),
+student_id int REFERENCES Student(student_id),
+teacher_id int REFERENCES Teacher(teacher_id),
+class_id int REFERENCES Class(class_id),
+primary key (grade, student_id, class_id));
+
+### LOAD DATA INTO TABLES
+
+INSERT INTO Grade_Lvl (grade_lvl)
+SELECT DISTINCT(grade_lvl) FROM stg_tbl;
+
+INSERT INTO Student (student_name, grade_lvl_id)
+SELECT DISTINCT(s.student), g.grade_lvl_id FROM stg_tbl AS s
+JOIN Grade_lvl AS g 
+ON s.grade_lvl = g.grade_lvl;
+
+INSERT INTO Teacher(teacher_name)
+SELECT DISTINCT(teacher) FROM stg_tbl;
+
+INSERT INTO Class (class_name)
+SELECT DISTINCT(class) FROM stg_tbl;
+
+INSERT INTO Grade (grade, student_id, teacher_id, class_id)
+SELECT s.grade, st.student_id, t.teacher_id, c.class_id
+FROM stg_tbl AS s
+JOIN Student AS st
+ON s.student = st.student_name
+JOIN Teacher AS t
+ON s.teacher = t.teacher_name
+JOIN Class AS c
+ON s.class = c.class_name;
+
 
 
 ### Further reading
@@ -326,3 +436,30 @@ Aggregates [group by, having](https://analytics4all.org/2016/04/26/sql-aggregate
 
 
 
+# COURSE SUMMARY
+
+While this was a foundations course, we did cover a lot of information. Looking back, if I had to redo this course, cutting some material from it, what would survive the cut?
+
+1) Business Partner focused (customer-centric): I can't express this enough. This job is not simply about how good you are technically. At this level, we all assume you have technical chops. Now it is time to focus on being a member of the business facing environment. This can be intimidating, and it takes practice, but it is something you will need to learn to do well in this position.
+
+2) What is the difference between model and schema? Come on, I made sure I highlighted this throughout the course. Models are abstract - can be used anywhere, a schema is designed with a specific RDBMS in mind.
+
+3) Learn the 3NF, how to apply it, and when not to. I assure you, it becomes almost second nature after a while.
+
+4) Speaking of 3NF, learn to let the needs of the database drive the design. 3NF, and other modeling techniques, are guidelines not mandates. Sometimes the database needs suggest adjusting your design away from guidelines.
+
+5) Learn to build and read ERDs. Often that is the only piece of information you have to go on when taking over a database project.
+
+6) Be creative. Difficult problems require creative solutions. As a data architect, you will not easily find the answer to all your problems in a textbook. You have the technical know-ho, and if you let your creativity flow, you can build great solutions.
+
+By now, you should be able to:
+
+Explain the characteristics of good data architecture
+Take business and functional requirements and turn them into preliminary (non-technical) database design descriptions
+Describe different types of storage systems and formats
+Develop the conceptual, logical, and physical data model utilizing data integrity, cardinality principles
+Design a normalized relational model and its underlying schema in 3NF, given a set of business requirements.
+Create a structural diagram (ERD) for database design using visual tools such as Lucidchart
+Translate a simple ERD into a physical database schema using SQL DDL commands
+Create and populate a database/data repository platform, such as MySQL, PostgreSQL
+Develop and run SQL queries with CRUD operations against the database to test the data model and the data it maintains
