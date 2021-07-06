@@ -1,5 +1,26 @@
 # SOLUTION
 
+
+## Project Steps
+The project was broken down into four major steps. The project was designed to mimic the flow of a real-world database design project.
+
+### Step 1: 
+This step was all about information gathering and putting it down on paper. In this step, I created business and technical proposal documents required to begin the database design process.
+
+### Step 2: 
+
+I gave a walk through for the design process. I used Lucidchart to create database ER diagrams that were used to build an actual database.
+
+### Step 3: 
+
+It was time to start coding. I used SQL DDL commands to create a database. I then populated the database with the HR dataset. From there, I demonstrated the effectiveness of my database by completing some SQL CRUD exercises.
+
+### Step 4: 
+
+In the last optional step, I used some ideas on how to make my completed project stand out from the rest - adding items like views, stored procedures, and security.
+
+
+
 ## STEP 1
 
 ## STEP 2 -  DATABASE DESIGN
@@ -27,6 +48,7 @@ Using Lucidchart, I created 3 entity relationship diagrams (ERDs) to show how I 
 
 ![image](https://user-images.githubusercontent.com/68102477/124380839-69d26000-dd02-11eb-998b-9293a22ae648.png)
 
+## STEP 3 - Create Database and populate data
 
 USE dbtest;
 
@@ -283,4 +305,4 @@ WHERE e.emp_nm = 'Toni Lembeck'
 ### Create a view that returns all employee attributes; results should resemble initial Excel file
 
 
-
+## Step 4
