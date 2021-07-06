@@ -6,7 +6,7 @@ The project was broken down into four major steps. The project was designed to m
 
 ## STEP 1: 
 
-This step was all about information gathering and putting it down on paper. In this step, I created business and technical proposal documents required to begin the database design process. [HR-Database-Solution]()
+This step was all about information gathering and putting it down on paper. In this step, I created business and technical proposal documents required to begin the database design process. [HR-Database-Solution](https://github.com/arpit-mittal-ds/Data-Architect-Udacity-Nanodegree/blob/main/2%20-%20Data%20Architecture%20Foundations/Project-Designing-an-HR-Database/Solution/HR-Database-Solution.pptx)
 
 
 ## STEP 2 -  DATABASE DESIGN
