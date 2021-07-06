@@ -26,13 +26,14 @@ This step was all about information gathering and putting it down on paper. In t
 
 **The logical model is the next level of refinement from the conceptual ERD. At this point, I have normalized the data to the 3NF. Attributes are also be listed now in the ERD. I am still using human-friendly entity and attribute names in the logical model, and while relationship lines are present, Crow's foot notation is still not mentioned.**
 
-![image](https://user-images.githubusercontent.com/68102477/124380485-1e1eb700-dd00-11eb-9391-a9b8158c5bcc.png)
+![image](https://user-images.githubusercontent.com/68102477/124600158-c754e100-dea9-11eb-8f33-00cf41de7d96.png)
+
 
 ## PHYSICAL DATA MODEL
 
 **The physical model is what will be built in the database. Each entity represents a database table, complete with column names and data types.**
 
-![image](https://user-images.githubusercontent.com/68102477/124380839-69d26000-dd02-11eb-998b-9293a22ae648.png)
+![image](https://user-images.githubusercontent.com/68102477/124599958-95437f00-dea9-11eb-9025-effd701e51a4.png)
 
 ## STEP 3 - Create Database and populate data
 
@@ -286,6 +287,16 @@ JOIN employee	m	ON	h.mngr_id 	= m.emp_id
 WHERE e.emp_nm = 'Toni Lembeck'
 
 ### Question 7: Describe how you would apply table security to restrict access to employee salaries using an SQL server.
+
+
+When an authorized user gets database access, further security can be implemented at the object level by allowing or denying access to a particular object. This can be done using various role-based authentication measures and using GRANT and REVOKE commands.
+I will execute following steps to apply table security to restrict access to employee salaries using an SQL server:
+1. I will create a separate table for storing Salary Data of Employees: employee_salary.
+2. I will create different roles such as "owner" , "user", "usersensitive" etc.
+3. I will GRANT access to one such  role- "usersensitive" to read the sensitive salary data in "employee_salary" table.
+4. Lastly I will create users and assign them to “usersensitive” role to access salary table.
+
+https://docs.wavefront.com/users_roles.html
 
 
 ## Step 4
