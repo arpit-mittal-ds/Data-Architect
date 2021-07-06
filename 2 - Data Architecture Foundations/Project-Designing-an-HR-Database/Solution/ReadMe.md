@@ -11,9 +11,9 @@ This step was all about information gathering and putting it down on paper. In t
 
 ## STEP 2 -  DATABASE DESIGN
 
-**Using the dataset provided, along with the requirements gathered in step one, I designed the database in 3NF.
+**Using the dataset provided, along with the requirements gathered in step one, I designed the database in 3NF.**
 
-Using Lucidchart, I created 3 entity relationship diagrams (ERDs) to show how I developed the final design for the provided data.**
+**Using Lucidchart, I created 3 entity relationship diagrams (ERDs) to show how I developed the final design for the provided data.**
 
 
 ## CONCEPTUAL DATA MODEL
