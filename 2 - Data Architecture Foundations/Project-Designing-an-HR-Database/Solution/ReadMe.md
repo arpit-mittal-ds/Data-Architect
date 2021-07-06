@@ -52,17 +52,26 @@ Using Lucidchart, I created 3 entity relationship diagrams (ERDs) to show how I 
 
 USE dbtest;
 
-DROP TABLE IF EXISTS employee;
 
-DROP TABLE IF EXISTS job;
+**-- Dropping tables if they exist.**
 
-DROP TABLE IF EXISTS employee_salary;
+DROP TABLE IF EXISTS  employee CASCADE;
 
-DROP TABLE IF EXISTS employee;
+DROP TABLE IF EXISTS job CASCADE;
 
-DROP TABLE IF EXISTS employee;
+DROP TABLE IF EXISTS employee_salary CASCADE;
 
-### CREATE TABLE statements
+DROP TABLE IF EXISTS employee_job_hist CASCADE;
+
+DROP TABLE IF EXISTS department CASCADE;
+
+DROP TABLE IF EXISTS state CASCADE;
+
+DROP TABLE IF EXISTS city CASCADE;
+
+DROP TABLE IF EXISTS office CASCADE;
+
+**--Creating tables according to the Physical Data Model**
 
 -- create table EMPLOYEE
 CREATE TABLE IF NOT EXISTS employee(
@@ -72,16 +81,14 @@ email	varchar(50),
 edn_lvl	varchar(50)
 );
 
-**-- create table JOB**
-
-CREATE TABLE job(
+-- create table JOB
+CREATE TABLE IF NOT EXISTS job(
 job_id	serial primary key,
 title	varchar(50)
 );
 
-**-- create table EMPLOYEE_SALARY**
-
-CREATE TABLE employee_salary(
+-- create table EMPLOYEE_SALARY
+CREATE TABLE IF NOT EXISTS employee_salary(
 emp_id 		varchar(50),
 job_id		int,
 salary 		float8,
@@ -90,23 +97,20 @@ primary key (emp_id,job_id)
 
 
 -- create table DEPARTMENT
-
-CREATE TABLE department(
+CREATE TABLE IF NOT EXISTS department(
 dept_id	serial	primary key,
 name	varchar(50)
 );
 
 
 -- create table STATE
-
-CREATE TABLE state(
+CREATE TABLE IF NOT EXISTS state(
 state_id	serial primary key,
 name		varchar(50)
 );
 
 
 -- create table CITY
-
 CREATE TABLE IF NOT EXISTS city(
 city_id 	serial primary key,
 state_id	int,
@@ -124,7 +128,6 @@ addr 		varchar(50)
 
 
 -- create table EMPLOYEE_JOB_HIST
-
 CREATE TABLE IF NOT EXISTS employee_job_hist(
 emp_id		varchar(50),
 mngr_id		varchar(50),
@@ -137,38 +140,28 @@ end_dt		date,
 PRIMARY KEY (emp_id, job_id)
 );
 
-### --Foreign keys cannot be created on tables that do not exist yet, so it may be easier to create all tables in the database, then to go back and run modify statements on the tables to create foreign key constraints.
+**--Foreign keys cannot be created on tables that do not exist yet, so may be it is easier to create all tables in the database, then to go back and run modify statements on the tables to create foreign key constraints.**
+
+**-- Adding Foreign Keys to the created tables**
 
 
-ALTER TABLE employee_salary 
-ADD CONSTRAINT salary_emp_fk 
-FOREIGN KEY (emp_id) 
-REFERENCES employee (emp_id);
+ALTER TABLE employee_salary   ADD CONSTRAINT salary_emp_fk  FOREIGN KEY (emp_id)  	REFERENCES employee (emp_id);
 
-ALTER TABLE salary 
-ADD CONSTRAINT salary_job_fk 
-FOREIGN KEY (job_id) 
-REFERENCES job (job_id);
+ALTER TABLE employee_salary	  ADD CONSTRAINT salary_job_fk 	FOREIGN KEY (job_id) 	REFERENCES job (job_id);
 
+ALTER TABLE city 			        ADD CONSTRAINT city_state_fk 	FOREIGN KEY (state_id) 	REFERENCES state (state_id);
 
-ALTER TABLE city 
-ADD CONSTRAINT city_state_fk 
-FOREIGN KEY (state_id) 
-REFERENCES state (state_id);
+ALTER TABLE office 			      ADD CONSTRAINT office_city_fk FOREIGN KEY (city_id) 	REFERENCES city (city_id);
 
-ALTER TABLE office 
-ADD CONSTRAINT office_city_fk FOREIGN KEY (city_id) 
-REFERENCES city (city_id);
+ALTER TABLE employee_job_hist ADD CONSTRAINT hist_dept_fk 	FOREIGN KEY (dept_id) 	REFERENCES department (dept_id);
 
-ALTER TABLE employee_job_hist ADD CONSTRAINT hist_dept_fk FOREIGN KEY (dept_id) REFERENCES department (dept_id);
+ALTER TABLE employee_job_hist ADD CONSTRAINT hist_emp_fk 	FOREIGN KEY (emp_id) 	REFERENCES employee (emp_id);
 
-ALTER TABLE employee_job_hist ADD CONSTRAINT hist_emp_fk FOREIGN KEY (emp_id) REFERENCES employee (emp_id);
+ALTER TABLE employee_job_hist ADD CONSTRAINT hist_mngr_fk 	FOREIGN KEY (emp_id) 	REFERENCES employee (emp_id);
 
-ALTER TABLE employee_job_hist ADD CONSTRAINT hist_mngr_fk FOREIGN KEY (emp_id) REFERENCES employee (emp_id);
+ALTER TABLE employee_job_hist ADD CONSTRAINT hist_job_fk 	FOREIGN KEY (job_id) 	REFERENCES job (job_id);
 
-ALTER TABLE employee_job_hist ADD CONSTRAINT hist_job_fk FOREIGN KEY (job_id) REFERENCES job (job_id);
-
-ALTER TABLE employee_job_hist ADD CONSTRAINT hist_offc_fk FOREIGN KEY (offc_id) REFERENCES office (offc_id);
+ALTER TABLE employee_job_hist ADD CONSTRAINT hist_offc_fk 	FOREIGN KEY (offc_id) 	REFERENCES office (offc_id);
 
 
 ### Loading data into ODS tables
@@ -177,17 +170,13 @@ insert into employee(
 select distinct emp_id, emp_nm, email, education_lvl
 from proj_stg
 );
-
-
 select * from employee;
 
 
 insert into job(title)(
 select distinct job_title from proj_stg
 );
-
-select count(*) from job;
-
+select * from job;
 
 
 INSERT INTO employee_salary(
@@ -196,14 +185,12 @@ from proj_stg s
 join job j
 on s.job_title = j.title
 );
-
 select * from employee_salary;
 
 
 insert into department (name)(
 select distinct department_nm from proj_stg
 );
-
 select * from department;
 
 
@@ -211,7 +198,6 @@ select * from department;
 insert into state (name)(
 select distinct(state) from proj_stg
 );
-
 select * from state;
 
 
@@ -221,7 +207,6 @@ from state st
 join proj_stg ps
 on ps.state = st.name
 );
-
 select * from city;
 
 
@@ -232,7 +217,6 @@ from city c
 join proj_stg s
 on s.city = c.name
 );
-
 select * from office;
 
 
@@ -245,6 +229,7 @@ join office o 		ON s.address 	= o.addr
 join employee e 	ON s.manager 	= e.emp_nm
 );
 
+select * from employee_job_hist;
 
 
 -- ?? joining with strings from staging tables
@@ -264,22 +249,22 @@ JOIN job		j 	ON	h.job_id 	= j.job_id
 ### -- Question 2: Insert Web Programmer as a new job title
 
 INSERT INTO job (title) values('Web Programmer');
-
 SELECT * FROM job;
 
 ### --Question 3: Correct the job title from web programmer to web developer
 
-UPDATE JOB SET title = 'web developer' WHERE title ='web programmer';
-
+UPDATE JOB SET title = 'Web Developer' WHERE title ='Web Programmer';
 SELECT * FROM job;
 
 ### -- Question 4: Delete the job title Web Developer from the database
 
-DELETE FROM job where title = 'web developer';
+DELETE FROM job where title = 'Web Developer';
 
 SELECT * FROM job;
 
+
 ### -- Question 5: How many employees are in each department?
+
 SELECT d.name as "Department Name", COUNT(*) as "Number of Employees"
 FROM employee_job_hist h
 JOIN employee	e	ON	h.emp_id 	= e.emp_id
@@ -290,8 +275,7 @@ GROUP BY d.name;
 
 ### -- Question 6: Write a query that returns current and past jobs (include employee name, job title, department, manager name, start and end date for position) for employee Toni Lembeck.
 
-SELECT e.emp_nm as "employee name", j.title as "job title", d.name as "department", m.emp_nm as "manager name", 
-h.start_dt as "start date", h.end_dt as"end date"
+SELECT e.emp_nm as "employee name", j.title as "job title", d.name as "department", m.emp_nm as "manager name", h.start_dt as "start date", h.end_dt as"end date"
 FROM employee_job_hist h
 JOIN employee	e	ON	h.emp_id 	= e.emp_id
 JOIN department d 	ON	h.dept_id	= d.dept_id
@@ -300,9 +284,6 @@ JOIN employee	m	ON	h.mngr_id 	= m.emp_id
 WHERE e.emp_nm = 'Toni Lembeck'
 
 ### Question 7: Describe how you would apply table security to restrict access to employee salaries using an SQL server.
-
-
-### Create a view that returns all employee attributes; results should resemble initial Excel file
 
 
 ## Step 4
