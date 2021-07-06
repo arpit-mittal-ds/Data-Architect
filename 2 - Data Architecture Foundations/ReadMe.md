@@ -11,6 +11,6 @@ Learnt to take business and functional requirements and turn them into prelimina
 
 **Created a structural diagram (ERD) for database design using visual tools such as Lucidchart**
 
-**Translated a simple ERD into a physical database schema using SQL DDL commands**
+**Translated an ERD into a physical database schema using SQL DDL commands**
 
-**Develop and ran SQL queries with CRUD operations against the database to test the data model and the data it maintains**
+**Developed and ran SQL queries with CRUD operations against the database to test the data model and the data it maintains**
