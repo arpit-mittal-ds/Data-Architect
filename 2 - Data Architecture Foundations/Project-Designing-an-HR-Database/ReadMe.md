@@ -44,17 +44,92 @@ The HR dataset I worked with is an Excel workbook consisting of 206 records, wit
 ### IT Department Best Practices
 The IT Department has certain Best Practices policies for databases that I had followed, are detailed in the Best Practices document.
 
-### Project Steps
-The project was broken down into four major steps. The project was designed to mimic the flow of a real-world database design project.
 
-#### Step 1: 
-This step was all about information gathering and putting it down on paper. In this step, I created business and technical proposal documents required to begin the database design process.
+## PROJECT SPECIFICATION - Designing an HR database
 
-#### Step 2: 
-I gave a walk through for the design process. I used Lucidchart to create database diagrams that were used to build an actual database.
+### CRITERIA
 
-#### Step 3: 
-It was time to start coding. I used SQL DDL commands to create a database. I then populated the database with the HR dataset. From there, I demonstrated the effectiveness of my database by completing some SQL CRUD exercises.
+Gather business requirements for a new database request and create a non-technical proposal document.
 
-#### Step 4: 
-In the last optional step, I used some ideas on how to make my completed project stand out from the rest - adding items like views, stored procedures, and security.
+### MEETS SPECIFICATIONS
+
+Complete “Data Architect Business Requirement ” section in step 1 in the starter template
+
+Identify the business purpose for creating the database
+
+Outline data to be stored
+
+List estimate size of the database and growth rate
+
+Identify who will own/manage data
+
+Identify who will be able to access the data
+
+Identify sensitive/restricted data
+
+Outline data retention and backup requirements
+
+Translate a non-technical proposal into a technical proposal document.
+
+
+Complete “Data Architect Technical Requirement ” section in step 1 in the starter template
+Provide at least 2 justifications for creating a database
+Define data elements to be stored
+List database objects to be created (Students may wish to return to database objects section after completion of logical ERD)
+Define proposed data ingestion method
+Define who has data ownership
+Define user access recommendations
+List at least 2 examples of considerations taken to ensure data scalability and flexibility and provide an explanation
+Defined proposed storage method and provided an explanation
+Identify data retention requirements
+Propose a backup schedule and provide an explanation
+Relational Database Design
+
+CRITERIA
+MEETS SPECIFICATIONS
+Develop a conceptual ERD using Lucidchart.
+
+Complete the “ERD conceptual” section in step 2 in the starter template
+Create at least 3 objects and show their relationships through connection lines
+This should be a first step towards 3NF, so chose attributes that will likely become future tables
+Follow the visual requirements listed in the instructions
+Use Lucidchart's built-in template for DBMS ED Diagram UML
+No attributes should be named and Crows foot notation is not required
+Consider an entity for any secure / restricted data
+Develop a logical ERD using Lucidchart.
+
+Complete the “ERD logical” section in step 2 in the starter template
+Normalize the data to the 3NF
+Create an entity for each table
+List Attributes
+Add relationship lines connecting entities
+Follow the visual requirements listed in the instructions
+Use Lucidchart's built-in template for DBMS ED Diagram UML
+Entity and attribute names can still be plain English
+Develop a physical ERD using Lucidchart
+
+Complete the “ERD physical” section in step 2 in the starter template
+Tables and attributes should be given database friendly names now (think underscore or camel case)
+Attribute data types need to be defined
+Primary keys should be bold
+Relationship lines need to line up with PK / FK pairings
+Cardinality is required on this ERD
+Follow the visual requirements listed in the instructions
+Create A Physical Database
+
+CRITERIA
+MEETS SPECIFICATIONS
+Develop DDL code to create a database in a SQL environment.
+
+Complete the “DDL” section in step 3 in the starter template
+Create scripts (.sql file) to build tables with attributes as defined in the physical ERD
+Primary and foreign keys must be included in the code
+Populate the database and demonstrate a working database by completing CRUD commands.
+
+Complete the “CRUD” section in step 3 in the starter template
+Screen shots should be taken of all SQL commands showing code and results
+Following commands like update/delete/insert, run a select * on the table affected to show results
+Suggestions to Make Your Project Stand Out!
+Create a view that returns all employee attributes; results should resemble the initial Excel file.
+Create a stored procedure with parameters that return current and past jobs (include employee name, job title, department, manager name, start and end date for the position) when given an employee name.
+Implement user security on the restricted salary attribute.
