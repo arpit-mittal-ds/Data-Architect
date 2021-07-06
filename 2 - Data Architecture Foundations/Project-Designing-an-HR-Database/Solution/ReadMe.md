@@ -4,24 +4,10 @@
 ## Project Steps
 The project was broken down into four major steps. The project was designed to mimic the flow of a real-world database design project.
 
-### Step 1: 
-This step was all about information gathering and putting it down on paper. In this step, I created business and technical proposal documents required to begin the database design process.
+## STEP 1: 
 
-### Step 2: 
+This step was all about information gathering and putting it down on paper. In this step, I created business and technical proposal documents required to begin the database design process. [HR-Database-Solution]()
 
-I gave a walk through for the design process. I used Lucidchart to create database ER diagrams that were used to build an actual database.
-
-### Step 3: 
-
-It was time to start coding. I used SQL DDL commands to create a database. I then populated the database with the HR dataset. From there, I demonstrated the effectiveness of my database by completing some SQL CRUD exercises.
-
-### Step 4: 
-
-In the last optional step, I used some ideas on how to make my completed project stand out from the rest - adding items like views, stored procedures, and security.
-
-
-
-## STEP 1
 
 ## STEP 2 -  DATABASE DESIGN
 
@@ -74,6 +60,7 @@ DROP TABLE IF EXISTS office CASCADE;
 **--Creating tables according to the Physical Data Model**
 
 -- create table EMPLOYEE
+
 CREATE TABLE IF NOT EXISTS employee(
 emp_id	varchar(50) primary key,
 emp_nm	varchar(50),
@@ -82,12 +69,14 @@ edn_lvl	varchar(50)
 );
 
 -- create table JOB
+
 CREATE TABLE IF NOT EXISTS job(
 job_id	serial primary key,
 title	varchar(50)
 );
 
 -- create table EMPLOYEE_SALARY
+
 CREATE TABLE IF NOT EXISTS employee_salary(
 emp_id 		varchar(50),
 job_id		int,
@@ -97,6 +86,7 @@ primary key (emp_id,job_id)
 
 
 -- create table DEPARTMENT
+
 CREATE TABLE IF NOT EXISTS department(
 dept_id	serial	primary key,
 name	varchar(50)
@@ -104,6 +94,7 @@ name	varchar(50)
 
 
 -- create table STATE
+
 CREATE TABLE IF NOT EXISTS state(
 state_id	serial primary key,
 name		varchar(50)
@@ -111,6 +102,7 @@ name		varchar(50)
 
 
 -- create table CITY
+
 CREATE TABLE IF NOT EXISTS city(
 city_id 	serial primary key,
 state_id	int,
@@ -119,6 +111,7 @@ name 		varchar(50)
 
 
 -- create table OFFICE
+
 CREATE TABLE IF NOT EXISTS office(
 offc_id 	serial primary key,
 city_id		int,
@@ -128,6 +121,7 @@ addr 		varchar(50)
 
 
 -- create table EMPLOYEE_JOB_HIST
+
 CREATE TABLE IF NOT EXISTS employee_job_hist(
 emp_id		varchar(50),
 mngr_id		varchar(50),
@@ -170,12 +164,14 @@ insert into employee(
 select distinct emp_id, emp_nm, email, education_lvl
 from proj_stg
 );
+
 select * from employee;
 
 
 insert into job(title)(
 select distinct job_title from proj_stg
 );
+
 select * from job;
 
 
@@ -185,12 +181,14 @@ from proj_stg s
 join job j
 on s.job_title = j.title
 );
+
 select * from employee_salary;
 
 
 insert into department (name)(
 select distinct department_nm from proj_stg
 );
+
 select * from department;
 
 
@@ -198,6 +196,7 @@ select * from department;
 insert into state (name)(
 select distinct(state) from proj_stg
 );
+
 select * from state;
 
 
@@ -207,6 +206,7 @@ from state st
 join proj_stg ps
 on ps.state = st.name
 );
+
 select * from city;
 
 
@@ -217,6 +217,7 @@ from city c
 join proj_stg s
 on s.city = c.name
 );
+
 select * from office;
 
 
@@ -233,7 +234,9 @@ select * from employee_job_hist;
 
 
 -- ?? joining with strings from staging tables
+
 -- ?? is ODS used for Big Data....if yes then wouldn't loading tables sequentially with FK Contraints be slow to populate the ODS ??
+
 -- ?? why alter table commands to add foreign key constraints need to be executed separately....what is the downside in adding them to create table statements.
 
 
@@ -259,7 +262,6 @@ SELECT * FROM job;
 ### -- Question 4: Delete the job title Web Developer from the database
 
 DELETE FROM job where title = 'Web Developer';
-
 SELECT * FROM job;
 
 
