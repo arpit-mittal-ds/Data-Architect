@@ -208,3 +208,57 @@ Login into Snowflake. Review the ERD provided below. This exercise assumes you c
 ![image](https://user-images.githubusercontent.com/68102477/121681370-13f10a80-cafe-11eb-9324-ad6762768d14.png)
 
 ## Cleanse Data Anomalies
+
+**Examples of Anomalies of Nulls**
+
+A column with possible values - High School, BS, MS, Ph.D., etc. If there is no value entered, we can have a logical null.
+
+Or a value with an empty space. Note: database null is different from an empty space.
+
+Or code values that map 0 for null, 1 for High School, 2 for BS, 3 for MS, 4 for Ph.D.
+
+**Types of Conversions**
+
+Date conversions are common when transferring data back and forth from different countries
+
+Missing values can be replaced with default values
+
+Date of births, Social Security Numbers, Credit card numbers, etc., needs to be validated against a range of appropriate values
+
+Hospitals and insurance companies needing to reconcile hospital bills and insurance payments. This is because of not mapping properly during the conversion process.
+Sometimes, data is misaligned into wrong columns when certain delimiters, such as commas, quotes, etc., are used in CSV files.
+
+A dataset in an ODS becomes out of synchronization, so would need to be reprocessed after correcting those values.
+
+**Common Transformations**
+
+Street names can be written Ave or Avenue, Blvd or Boulevard. But, postal departments have a standard convention to follow for the automatic sorting of mail.
+
+Data such as date formats that are different across the world may have to be converted based on the ODS standards.
+
+Sometimes, new columns might have to be created to derive aggregations, such as averages, summaries, and statistical values.
+
+Sensitive information, such as Passwords, credit card numbers, HIPAA (Health Insurance Portability Accountability Act), and PII (Personal Identifiable Information) need to be encoded or encrypted in the ODS. When presenting to customers or users, the same has to be decrypted or masked.
+
+Documents, such as contracts or letters, have to be reformatted when sending to the printers or users.
+
+RESTful APIs (Representation Stateful Transfer) require conversion into a different data structure.
+
+## PII with Masking
+
+![image](https://user-images.githubusercontent.com/68102477/124912082-e2059200-e030-11eb-9b36-e95b1c91915a.png)
+
+[Masking](https://community.snowflake.com/s/article/How-to-Secure-PII-Data-with-Data-Masking)
+
+
+### Bugs
+
+Bugs in a popular e-commerce system can impact 6,500 orders every minute valued at approximately $300,000. If ODS has a bug in a transformation rule that maps the wrong product code from the stock inventory system to the product code of online orders, as a result, the wrong product is shipped. This transaction triggers a notification to replenish the wrong product.
+
+Exceptions like these are nightmares to any company.
+
+
+
+
+
+
