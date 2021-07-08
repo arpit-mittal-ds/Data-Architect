@@ -168,13 +168,33 @@ Administrators need to know about the status of processes in the ODS production 
 
 ## ETL data from staging schema into ODS schema
 
-### Transforming Staging data into multiple columns for ODS
+![image](https://user-images.githubusercontent.com/68102477/124905599-8be12080-e029-11eb-9387-5e032369577e.png)
 
-### Exercise:
+Column mapping
+A catalog provides a way to manage column mappings of staging database tables to ODS tables. Without a catalog, this process would be unmanageable. These catalogs are called Metadata tables.
+Metadata tables can be used to record the mapping of the source and target columns. They can also handle converting from one data type to another data type
+Cleansing
+There are two major strategies for cleansing data
+
+Popular ETL tools such as Informatica, Pegasys, and Ab Initio process one record at a time to clean at the rate of few rows at a time.
+The other strategy is to load the file into a table first and then process using SQL statements and stored procedures. RDBMS engines are designed and optimized to process set operations most efficiently, the cleansing process can be done at a higher throughput.
+Loading and Storage
+There are two major techniques for storing data
+
+The first technique is inserting one row at a time by the ETL tool
+
+Popular RDBMS products are highly optimized for massive writes for the purpose of OLTP systems that require millisecond performance. Tens of thousands of records per minute can be written into row-based storage systems. This performance is a result of the way the data is stored on the disk using row-based storage, meaning the entire row is saved together on the disk physically. Oracle and SQL server is also used for DSS, Decision Support Systems, whose purpose is to optimize for faster reads in a multi-user environment.
+The second one is to load files into the database and process them with stored procedures.
+
+This strategy uses columnar storage for OLAP to get maximum throughput for loading the data from files. Large search engines use columnar based storage. Some commercial products are built, using this type of storage, where all column values are saved together on the disk. This technique enables faster performance for reads of OLAP systems. Millions of records per minute can be loaded into columnar storage systems.
+
+## Transforming Staging data into multiple columns for ODS
+
 
 In ODS schema, **create a new table**
 
 We need to transform a 1-column structure into a 5-column structure
+
 Note: This assumes there is a table called UDACITYPROJECT.STAGING.UserDetails that exists and is populated with data.
 
 create table UserDetails (email string, firstname string , lastname string , Phone number, userID number);
@@ -182,11 +202,6 @@ create table UserDetails (email string, firstname string , lastname string , Pho
 To insert JSON data into this table correctly aligned 
 
 insert into UserDetails select usersjson:emailAddress, usersjson:firstname, usersjson:lastname usersjson:Phone, usersjson:userID from UDACITYPROJECT.STAGING.UserDetails.
-
-Here is our new Userdetails table created in the ODS schema with table data extracted from the JSON format.
-
-<insert image>
-	
 
 Login into Snowflake. Review the ERD provided below. This exercise assumes you completed the Staging Area Exercise: Loading small data files where you successfully uploaded the 9 CSV files(Cleaning Testing Exercise Files). For this exercise, you will create relationships in the ODS table with respect to the diagram provided. If needed, those files (called Cleaning_Testing_Files-1) are also located in the resources section of this page.
 
