@@ -129,4 +129,87 @@ Loading data into the table
 
 Now depending on what format the file is in you can select that format.
 
+### Databases and Schemas In Snowflake
+
+Click + Create to create a new Database
+
+Enter Name and click 'Finish`
+
+Click Schemas on the tab at the top
+
+Click + Create to create a new schema
+
+Enter Name and click Finish
+
+Use this process to create Staging, ODS, and DWH
+
+ODS is an (O)operational (D)ata (S)tore
+
+(D)ata (W)are(H)ouse
+
+(advanced users) Not shown in the Demo video but you can try this using the command line
+
+Under worksheets
+
+Select a worksheet you would like to run the query
+
+Type create schema schema_name and click run.
+
+You can see the success message here in results.
+
+We created this schema in ‘ExampleDB’ database, here in the explorer refresh it first and click on the database.
+
+You can find the new schema here, and select staging as your schema for any tables you want in here.
+
+You can view those tables under Staging in the left explorer.
+
+
+### Creating a table in a database
+
+Select the database you want to create a table in and click create.
+Use UserSales for the table name
+Click add to add columns. (in this demo, userid, zipcide, and sales)
+Give your column a name and datatype, null or not null and add more as you like
+Click finish.
+
+You can click into the table you created and see the columns and their type. (Snowflake takes all types of numbers as NUMBERS and strings as VARCHAR. )
+
+### Loading data into the table
+
+Snowflake will use a backend system called a Warehouse to actually execute the load files
+
+To load data into the table,
+click on load table
+select the warehouse in the pulldown menu and click Next
+(Source Files tab) select files to upload the file from your local, select the file and click next.
+
+### Setting up file formats for data loading
+
+Now depending on what format the file is in you can select that format.
+You will need to create one initially.
+To create one, click + give it a name, select the format type from the dropdown and check all the other options as shown and then click finish.
+Click next, select the loading options. -You can select stop when an error occurs select this one or continue loading valid data even if an error occurs select the last option and then click finish.
+Notice 27 rows loaded without any error.
+Click OK and go to the database, you can see that 28 rows have been loaded into the table and its size here.
+
+### Worksheets
+
+Snowflake also provides an interactive command line for SQL for advanced users. Feel free to explore this. This is found under Worksheets on the toolbar.
+
+
+When you frequently run the same query, you can also save it under a Worksheets.
+
+Here is a sample challenge for you to try:
+
+Go to worksheets, refresh the explorer.
+Select the database and schema we created and the table
+You can even create your own tables as you would in standard SQL
+To see what we have in the table, write a standard SQL query.
+select * from table_name;
+You can rename the worksheet by double-clicking on it and give it a name.
+
+### Loading data with the Snowflake Client
+Now that you know how to upload data in Snowflake using the Snowflake UI, let's see how to do the same job using the SnowSQL Client.
+
+Note: The data file userdetails.json for going through this demo can be downloaded from the bottom of the page.
 
