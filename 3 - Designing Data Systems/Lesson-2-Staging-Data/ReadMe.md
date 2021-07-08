@@ -211,5 +211,23 @@ You can rename the worksheet by double-clicking on it and give it a name.
 ### Loading data with the Snowflake Client
 Now that you know how to upload data in Snowflake using the Snowflake UI, let's see how to do the same job using the SnowSQL Client.
 
-Note: The data file userdetails.json for going through this demo can be downloaded from the bottom of the page.
+1. Open the SnowSQL client that you installed in your local machine and log in to your account. You should see the following:
+
+2. Run the "show databases"; command to get information about already existing databases in your Snowflake account.
+
+3. Let's use theUdacityExercise database for this demo. (Note: If you do not have the UdacityExercise database, you can create it as shown in the previous concepts.
+
+4. Since we will be uploading a JSON file, we need to create a JSON file format.
+
+5. Next step is to create the Staging Area, which is a temporary holding area for data.
+
+6. Creating Tables, Uploading files, and Copying data into the table - Create a table with one column of type variant.
+
+7. upload data from your local computer to the Staging Area
+
+8. Finally copy the data you just uploaded to the staging area into the table
+9. 
+10. 
+11. 
+
 
