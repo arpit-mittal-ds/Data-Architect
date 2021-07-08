@@ -266,7 +266,9 @@ The above "PUT" command uploads (i.e. stages) data from my local directory (/Use
 
 
 ### Loading Large Data Files in Snowflake
-To upload large files (>150 MB), we will use an optional parameter called Parallel and set its value to an ''. This parameter specified the number of threads used for uploading files. Setting <integer> to 1 means no parallelism. The max value of <integer> is 99. Snowflake handles file uploading as follows:
+To upload large files (>150 MB), we will use an optional parameter called Parallel and set its value to an ''. This parameter specified the number of threads used for uploading files. 
+
+Setting integer to 1 means no parallelism. The max value of integer is 99. Snowflake handles file uploading as follows:
 
 Small files (< 64 MB) are uploaded as individual files.
                  
@@ -281,3 +283,82 @@ eg. COPY INTO "UDACITYEXERCISE"."STAGING"."FLOORS" FROM @MY_CSV_STAGE FILE_FORMA
 **Once we are done uploading the data we can view the "FLOORS" table by executing**
 
 SELECT * FROM UDACITYEXERCISE.STAGING.FLOORS;
+
+## Create a Schedule - Scheduling Data Ingestion
+
+![image](https://user-images.githubusercontent.com/68102477/124898113-3ce3bd00-e022-11eb-8dca-613a3607646e.png)
+
+All source files have to be scheduled to ingest into the staging database.
+
+**When can it happen?**
+
+**Nighttime is a common time when demand on primary systems is less**
+
+Legacy system data
+
+Large enterprise data sets
+
+Outside vendors and suppliers data
+
+Any data that needs longer extraction time for any reason
+
+**Daytime is common when data is related to day-to-day operations**
+
+Security systems
+
+Messaging
+
+Human resources data
+
+Inventory data
+
+**Real-time is needed for systems that need an instant response**
+
+Banking
+
+Trading systems
+
+**For example**
+
+Wall street systems have the requirement of processing market data and trades in realtime
+
+Inventory replenishing can be processed during the intraday
+
+Bank office systems for compliance and regulation or reconciliation checks can be processed end of the day or overnight.
+
+
+## Create a Metadata Schema
+
+ It is a table of tables, where the relationships between the tables are defined
+ 
+![image](https://user-images.githubusercontent.com/68102477/124898866-ec209400-e022-11eb-8418-347c827d5e1c.png)
+
+
+A metadatabase schema is a higher-level schema made up of all of the other schemas of the staging area. The major components of the metadata included:
+
+ 
+Source
+
+Files
+
+Fields
+
+Business rules
+
+Because the metadata schema is in table format itself and stored in a database, changes can be managed easily by the production operations team via a central webpage
+
+Safeguards provided by MetaDatabase Schema
+
+Each of the components mentioned above has its own table in the metadata schema, which provides safeguards
+
+Temporary data source changes can ensure begin and end at the correct dates
+
+Version control of changes allows for easy and accurate monitoring or failure analysis
+
+Easy and fast access to check or change data names, descriptions, scheduling for any and all sources
+
+
+![image](https://user-images.githubusercontent.com/68102477/124898915-f6db2900-e022-11eb-955e-cbcc2f0458a7.png)
+
+
+
