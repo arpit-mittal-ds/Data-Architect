@@ -360,6 +360,58 @@ Easy and fast access to check or change data names, descriptions, scheduling for
 ![image](https://user-images.githubusercontent.com/68102477/124899495-884a9b00-e023-11eb-9eeb-940dce002f5c.png)
 
 
+## Ingestion Techniques
+
+**There are 3 main ways of loading data**
+
+**Manual and ad-hoc as needed** - Especially used during development and when there are anomalies
+
+**Bulk loading** - Compression reduces the size of the data, which means faster. Since the database server doesn’t have to write to the transaction log, which means this is a much faster technique than manual
+
+![image](https://user-images.githubusercontent.com/68102477/124900400-5d147b80-e024-11eb-80e6-82e36729cfa4.png)
+
+**Continuous loading throughout 24/7/365** - This is transaction data that must be updated in milliseconds
+
+**Drowning in Data**
+
+Humans generate 2.5 quintillion bytes of data every single day. Experts predict by 2025, we will reach over 400 exabytes.
+
+This is important because the companies that deal with data have to handle the increasing data demands. 
+
+As a Data Architect, you must manage the data before it becomes unmanageable. Technical Strategies that can help:
+
+Use micro-batches that occur every few minutes which prevents bottlenecks, since we cannot handle huge amounts of data all at one time. We can still use batch processing, but more frequently with smaller chunks
+
+Use message-oriented middleware that can communicate with database servers as needed
+
+Take advantage of replication servers
+
+![image](https://user-images.githubusercontent.com/68102477/124900809-c4cac680-e024-11eb-9745-3f71a33f835e.png)
+
+![image](https://user-images.githubusercontent.com/68102477/124901171-1bd09b80-e025-11eb-8589-215753a3af75.png)
+
+**Why so many projects fail ?**
+
+Lack of leadership agreement
+
+Incorrectly selecting the right technology stack for desired scaling and performance
+
+Companies are not agile
+
+AGILE => START SMALL - DELIVER QUICKLY - KEEP IMPROVING ADDING MORE FUNCTIONALITIES (this gives less risk of failure)
+
+
+Business requirements change before a system is implemented
+
+## On-premise vs. Cloud-Native Solutions
+
+The ability to handle structured, unstructured and semi-structured data in the same systems is possible now in some Cloud-native providers
+
+Cloud provides unlimited scaling, while On-premise infrastructure, typically, has scalability challenges
+
+On-premise infrastructure and local hardware that is already pushed to the max can cause performance issues
+
+Regardless of where the data is stored, your metadata tables should enable quick handling of data or data sources changes
 
 
 
