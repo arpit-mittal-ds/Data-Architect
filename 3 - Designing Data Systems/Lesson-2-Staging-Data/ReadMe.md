@@ -390,7 +390,7 @@ Take advantage of replication servers
 
 ![image](https://user-images.githubusercontent.com/68102477/124901171-1bd09b80-e025-11eb-8589-215753a3af75.png)
 
-**Why so many projects fail ?**
+**[Why so many projects fail ?](https://designingforanalytics.com/resources/failure-rates-for-analytics-bi-iot-and-big-data-projects-85-yikes/)**
 
 Lack of leadership agreement
 
@@ -411,7 +411,20 @@ Cloud provides unlimited scaling, while On-premise infrastructure, typically, ha
 
 On-premise infrastructure and local hardware that is already pushed to the max can cause performance issues
 
-Regardless of where the data is stored, your metadata tables should enable quick handling of data or data sources changes
+Regardless of where the data is stored, when data format or data sources change - the staging hub should be able to handle the change by having configurable metadata tables.44
+
+
+## Further Reading
+
+[Virtual hands-on labs](https://www.snowflake.com/virtual-hands-on-lab/)
+
+[Getting started tutorials](https://docs.snowflake.com/en/user-guide-getting-started.html)
+
+[Here stories from Snowflake experts](https://www.snowflake.com/blog/)
+
+[New vendor products and how they fit in the emerging Data warehouse Architectures](https://a16z.com/2020/10/15/the-emerging-architectures-for-modern-data-infrastructure/)
+
+[Articulated the best practices of Enterprise Data Architecture](https://www.mckinsey.com/business-functions/mckinsey-digital/our-insights/how-to-build-a-data-architecture-to-drive-innovation-today-and-tomorrow)
 
 
 
