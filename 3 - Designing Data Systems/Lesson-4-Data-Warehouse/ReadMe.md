@@ -214,39 +214,3 @@ Data Hubs are ideally the "go-to" place for data within an enterprise, so that m
 
 ![image](https://user-images.githubusercontent.com/68102477/121339896-4ebe3b80-c962-11eb-804e-2cd7416fe5dc.png)
 
-
-approximately 80% of all projects fail? There are plenty of case studies available to learn from the lessons.
-From my 3 decades of experience of working on a couple of dozen projects, I can summarize a couple reasons that I would like you to remember -
-OLTP transactional systems should use row-based storage
-OLAP analytical ODS systems should use columnar based storage.
-Recently, I rescued a data warehouse project, by replacing a row-based storage OLTP based database for the data warehouse with columnar storage OLAP based system. This alone cut down the processing time from 20 hours to under 2 hours.
-
-
-## Summary
-
-In this lesson, we discussed how the Operational Data Store is the environment where data from different transactional and operational databases are integrated into a single enterprise model
-
-In this lesson:
-
-We saw how ER models bring together Data Dictionary, Data flows, events, and actions to allow the Data Architect to visualize the data in the enterprise
-
-We looked at using master data categories to help us get to a single version of data truth.
-
-We looked at how Normalization eliminates redundancies in data
-
-We looked a 2 ways of actually moving data from staging to ODS.
-
-And finally, we saw how to cleanse data anomalies
-
-## Further Reading
-
-[A good source for education and research to acquire the knowledge and skills is available at “The Data warehouse Institute”](https://tdwi.org/Home.aspx)
-
-[Everything related to data architecture strategies and advancements](https://www.dataversity.net/)
-
-[New vendor products and how they fit in the emerging Data warehouse Architectures](https://a16z.com/2020/10/15/the-emerging-architectures-for-modern-data-infrastructure/)
-
-[Articulated the best practices of Enterprise Data Architecture](https://www.mckinsey.com/business-functions/mckinsey-digital/our-insights/how-to-build-a-data-architecture-to-drive-innovation-today-and-tomorrow)
-
-
-
