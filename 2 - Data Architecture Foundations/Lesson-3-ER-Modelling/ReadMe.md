@@ -354,3 +354,5 @@ This is a new challenge for you. Try to have fun and be creative with this chall
 
 ![image](https://user-images.githubusercontent.com/68102477/124073014-e3f5b100-da84-11eb-923d-a94cbead24a7.png)
 
+### Further Reading
+[ERD](https://www.smartdraw.com/entity-relationship-diagram/)
