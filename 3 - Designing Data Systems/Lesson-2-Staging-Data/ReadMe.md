@@ -231,3 +231,53 @@ Now that you know how to upload data in Snowflake using the Snowflake UI, let's 
 11. 
 
 
+Loading Files in Snowflake using SnowSQL
+
+Open the "SnowSQL" client that you set up on the page "Demo: Getting Started in Snowflake" in the "Data Architecture" Lesson, and execute the following commands
+
+Create a Database called "UDACITYEXERCISE"
+
+CREATE DATABASE UDACITYEXERCISE;
+
+Create "STAGING" schema in the "UDACITYEXERCISE" database
+
+CREATE SCHEMA "UDACITYEXERCISE"."STAGING";
+
+Create "FLOORS" table in the "STAGING" Schema of "UDACITYEXERCISE" database
+
+CREATE TABLE "UDACITYEXERCISE"."STAGING"."FLOORS" ("FLOORID" INTEGER, "FLOORNAME" STRING, "BUILDINGID" INTEGER);
+
+The "FLOORS" table contains three columns with headers "FLOORID", "FLOORNAME" and "BUILDINGID", respectively. The column names and data types are chosen to be in accordance with the "floors.csv" file.
+
+Create "ROOMS" table in the "STAGING" Schema of "UDACITYEXERCISE" database
+
+CREATE TABLE "UDACITYEXERCISE"."STAGING"."ROOMS" ("ROOMID" INTEGER, "ROOMNAME" STRING, "FLOORID" INTEGER, "BUILDINGID" INTEGER, "TOTALAREA" DOUBLE, "CLEANEDAREA" DOUBLE);
+Before we can load data in the tables created above, we need to create a file format object. Let's call it "CSVFILEFORMAT". It can be created by the following command
+
+CREATE FILE FORMAT "UDACITYEXERCISE"."STAGING".CSVFILEFORMAT TYPE = 'CSV' COMPRESSION = 'AUTO' FIELD_DELIMITER = ',' RECORD_DELIMITER = '\n' SKIP_HEADER = 1 FIELD_OPTIONALLY_ENCLOSED_BY = 'NONE' TRIM_SPACE = FALSE ERROR_ON_COLUMN_COUNT_MISMATCH = TRUE ESCAPE = 'NONE' ESCAPE_UNENCLOSED_FIELD = '\134' DATE_FORMAT = 'AUTO' TIMESTAMP_FORMAT = 'AUTO' NULL_IF = ('\\N');
+CREATE OR REPLACE STAGE MY_CSV_STAGE FILE_FORMAT = CSVFILEFORMAT;
+
+
+Now, it's time to load the data in respective tables. We will first "PUT" data in "MY_CSV_STAGE" and then copy it from "MY_CSV_STAGE" to the tables. Let us start with loading data present in "floors.csv" in the FLOORS table.
+
+PUT file:///Users/abhiojha/Documents/Udacity/floors.csv @MY_CSV_STAGE AUTO_COMPRESS=TRUE;
+
+The above "PUT" command uploads (i.e. stages) data from my local directory (/Users/abhiojha/Documents/Udacity/floors.csv) to a named internal stage called "MY_CSV_STAGE". 
+
+
+### Loading Large Data Files in Snowflake
+To upload large files (>150 MB), we will use an optional parameter called Parallel and set its value to an ''. This parameter specified the number of threads used for uploading files. Setting <integer> to 1 means no parallelism. The max value of <integer> is 99. Snowflake handles file uploading as follows:
+
+Small files (< 64 MB) are uploaded as individual files.
+                 
+Large files are split into chunks, staged concurrently, and then reassembled.
+
+eg. PUT file:///Users/abhiojha/Documents/Udacity/floors.csv @MY_CSV_STAGE AUTO_COMPRESS=TRUE; parallel=4
+
+### Next, we will copy the data from "MY_CSV_STAGE" to the FLOORS table as follows:
+                 
+eg. COPY INTO "UDACITYEXERCISE"."STAGING"."FLOORS" FROM @MY_CSV_STAGE FILE_FORMAT = '"UDACITYEXERCISE"."STAGING"."CSVFILEFORMAT"' ON_ERROR = 'ABORT_STATEMENT' PURGE = TRUE;
+                 
+**Once we are done uploading the data we can view the "FLOORS" table by executing**
+
+SELECT * FROM UDACITYEXERCISE.STAGING.FLOORS;
