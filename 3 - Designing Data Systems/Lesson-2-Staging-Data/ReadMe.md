@@ -357,8 +357,10 @@ Version control of changes allows for easy and accurate monitoring or failure an
 
 Easy and fast access to check or change data names, descriptions, scheduling for any and all sources
 
+![image](https://user-images.githubusercontent.com/68102477/124899495-884a9b00-e023-11eb-9eeb-940dce002f5c.png)
 
-![image](https://user-images.githubusercontent.com/68102477/124898915-f6db2900-e022-11eb-955e-cbcc2f0458a7.png)
+
+
 
 
 
