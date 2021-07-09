@@ -177,7 +177,22 @@ Special care must be taken when handling ratios and percentage. One good design 
 
 In the real world, it is possible to have a fact table that contains no measures or facts. These tables are called "factless fact tables", or "junction tables".
 
-The factless fact tables may be used for modeling many-to-many relationships or for capturing timestamps of events.[1]
+The factless fact tables may be used for modeling many-to-many relationships or for capturing timestamps of events.
+
+Contain transactional data with every attribute associated with the transaction. Many of these attributes keep repetitive values.
+
+Hierarchical relationships are not represented.
+
+All dimension will have 1 to many relationships either with sub-dimension tables or Fact tables
+
+**Fact types**
+
+Transaction - All transactions, at a grain level, are recorded in the Transaction fact table.
+
+Periodic snapshot - Especially for the business operations team, values such as total sales and count of items by location for every minute(or specified time duration). This can identify trends that allow them to prepare for scaling as needed.
+
+Accumulating snapshot - Recording the start and end times of each activity or workflow. It helps to troubleshoot the slowness of certain time/date ranges.
+
 
 ### Dimensions
 
@@ -186,6 +201,109 @@ A dimension is a structure that categorizes facts and measures in order to enabl
 The primary functions of dimensions are threefold: to provide filtering, grouping and labelling.
 
 These functions are often described as "slice and dice". A common data warehouse example involves sales as the measure, with customer and product as dimensions. In each sale a customer buys a product. The data can be sliced by removing all customers except for a group under study, and then diced by grouping by product.
+
+### Dimension Table Types
+In a typical business data system, common dimensions would be:
+
+Product
+
+Customer
+
+Location
+
+Date
+
+**Rapidly changing Attributes**
+
+The table size increases rapidly when data of certain columns are changing rapidly. This dimension can be refactored by separating the frequently changing attributes into a separate table.
+
+Example: Customer dimension
+
+Customer’s age
+
+Income
+
+Number of lifetime purchases
+
+Rating
+
+Account status
+
+Credit score.
+
+**Slowly changing**
+
+Don’t change frequently. The history of these changes can be kept at the same table.
+
+Example: Customer dimension
+
+Name
+
+Address
+
+Gender
+
+Date of birth
+
+**Junk**
+
+Contains unrelated attributes pulled out of the fact table. A junk dimension is a table with a combination of different and unrelated attributes to avoid a large number of foreign keys in the fact table. All of these types of values can be put into a single junk dimension and their key used a foreign key in the fact table.
+
+Example:
+
+is_qualified
+
+is_on_time
+
+**Inferred**
+
+**When Fact data comes before dimension data, process the fact data first by putting NA in the place of the key fields of dimension and then reprocess together with dimension data whenever it is available.**
+
+
+**Conformed**
+
+A date dimension, which has a year, quarter, month, week, day column, can be used for many fact tables.
+
+**Degenerate**
+
+This type of dimension has the primary key as the only attribute. Hence, instead of creating a dimension just with the primary key, moving this primary key to the Fact table eliminates this dimension table.
+
+Example
+
+Insurance claim and policy
+
+****Role-playing******
+
+A single physical dimension that can be referenced multiple times in a fact table. Every reference has its own relationship with the fact table. Each of these columns in a fact 
+table, such as order date, shipping date, received date, can play a role with the Date dimension.
+
+Examples
+
+Date dimension has columns like a year, quarter, month, week, day, etc.,
+
+**Shrunken**
+
+This is an individual dimension, such as year, quarter, month, week, day, date. If you want the fact table to be optimized for summaries, shrunken dimensions can be used.
+
+Examples
+
+Month is a shrunken dimension of the week
+
+Quarter is a shrunken dimension of the month
+
+**Static**
+
+Not coming from data sources, rather created manually to represent any codes or extracted from external sources.
+
+Examples
+
+Country codes
+
+Currency codes
+
+State codes
+
+
 
 ## 3. Star and Snowflake Schema
 
