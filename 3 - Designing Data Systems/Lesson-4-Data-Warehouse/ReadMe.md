@@ -145,6 +145,9 @@ Data marts are smaller subsets of data from a data warehouse.
 Data marts are a repository of essential data for a specific subgroup or use case where access can be restricted to that subgroup or use case. Only a few users have access to the entire data warehouse.
 Data marts are less expensive and can analyze data faster because they are smaller subsets of the data warehouse that is slower and overloaded.
 
+![image](https://user-images.githubusercontent.com/68102477/125054293-66b3e700-e0e9-11eb-8465-aeeccec4307f.png)
+
+
 ### DataHub
 [DataHub](https://en.wikipedia.org/wiki/Data_hub)
 A data hub is a collection of data from multiple sources organized for distribution and sharing. Generally this data distribution is in the form of a [hub and spoke architecture.](https://en.wikipedia.org/wiki/Spoke%E2%80%93hub_distribution_paradigm)
@@ -192,6 +195,9 @@ Transaction - All transactions, at a grain level, are recorded in the Transactio
 Periodic snapshot - Especially for the business operations team, values such as total sales and count of items by location for every minute(or specified time duration). This can identify trends that allow them to prepare for scaling as needed.
 
 Accumulating snapshot - Recording the start and end times of each activity or workflow. It helps to troubleshoot the slowness of certain time/date ranges.
+
+![image](https://user-images.githubusercontent.com/68102477/125054451-906d0e00-e0e9-11eb-99a0-f27e4ffadd89.png)
+
 
 
 ### Dimensions
