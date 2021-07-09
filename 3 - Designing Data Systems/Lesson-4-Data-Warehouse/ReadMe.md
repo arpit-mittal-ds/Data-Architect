@@ -157,11 +157,6 @@ A data hub differs from a data lake by homogenizing data and possibly serving da
 Data Hubs are ideally the "go-to" place for data within an enterprise, so that many point-to-point connections between callers and data suppliers do not need to be made, and so that the Data Hub organization can negotiate deliverables and schedules with various data enclave teams, rather than being an organizational free-for-all as different teams try to get new services and features from many other teams.
 
 
-![image](https://user-images.githubusercontent.com/68102477/121339862-4239e300-c962-11eb-9896-9dfeb00c17f1.png)
-
-![image](https://user-images.githubusercontent.com/68102477/121339896-4ebe3b80-c962-11eb-804e-2cd7416fe5dc.png)
-
-
 
 ## 2. Dimensional Modelling - Facts and Dimensions
 
