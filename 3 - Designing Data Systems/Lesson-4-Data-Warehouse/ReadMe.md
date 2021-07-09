@@ -335,4 +335,5 @@ Data captured by Slowly Changing Dimensions (SCDs) change slowly but unpredictab
 
 ## 4. ETL Data from ODS to DWH
 
+![image](https://user-images.githubusercontent.com/68102477/125054683-d32ee600-e0e9-11eb-83cf-b691b916168a.png)
 
