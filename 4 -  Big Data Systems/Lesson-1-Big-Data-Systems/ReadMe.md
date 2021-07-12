@@ -56,11 +56,21 @@ Using their data to identify new opportunities leads to smarter business moves, 
 
 ![image](https://user-images.githubusercontent.com/68102477/125286194-e0083f80-e35e-11eb-9f45-d717d861917d.png)
 
-## Tools, Environment & Dependencies
+## < .... would need AWS Account: http://aws.amazon.com/   >
 
+The default AWS region for you will be US East (N. Virginia) (us-east-1). 
 
+The budget for this entire Nanodegree is $75 for you. Although, we find about $20 sufficient for most to complete this Nanodegree.
 
+Track your usage on the AWS web console. Go to AWS Billing Dashboard, and view the monthly spending. It will list you the services constituting the spend.
+Submit a ticket to Student Support Services to know your current balance.
 
+Install AWS Toolkit Extension in VS Code
+Open Extensions tab
+Search AWS
+Install AWS Toolkit
+
+[AWS Console](https://console.aws.amazon.com/console/home?region=us-east-1#)
 
 
 
