@@ -72,11 +72,37 @@ Install AWS Toolkit
 
 [AWS Console](https://console.aws.amazon.com/console/home?region=us-east-1#)
 
+**Silo** -	Physical or Logical separation of data or people which limits collaboration and data sharing
+
+**Data engineer** -	A person who manages a company's Big Data infrastructure. Engineers are expected to be knowledgeable and efficient in Big Data tools. This person should also to get results from theBig Data system quickly
+
+**Data Architect** -	This person acts as a bridge between the business and/or technical leadership of the company and the actual engineering team, working with the leadership to understand requirements better, propose solutions, provide a rationale.
 
 
+## Further Reading and Learning
 
+[History of Big Data](https://www.sas.com/en_us/insights/big-data/what-is-big-data.html)
 
+[Value of high-quality Big Data](https://www.precisely.com/blog/big-data/quality-data-big-data-worth#:~:text=The%20big%20data%20market%20is,they%20were%20deriving%20from%20it)
 
+How important is it to maximize your data’s value?
 
+[Big Data definition, value, benefits, and context](https://www.i-scoop.eu/big-data-action-value-context/)
+
+What is big data
+
+How is big data used
+
+Why is it essential for digital transformation
+
+Book: [Why making sense of larger, more complex data is a must for enterprises](https://go.oracle.com/LP=87687)
+
+What big data is and how it works.
+
+How the volume, velocity, and variety of structured and unstructured data make it increasingly challenging to deal with.
+
+Big data use cases and best practices.
+
+How enterprises can use big data to make better, faster decisions.
 
 
