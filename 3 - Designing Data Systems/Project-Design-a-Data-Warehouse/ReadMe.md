@@ -30,7 +30,9 @@ In this project, I merged two massive, real-world datasets in order to draw conc
 
 Both of these websites are independent sources and not related to each other. 
 
-[Yelp Dataset](https://www.yelp.com/dataset/download)
+[Yelp Dataset Documentation](https://www.yelp.com/dataset/documentation/main)
+
+[Yelp Dataset Download](https://www.yelp.com/dataset/download)
 
 I downloaded 2 files from - “JSON” and “COVID-19 Data”
 
