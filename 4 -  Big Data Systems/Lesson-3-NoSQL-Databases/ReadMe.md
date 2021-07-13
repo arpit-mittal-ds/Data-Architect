@@ -25,9 +25,13 @@ Databases offer ACID capabilities
 Achieving ACID transaction for large scale application database which has needs for millions of reads/write per second, the ACID approach prevents relational database to scale beyond a point.
 
 ACID Properties
+
 Atomicity: All or nothing for transaction completion.
+
 Consistency: The database must be consistent no matter what happens 100% of the time
+
 Isolation: No transaction should affect the existence of any other transaction.
+
 Durability: The database should be able to handle all transactions even if there is a failure somewhere during the transaction processing
 
 
