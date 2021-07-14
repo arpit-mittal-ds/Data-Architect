@@ -34,6 +34,11 @@ Isolation: No transaction should affect the existence of any other transaction.
 
 Durability: The database should be able to handle all transactions even if there is a failure somewhere during the transaction processing
 
+# CAP Theorem
+
+NoSQL CAP
+
+**Note: Consistency in CAP theorem is not the same as Consistency in RDBMS ACID. CAP consistency talks about data consistency across a cluster of nodes and not on a single server/node**
 
 
 
