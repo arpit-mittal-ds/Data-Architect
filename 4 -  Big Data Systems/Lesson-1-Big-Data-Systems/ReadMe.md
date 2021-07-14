@@ -270,6 +270,14 @@ Cloud Providers (AWS, Azure, GCP)
 
 ![image](https://user-images.githubusercontent.com/68102477/125544246-1d949cac-7597-4d80-b96d-5fe21e407582.png)
 
+**Open Source tools are part of the Ecosystem, which provides low entrance cost, but does have some important considerations to be aware of**
+
+Can be complex to install and configure
+
+Each product versions on different schedule
+
+Incompatibility issues with updates
+
 **Some 3rd party companies have packaged these tools together seamlessly to provide an easier experience but at a price.**
 
 ![image](https://user-images.githubusercontent.com/68102477/125544256-59dbdc77-0f5d-4875-9e48-15b52e2aa391.png)
