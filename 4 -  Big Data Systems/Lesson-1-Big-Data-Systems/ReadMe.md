@@ -170,7 +170,78 @@ Horizontal Scaling: Buy a large number of machines. You add more machines to you
 
 In vertical scaling, you will have a single node. In horizontal scaling, you will have multiple nodes connected together in a network (called a cluster of nodes)
 
+### Vertical Scaling
+
+In order to handle the increased demands of bigger data, we can scale vertically, which means we can increase the capacity of existing hardware or software by adding additional resources, including processing power, storage, memory, and even network.
+
+Keep in mind, you can only get as big as the size of the physical server
+
+Technically, we can also "scale" our Relational Databases such as MySQL, PostgreSQL, MariaDB. What that means is you can increase the underlying hardware configurations.
+
+**Advantages of Vertical Scaling**
+
+Easy to manage and implement
+
+Reduced software, licensing, and operating costs
+
+Less administrative efforts
+
+Lower cooling costs
+
+Easy to manage security
+
+**Disadvantages**
+
+Limited scaling
+
+Can be a single point of failure
+
+Longer downtime during maintenance
+
+Upper limit on hardware upgrades
+
+Hardware upgrades themselves can be costly
+
+### Horizontal Scaling
+
+
+You can enhance the performance of the server node by adding more instances of the server to the existing pool of servers
+
+When we do this, we are not actually changing the capacity of the individual server, but we actually decrease the load on a specific server by distributing the load
+
+We do this with the help of distributed file systems, clustering, and load balancing.
+
+Examples of horizontally scalable systems: HDFS, HBase, Cassandra, MongoDB, Amazon DynamoDB.
+
+![image](https://user-images.githubusercontent.com/68102477/125540058-50c4726e-0187-4d05-b367-06fa1ed22509.png)
+
+There are workarounds to overcome disadvantages of horizontal scaling. 
+
+![image](https://user-images.githubusercontent.com/68102477/125540201-b7967888-58cb-431e-b5b5-871b051136ac.png)
+
+### Exercise: Scenario
+
+An electronic device manufacturing company sells its products online via its website. The company has 3 tier web architecture where the first layer is the front-end (HTML, CSS, JavaScript), the middle layer is the application server processing incoming requests from the front-end, and the third layer is the database layer. The company is currently using a single Postgres SQL database server to store product and order information. Last year, during a holiday sales event, the company announced aggressive discounts to promote their product. Too many customers tried to visit the website. However, the database could not handle millions of concurrent requests and crashed. The company lost customer trust and revenue. The company's CTO has directed you to research and suggest 3-5 techniques that can be implemented to scale the database layer of the website. Can you help?
+
+**#1 Read Replicas** - Separate the read and write traffic. One machine will perform all writes, and data would be replicated to other nodes which will serve only read requests for application
+
+**#2 Connection Pooling** - Reuse existing connections and reduce the overhead that comes with establishing a new connection to RDBMS for every query
+
+**#3 Partitioning (Also known as sharding)** - Partition the data based on a particular group or range. e.g All records starting with A-P written in server 1, Q-Z in Server 2
+
+[Database Server Scaling Strategies](https://realscale.cloud66.com/database-server-scaling-strategies/)
+
 ## Big Data and A.I.
+
+While BD and AI are two distinct roles, there is a huge amount of skills overlap.
+
+Big Data Engineers focus on data cleaning, manipulation, ETL, and orchestration pipelines
+
+AI or Machine Learning Engineers focus on feature engineering, model building, and visualization
+
+Big Data and AI teams work closely with each other.
+
+![image](https://user-images.githubusercontent.com/68102477/125543956-9f27c10c-6e8b-484c-834d-e5f135b61dd0.png)
 
 ## Big Data Ecosystem
 
@@ -180,6 +251,8 @@ Commodity Hardware = Hardware which is relatively inexpensive, widely available 
 Because commodity hardware is cheap, it's expected that its components will also fail often. Big Data builds on top of the cluster using commodity hardware and that's why having built-in fault tolerance is crucial.
 
 ### Tools
+
+![image](https://user-images.githubusercontent.com/68102477/125544035-0b759887-6a10-407d-84cb-0d82b1d77040.png)
 
 Ingestion Tools (Sqoop, Flume, Kafka, Nifi)
 
@@ -194,6 +267,12 @@ Governance Tools (Atlas)
 Administration Tools (Zookeeper, Airflow, Ambari)
 
 Cloud Providers (AWS, Azure, GCP)
+
+![image](https://user-images.githubusercontent.com/68102477/125544246-1d949cac-7597-4d80-b96d-5fe21e407582.png)
+
+**Some 3rd party companies have packaged these tools together seamlessly to provide an easier experience but at a price.**
+
+![image](https://user-images.githubusercontent.com/68102477/125544256-59dbdc77-0f5d-4875-9e48-15b52e2aa391.png)
 
 
 
