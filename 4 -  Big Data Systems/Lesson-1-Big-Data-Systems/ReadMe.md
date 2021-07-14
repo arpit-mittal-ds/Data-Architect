@@ -283,4 +283,115 @@ Incompatibility issues with updates
 ![image](https://user-images.githubusercontent.com/68102477/125544256-59dbdc77-0f5d-4875-9e48-15b52e2aa391.png)
 
 
+## Introduction to Amazon EMR
+
+EMR Cluster Creation and Termination
+Amazon EMR is a cloud big data platform for processing vast amounts of data. EMR supports using open source tools such as Apache Spark, Apache Hive, Apache HBase, Apache Flink, Apache Hudi, and Presto. Building your own Hadoop clusters can be hard, time-consuming, and costly.
+
+EMR allows you to create on-demand Hadoop clusters. EMR natively integrates with Amazon S3 and provides an abstraction on top of it called EMRFS. It allows you to access S3 with HDFS compatible interface.
+
+Creating a KeyPair
+
+Login to AWS
+
+Go to Services -> Select EC2 (IMG1)
+
+On the left side navigation column select KeyPair and then click on "Create KeyPair" button (IMG2)
+
+Give your Keypair a name. If you are on Mac or Linux use PEM, if you are on Windows using Putty use PPK. (IMG3)
+
+![image](https://user-images.githubusercontent.com/68102477/125546722-3aa6e6bf-c6af-4983-8542-d138d94ed9f1.png)
+
+### Steps to create EMR cluster
+
+Ensure "N.Virginia - US-EAST-1" is selected as region on the top right corner of the page
+
+Ensure you have a KeyPair created and have access to it. If you do not have it, please go to Services -> EC2 -> Create keyPair
+
+Go to Services -> Select EMR
+
+Click Create cluster, go to advanced options
+
+Select 5.31.0 EMR version
+
+Select the right set of tools to install as shown in the video
+
+Enable Glue catalog settings
+
+Select an appropriate subnet which supports the EMR instances such as M5.XLarge
+
+Ensure correct key pair is configured for launch
+
+Review and launch
+
+Terminating the Cluster
+
+You pay for EMR for each minute that it is running, so you should terminate running when completed your exercises
+
+Turn off Termination Protection
+
+Click Terminate
+
+
+
+https://user-images.githubusercontent.com/68102477/125550174-35514c09-7083-4082-98e6-5bc12b49426b.mp4
+
+
+
+https://user-images.githubusercontent.com/68102477/125550186-34f78f26-dd17-41c0-9d5d-2bf8be60865f.mp4
+
+
+
+
+**Connect to EMR Cluster**
+
+Connect to EMR Cluster Steps
+
+Login to AWS -> Go to EMR service
+
+Launch the EMR Cluster. (See EMR demo for specific instructions)
+
+Edit "Security Groups for Master"
+
+Allow inbound connection on port 22 (SSH), allow "My IP" or "Anywhere"
+
+Open a command line software such as Terminal on Mac or Putty on Windows
+
+Establish SSH connection based on the code provided from AWS Console
+
+https://user-images.githubusercontent.com/68102477/125550189-ed0511fe-ac37-4492-bc45-8d2d2ab07f16.mp4
+
+In any enterprise's journey to Big Data, you will face many other problems beyond what you can solve with this set of tools.
+
+Examples of such challenges include the following:
+
+Aligning the leadership teams on design decisions, use cases,
+
+Getting access to raw data
+
+Configuring network, firewall
+
+As an Architect your job is to think both long term and short term. Identify blind spots and proactively solve them before they become a risk to your project!
+
+## Further Reading
+
+
+[Apache Kafka: Ingest real-tome streaming data to HDFS](https://kafka.apache.org/)
+
+[Airflow: Workflow management platform](https://airflow.apache.org/)
+
+[Amazon EMR (Elastic Map Reduce)](https://aws.amazon.com/emr/)
+
+[HDInsights (Easy, cost-effective, enterprise-grade service for open source analytics](https://azure.microsoft.com/en-us/services/hdinsight/)
+
+[Databricks on Azure: Apache SparkTM based analytics service](https://azure.microsoft.com/en-us/services/databricks/)
+
+[Data Proc: A fast, easy-to-use, fully managed cloud service for running Apache Spark and Apache Hadoop clusters in a simpler, more cost-efficient way](https://cloud.google.com/dataproc)
+
+[Server Scaling](https://realscale.cloud66.com/database-server-scaling-strategies/)
+
+
+
+
+
 
