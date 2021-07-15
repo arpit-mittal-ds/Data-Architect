@@ -25,6 +25,9 @@ All the data that is collected and managed by an organization can be stored in t
 
 While a data warehouse offers many benefits, one of the key benefits is having a consistent, reliable, dependable central point of access for all the data in an organization
 
+**Formal Definition**
+
+A data warehouse is a database optimized to analyze relational data coming from transactional systems and line of business applications. The data structure, and schema are defined in advance to optimize for fast SQL queries, where the results are typically used for operational reporting and analysis. Data is cleaned, enriched, and transformed so it can act as the “single source of truth” that users can trust.
 
 ### The Need for Data Analysis
 
