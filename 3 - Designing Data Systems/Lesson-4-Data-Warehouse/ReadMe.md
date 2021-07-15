@@ -161,7 +161,7 @@ Data Hubs are ideally the "go-to" place for data within an enterprise, so that m
 
 
 
-## 2. [Dimensional Modelling(https://docs.microsoft.com/en-us/power-bi/guidance/star-schema) - Facts and Dimensions
+## 2. [Dimensional Modelling](https://docs.microsoft.com/en-us/power-bi/guidance/star-schema) - Facts and Dimensions
 
 ### [Fact table](https://en.wikipedia.org/wiki/Fact_table)
 
