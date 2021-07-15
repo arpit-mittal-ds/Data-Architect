@@ -1,11 +1,9 @@
 
 ![image](https://user-images.githubusercontent.com/68102477/121683183-5f0c1d00-cb00-11eb-89e7-41d96fbe00f5.png)
 
-## What is a Data Lake
+## What is a [Data Lake](https://aws.amazon.com/big-data/datalakes-and-analytics/what-is-a-data-lake/)
 
-Big Data represent large amounts of data. A Data Lake represents where that data is stored
-
-Machine Learning, Analytics, and data all come together in a Data Lake. 
+A data lake is a centralized repository that allows you to store all your structured and unstructured data at any scale. You can store your data as-is, without having to first structure the data, and run different types of analytics—from dashboards and visualizations to big data processing, real-time analytics, and machine learning to guide better decisions.
 
 Many Silos that form as a natural consequence of organizational and data structure suddenly have a chance to be broken down.
 
