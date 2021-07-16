@@ -2,7 +2,9 @@
 
 ## Lesson Objectives:
 
-Create Conceptual and Logical Enterprise Data Models
+Understand why Metadata Management is important.
+
+Create an Enterprise Data Model, providing a holistic view of the data in a company.
 
 Understand the different types of metadata: business, technical and operational metadata
 
@@ -32,7 +34,7 @@ Since the data is physically contained in many systems, there is no Enterprise P
 
 **Enterprise Data Catalog** is a consolidation of all the metadata in an enterprise. It contains information about the content of data like business glossaries, business rules, data dictionaries, data policies, data lineage...etc. Enterprise Data Catalog resides in a metadata repository which is a part of the Metadata Management System.
 
-**Enterprise Data Model** is the foundation for creating an Enterprise Data Catalog. You first create an Enterprise Data Model. Then you add various metadata to the entities and attributes in an Enterprise Data Model to build an Enterprise Data Catalog.
+**Enterprise Data Model is the foundation for creating an Enterprise Data Catalog. You first create an Enterprise Data Model. Then you add various metadata to the entities and attributes in an Enterprise Data Model to build an Enterprise Data Catalog.**
 
 ![image](https://user-images.githubusercontent.com/68102477/119623879-f1979580-be4b-11eb-8e68-f1602684682d.png)
 
@@ -54,9 +56,12 @@ Users review the different metadata in a Metadata Management System and rate the
 
 
 ### New terms
-Metadata information that describes other data
-Metadata Repository is a database that stores metadata
-Enterprise Data Catalog is a consolidation or inventory of all the metadata
+
+Metadata - information that describes other data
+
+Metadata Repository - is a database that stores metadata
+
+Enterprise Data Catalog - is a consolidation or inventory of all the metadata
 
 ## Why Metadata Management Is Important ?
 
@@ -91,9 +96,10 @@ Metadata that was once scattered across the enterprise is now captured in a sing
 Metadata management identifies and eliminates redundancies and inconsistencies in data and processes.
 
 ### New terms
-Data Owner Person who is responsible for data in a particular Data Domain
 
-Data Quality Threshold Categorizes the data into different data quality levels
+Data Owner - Person who is responsible for data in a particular Data Domain
+
+Data Quality Threshold - Categorizes the data into different data quality levels
 
 ### Further reading
 [role played by metadata in effective Data Governance](https://tdan.com/metadata-in-data-governance/1610)
