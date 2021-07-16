@@ -332,7 +332,11 @@ Data Dictionary - contains information about columns in a data set.
 
 ### Exercise: Metadata
 
+Gather the metadata for the following Logical Data Model
 
+![image](https://user-images.githubusercontent.com/68102477/125928455-606ffa3f-0bab-4ceb-87c6-880f607d036b.png)
+
+### Solution
 
 ### Further reading
 [additional information on what to include in a good business glossary](https://tdwi.org/articles/2016/02/16/data-governance-glossary-missing-elements.aspx)
