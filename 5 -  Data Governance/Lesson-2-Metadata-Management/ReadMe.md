@@ -177,6 +177,67 @@ Subject Area is a business functional area or business domain
 [examples of Enterprise Data Models](http://www.databaseanswers.org/downloads/tutorial_in_enterprise_data_modelling_by_example.pdf)
 
 
+### Exercise
+
+Document the Enterprise Data model for an online music store, called Musikland. 
+
+Create an Enterprise Conceptual Data Model following the process we've just learned about. 
+
+Take it a step further and expand the Conceptual model to create an Enterprise Logical Data Model by adding primary and foreign keys, attributes, and cardinalities.
+
+**Tables**
+
+employee table stores employee data.
+
+customer table stores customer data.
+
+invoice & invoiceline tables store invoice data.
+
+artist table stores artist data.
+
+album table stores data about albums.
+
+mediatype table stores media types such as MPEG audio and AAC audio files.
+
+genre table stores music types such as rock, jazz, metal, etc.
+
+track table stores song data.
+
+playlist & playlisttrack tables store data about playlists.
+
+
+**Understand that there are four subject areas:**
+
+Music Inventory
+
+Billing
+
+Customer Service
+
+Playlist Management
+
+### Solution
+
+**Identified Entities and Relationships**
+
+![image](https://user-images.githubusercontent.com/68102477/125911304-7a7c1951-6dd0-4881-9f88-c454e8734bf9.png)
+
+**Enterprise Conceptual Model:**
+
+![image](https://user-images.githubusercontent.com/68102477/125911334-2ae5aba4-270d-4a43-ba86-b9bdc7ed7ad4.png)
+
+**Refined entities and relationships**
+
+![image](https://user-images.githubusercontent.com/68102477/125911379-e127d3b3-733a-4ce1-9762-b03bc641538e.png)
+
+**Refined Enterprise Conceptual Data Model**
+
+![image](https://user-images.githubusercontent.com/68102477/125911425-1a894fae-7964-4306-b7d6-5ca8e111c50a.png)
+
+**Enterprise Logical Data Model**
+
+![image](https://user-images.githubusercontent.com/68102477/125911552-5b9b31c9-c0fe-4bf8-aa57-3a44bd655e0c.png)
+
 
 ## 3. TYPES OF METADATA
 
@@ -291,4 +352,6 @@ Further reading
 [understand the different vendor products available for metadata management](https://solutionsreview.com/data-management/the-best-metadata-management-tools/)
 
 
+## 5. Enterprise Data Catalog
 
+EDM provides us with information around the structure of the data while EDC is a consolidation of metadata around the content of the data.
