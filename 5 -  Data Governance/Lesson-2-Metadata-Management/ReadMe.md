@@ -2,7 +2,7 @@
 
 ## Lesson Objectives:
 
-1. Understand why Metadata Management is important.
+1. What is Metadata and why Metadata Management is important.
 
 2. Create an **Enterprise Data Model**, providing a holistic view of the data in a company.
 
@@ -26,6 +26,14 @@ Business teams in different departments use the metadata management system in th
 
 ![image](https://user-images.githubusercontent.com/68102477/119623566-a67d8280-be4b-11eb-8d9a-baeb57d32fa7.png)
 
+
+Different people collaborate with each other to author different pieces of metadata for a data domain
+
+People curate the content by categorizing and classifying data using tags and taxonomies so that information can be found quickly in the Metadata Management System
+
+Users review the different metadata in a Metadata Management System and rate the content and quality
+
+
 ![image](https://user-images.githubusercontent.com/68102477/125906140-89029c40-a5da-4cc3-9418-9e200606e4e8.png)
 
 ### Some important concepts in Metadata Management:
@@ -43,14 +51,6 @@ Since the data is physically contained in many systems, there is no Enterprise P
 
 ![image](https://user-images.githubusercontent.com/68102477/119624191-37ecf480-be4c-11eb-8758-9a230cf0b735.png)
 
-Different people collaborate with each other to author different pieces of metadata for a data domain
-
-People curate the content by categorizing and classifying data using tags and taxonomies so that information can be found quickly in the Metadata Management System
-
-Users review the different metadata in a Metadata Management System and rate the content and quality
-
-![image](https://user-images.githubusercontent.com/68102477/119623795-dfb5f280-be4b-11eb-9a63-8cb9f6869ba9.png)
-
 
 ### New terms
 
@@ -62,9 +62,14 @@ Enterprise Data Catalog - is a consolidation or inventory of all the metadata
 
 ## Why Metadata Management Is Important ?
 
-![image](https://user-images.githubusercontent.com/68102477/119643852-9bcce880-be5f-11eb-8b53-ee81764c4ff0.png)
+![image](https://user-images.githubusercontent.com/68102477/125907413-4ceb0405-859d-4da6-a11f-8aa3269808aa.png)
 
-### Metadata management is critical to enabling good data governance.
+![image](https://user-images.githubusercontent.com/68102477/125907751-3720eaca-81fc-4046-a12e-634432e323b5.png)
+
+![image](https://user-images.githubusercontent.com/68102477/125907885-e84745e4-5657-471c-b3c3-2a76f3135ba0.png)
+
+![image](https://user-images.githubusercontent.com/68102477/125908657-bb3c0228-eba8-4863-85c3-e1524b634973.png)
+
 
 Metadata is information about your data. Metadata helps you understand different aspects of the data in your company. Some of the insights you can gain from metadata:
 
@@ -82,7 +87,6 @@ What are the business and data quality rules and transformations applied to the 
 
 Where is the data created? Where is it stored? How is it published? Is it archived or deleted?
 
-### Some of the key impacts of a good metadata management system:
 
 With proper metadata management, companies **reduce the reliance on subject matter experts/IT personnel to identify the location of the information.**
 
@@ -102,7 +106,7 @@ Data Quality Threshold - Categorizes the data into different data quality levels
 [role played by metadata in effective Data Governance](https://tdan.com/metadata-in-data-governance/1610)
 
 
-## 2. Enterprise Data Model
+## 2. Enterprise Data Models (Conceptual and logical)
 
 ![image](https://user-images.githubusercontent.com/68102477/125899953-c8ed26c4-551c-4013-901a-f5326034273d.png)
 
@@ -146,6 +150,9 @@ Some entities can exist in multiple subject areas.
 Refine the data model by modifying the entities and relationships based on a review of data, DDLs, data models, and data dictionaries for each system.
 
 ## Enterprise LOGICAL Data Model
+
+![image](https://user-images.githubusercontent.com/68102477/125908972-6678ed92-7d17-4397-98db-593d31d00423.png)
+
 
 After you create the Enterprise Conceptual Data Model, you will expand on that work to create the Enterprise Logical Data Model. The information you collected from business process documents, interviews, data models, DDLs, and data dictionaries will be used as the basis for this exercise. Steps to create an Enterprise Logical Data Model:
 
