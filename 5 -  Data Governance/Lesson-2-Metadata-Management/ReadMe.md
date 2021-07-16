@@ -8,7 +8,7 @@
 
 3. Understand the different **types of metadata**: business, technical and operational metadata
 
-4. Understand the capabilities and components of a Metadata Management System as well and the role of business and technical teams
+4. Understand the capabilities and components of a **Metadata Management System** as well and the role of business and technical teams
 
 5. Create an **Enterprise Data Catalog**
 
@@ -132,15 +132,6 @@ Data Quality Threshold - Categorizes the data into different data quality levels
 ![image](https://user-images.githubusercontent.com/68102477/125900992-4792987d-2942-4d63-82cc-671e0325fc42.png)
 
 
-![image](https://user-images.githubusercontent.com/68102477/119646493-93c27800-be62-11eb-834b-fef687ec2be6.png)
-
-![image](https://user-images.githubusercontent.com/68102477/119646620-b9e81800-be62-11eb-873f-9d0b2efed826.png)
-
-![image](https://user-images.githubusercontent.com/68102477/119646657-c2405300-be62-11eb-9ddc-d19011bc40aa.png)
-
-![image](https://user-images.githubusercontent.com/68102477/119646670-c66c7080-be62-11eb-9433-189f341939ba.png)
-
-
 Enterprise Data Models provide a standardized and holistic view of data in the enterprise, which is the key to good data governance. To create an Enterprise Data Model, you need to have an understanding of the high-level business processes. This information can be gathered from various business process documents and interviewing people in different departments.
 
 Enterprise Conceptual Data Model consists of entities and relationships. Enterprise Logical Data Model expands on the enterprise conceptual data model by adding attributes, primary and foreign keys to each entity.
@@ -159,33 +150,31 @@ Refine the data model by modifying the entities and relationships based on a rev
 
 ## Enterprise LOGICAL Data Model
 
-Correction: in the video, the instructor said: "Customer ID and Store ID are foreign keys that point to customer and order tables.". It should be "Customer ID and Store ID are foreign keys that point to customer and store tables."
-
-Example logical data model
-
-Example logical data model
-
-
 After you create the Enterprise Conceptual Data Model, you will expand on that work to create the Enterprise Logical Data Model. The information you collected from business process documents, interviews, data models, DDLs, and data dictionaries will be used as the basis for this exercise. Steps to create an Enterprise Logical Data Model:
 
 Add attributes to each entity.
+
 Add primary key and foreign key relationships.
+
 Add cardinalities such as one to one, zero to one, etc.
-New terms
-Enterprise Conceptual Data Model Provides a holistic view of all the data in an enterprise and consists of entities and relationships
-Enterprise Logical Data Model expands on the Enterprise Conceptual Data Model by adding attributes, primary and foreign keys, and cardinalities
-Entity is an object that represents a person, place, thing, event, or concept
-Primary Key uniquely identifies each record in a table
-Foreign Key set of attributes that refer (or links) to the primary key in another table
-Cardinality type of relationship(one or many) between a row of one table and a row of another table
+
+### Summary (Conceptual and Logical Enterprise Data Models)
+
+Enterprise Conceptual Data Model - Provides a holistic view of all the data in an enterprise and consists of entities and relationships
+
+Enterprise Logical Data Model - expands on the Enterprise Conceptual Data Model by adding attributes, primary and foreign keys, and cardinalities
+
+Cardinality - type of relationship(one or many) between a row of one table and a row of another table
+
 Subject Area is a business functional area or business domain
+
 
 ### Further reading
 [examples of Enterprise Data Models](http://www.databaseanswers.org/downloads/tutorial_in_enterprise_data_modelling_by_example.pdf)
 
 
 
-## Types of Metadata
+## 3. TYPES OF METADATA
 
 There are three different types of metadata - business, technical, and operational.
 
