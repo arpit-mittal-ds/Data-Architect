@@ -26,6 +26,7 @@ Business teams in different departments use the metadata management system in th
 
 ![image](https://user-images.githubusercontent.com/68102477/119623566-a67d8280-be4b-11eb-8d9a-baeb57d32fa7.png)
 
+![image](https://user-images.githubusercontent.com/68102477/125906140-89029c40-a5da-4cc3-9418-9e200606e4e8.png)
 
 ### Some important concepts in Metadata Management:
 
@@ -41,10 +42,6 @@ Since the data is physically contained in many systems, there is no Enterprise P
 ![image](https://user-images.githubusercontent.com/68102477/119623973-08d68300-be4c-11eb-90d1-5fed2f2d9798.png)
 
 ![image](https://user-images.githubusercontent.com/68102477/119624191-37ecf480-be4c-11eb-8758-9a230cf0b735.png)
-
-
-
-### Different ways that people use a Metadata Management System:
 
 Different people collaborate with each other to author different pieces of metadata for a data domain
 
