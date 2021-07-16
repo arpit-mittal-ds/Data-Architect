@@ -243,9 +243,15 @@ Playlist Management
 
 There are three different types of metadata - business, technical, and operational.
 
+![image](https://user-images.githubusercontent.com/68102477/125911951-f4411b17-4774-4d87-b236-061bd00abb9a.png)
+
 ### Business Metadata
 
 Business metadata **provides the business context to the data.**
+
+![image](https://user-images.githubusercontent.com/68102477/125915487-79ac3006-6f6b-48a9-aead-aa236fefed05.png)
+
+![image](https://user-images.githubusercontent.com/68102477/125915594-f1c28229-2f09-499f-a207-9bbaea59ce39.png)
 
 Some key business metadata:
 
@@ -268,23 +274,34 @@ Some key business metadata:
 
 Technical metadata describes **how the data is defined, organized, and processed from a database and technology standpoint.**
 
+![image](https://user-images.githubusercontent.com/68102477/125922365-d00fe1d6-f761-4332-9c80-74631cff9131.png)
+
+![image](https://user-images.githubusercontent.com/68102477/125922501-7443d30c-17ec-42bf-a40a-580b86fda395.png)
+
 **Some key technical metadata:**
 
 **Conceptual, logical, and physical data models** describe how the data is organized from a business and database standpoint.
 
-DDL or Data Definition Language is the script that creates the tables in the database. DDL is specific to the database.
+**DDL** or Data Definition Language is the script that creates the tables in the database. DDL is specific to the database.
 
-Data dictionary is used by the technical teams to understand the technical details of the data elements like table name, column name, data type, sample values, and constraints.
+**Data dictionary** is used by the technical teams to understand the technical details of the data elements like table name, column name, data type, sample values, and constraints.
 
-Data lineage shows the details of which source table(s) and column(s) a given target column is loaded from.
+**Data lineage** shows the details of which source table(s) and column(s) a given target column is loaded from.
 
-Transformations are applied to convert the data to a different structure or implement business and data quality rules.
+**Transformations** are applied to convert the data to a different structure or implement business and data quality rules.
 
-Based on the access policies defined in the business metadata, different access groups are created, and users are assigned to these access groups.
+Based on the access policies defined in the business metadata, different **access groups** are created, and users are assigned to these access groups.
 
 
 ### Operational metadata
+
 Operational metadata describes the technical job execution details. 
+
+![image](https://user-images.githubusercontent.com/68102477/125924136-c714da6e-a3c8-45d4-89a0-f563fde8cf09.png)
+
+![image](https://user-images.githubusercontent.com/68102477/125924168-40729105-de8b-4377-8f8b-1e1e81a20a40.png)
+
+![image](https://user-images.githubusercontent.com/68102477/125924289-f91b47dc-8e59-484e-bd95-ad1f198bbb43.png)
 
 **Some key operational metadata:**
 
@@ -300,11 +317,22 @@ List of backup and archival processes created based on requirements defined in t
 
 
 ### New terms
-Business metadata provides the business context to the data.
-Technical metadata describes how the data is defined, organized, and processed from a database and technology standpoint.
-Operational metadata describes the technical job execution details.
-Business Glossary defines terms across a business domain.
-Data Dictionary contains information about columns in a data set.
+
+Business metadata - provides the business context to the data.
+
+Technical metadata - describes how the data is defined, organized, and processed from a database and technology standpoint.
+
+Operational metadata - describes the technical job execution details.
+
+Business Glossary - defines terms across a business domain.
+
+Data Dictionary - contains information about columns in a data set.
+
+![image](https://user-images.githubusercontent.com/68102477/125925377-5d630201-615a-49aa-938f-937875a52adb.png)
+
+### Exercise: Metadata
+
+
 
 ### Further reading
 [additional information on what to include in a good business glossary](https://tdwi.org/articles/2016/02/16/data-governance-glossary-missing-elements.aspx)
