@@ -2,20 +2,20 @@
 
 ## Lesson Objectives:
 
-Understand why Metadata Management is important.
+1. Understand why Metadata Management is important.
 
-Create an Enterprise Data Model, providing a holistic view of the data in a company.
+2. Create an **Enterprise Data Model**, providing a holistic view of the data in a company.
 
-Understand the different types of metadata: business, technical and operational metadata
+3. Understand the different **types of metadata**: business, technical and operational metadata
 
-Understand the capabilities and components of a Metadata Management System as well and the role of business and technical teams
+4. Understand the capabilities and components of a Metadata Management System as well and the role of business and technical teams
 
-Create an Enterprise Data Catalog
+5. Create an **Enterprise Data Catalog**
 
 ![image](https://user-images.githubusercontent.com/68102477/119624670-b8135a00-be4c-11eb-8c5e-61d21d72a17d.png)
 
 
-## What is Metadata Management
+## 1. What is Metadata Management
 
 **Metadata** provides information about data, such as definitions, rules, format, data types. 
 
@@ -105,7 +105,32 @@ Data Quality Threshold - Categorizes the data into different data quality levels
 [role played by metadata in effective Data Governance](https://tdan.com/metadata-in-data-governance/1610)
 
 
-## Enterprise Data Model
+## 2. Enterprise Data Model
+
+![image](https://user-images.githubusercontent.com/68102477/125899953-c8ed26c4-551c-4013-901a-f5326034273d.png)
+
+![image](https://user-images.githubusercontent.com/68102477/125900290-ec1bee56-583d-4214-8145-4e1fa4ccda53.png)
+
+![image](https://user-images.githubusercontent.com/68102477/125900347-39dcf209-db3a-45e2-89c2-fba09d364810.png)
+
+![image](https://user-images.githubusercontent.com/68102477/125900517-712520c3-bbbb-4dd7-a0c7-44c1edad2c55.png)
+
+### Now Integrate the Entities from different subject areas:
+
+![image](https://user-images.githubusercontent.com/68102477/125900676-5ff96078-7aaa-491a-a9fd-0fb3da2d2290.png)
+
+### Now Refine
+
+![image](https://user-images.githubusercontent.com/68102477/125900777-40c0acb6-0d23-479b-b126-54ab1c6007b6.png)
+
+### Add Entities
+
+![image](https://user-images.githubusercontent.com/68102477/125900943-98795588-4906-41ce-a86c-ac83cdb4ace7.png)
+
+### Update Conceptual Data Model
+
+![image](https://user-images.githubusercontent.com/68102477/125900992-4792987d-2942-4d63-82cc-671e0325fc42.png)
+
 
 ![image](https://user-images.githubusercontent.com/68102477/119646493-93c27800-be62-11eb-834b-fef687ec2be6.png)
 
@@ -123,11 +148,16 @@ Enterprise Conceptual Data Model consists of entities and relationships. Enterpr
 You should create the Enterprise Data Models using the data modeling tool(s) available in your company. Steps to create an Enterprise Conceptual Data Model:
 
 Map out all the different subject areas in the company.
+
 Identify the different entities in each subject area.
+
 Identify the relationship between entities.
+
 Some entities can exist in multiple subject areas.
+
 Refine the data model by modifying the entities and relationships based on a review of data, DDLs, data models, and data dictionaries for each system.
-Part 2 - Enterprise Logical Data Model
+
+## Enterprise LOGICAL Data Model
 
 Correction: in the video, the instructor said: "Customer ID and Store ID are foreign keys that point to customer and order tables.". It should be "Customer ID and Store ID are foreign keys that point to customer and store tables."
 
