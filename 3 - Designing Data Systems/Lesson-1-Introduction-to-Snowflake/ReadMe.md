@@ -168,3 +168,27 @@ The Citi Bike initial goal was to see if there was any correlation between the n
 Per the table above we have a clear answer. 
 As one would imagine, the number of trips is significantly higher when the weather is good! 
 
+## Further Reading
+
+
+[Snowflake Documentation](https://docs.snowflake.com/en/)
+
+[General Overview of Data Architecture](https://medium.com/@rusty.alderson/enterprise-data-architecture-c5c579b54abe)
+
+[Free downloadable book ”Cloud Datawarehouse for Dummies”](https://www.snowflake.com/cloud-dw-dummies-thanks/)
+
+[Here stories from Snowflake experts](https://www.snowflake.com/blog/)
+
+[One minute video to understand “The Corporate Elephant”](https://www.youtube.com/watch?v=87zSfpei_zo)
+
+[A good source for education and research to acquire the knowledge and skills is available at “The Data warehouse Institute”](https://tdwi.org/Home.aspx)
+
+[Everything related to data architecture strategies and advancements](https://www.dataversity.net/)
+
+[New vendor products and how they fit in the emerging Data warehouse Architectures](https://a16z.com/2020/10/15/the-emerging-architectures-for-modern-data-infrastructure/)
+
+[Articulated the best practices of Enterprise Data Architecture](https://www.mckinsey.com/business-functions/mckinsey-digital/our-insights/how-to-build-a-data-architecture-to-drive-innovation-today-and-tomorrow)
+
+
+
+
