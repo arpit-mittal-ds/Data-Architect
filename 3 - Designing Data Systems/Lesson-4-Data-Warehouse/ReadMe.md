@@ -649,9 +649,45 @@ Moving targets and priorities of other teams
 
 Shifting schedules because of those moving targets
 
+![image](https://user-images.githubusercontent.com/68102477/126059181-24a8adba-a0db-47c0-ba9f-f4b3c2424eb8.png)
 
+
+## Data Architecture Diagramming
+
+A good data architecture diagram is the most important artifact to start any project. We have studied numerous artifacts, diagrams, and models that can be used.
+
+**Steps to Data Architecture**
+
+Identifying data sources
+
+Moving the data into the staging area to organize
+
+Create an ER model in ODS to transform the data from the staging area
+
+Build ODS to query snapshot data sets
+
+Good schemas help build a data warehouse that provides reports on data
   
  
+### Importance of data architecture for an organization
 
+A business organization is very similar to a brain dead without having a data warehouse system.
 
+Just having the data warehouse is not enough. You need some kind of Business Intelligence tools like Business Objects and MicroStrategy for reporting, analytics tools like Power 
+BI and Tableau to maximize your analytics.
+
+**Cost Challenges**
+
+Cloud-native data warehouse software platforms like RedShift and Snowflake, which are bringing down the cost of data warehouse projects without having to be concerned about software upgrades and scaling the hardware up or down depending upon the demand.
+
+**Why Data Science?**
+
+Data science requires enterprise data into which we try to figure out the intricate and hidden relationships of integrated data sets. A.I. and M.L are innovative and powerful tools that can help organizations sift through their data.
+
+Artificial Intelligence and Machine Learning
+
+These are both huge topics and are beyond the scope of this nanodegree, but are deeply connected with data architecture, as they are incredible tools when dealing with large 
+data sets. I encourage you to explore several nanodegree on the Udacity platform related to these topics.
+
+As you explore AI and ML, keep in mind a common mistake organizations make is moving mountains of data to the process where the ML model is running; this can be very expensive and also time-consuming. Try to determine if the ML model should be brought to the data - much faster and less expensive. Your Data Architecture research can help you lead that conversation.
 
