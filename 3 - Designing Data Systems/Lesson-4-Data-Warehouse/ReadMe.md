@@ -308,7 +308,7 @@ is_on_time
 
 **Inferred**
 
-**When Fact data comes before dimension data, process the fact data first by putting NA in the place of the key fields of dimension and then reprocess together with dimension data whenever it is available.**
+When Fact data comes before dimension data, process the fact data first by putting NA in the place of the key fields of dimension and then reprocess together with dimension data whenever it is available.
 
 
 **Conformed**
@@ -323,7 +323,7 @@ Example
 
 Insurance claim and policy
 
-****Role-playing******
+**Role-playing**
 
 A single physical dimension that can be referenced multiple times in a fact table. Every reference has its own relationship with the fact table. Each of these columns in a fact 
 table, such as order date, shipping date, received date, can play a role with the Date dimension.
@@ -331,6 +331,8 @@ table, such as order date, shipping date, received date, can play a role with th
 Examples
 
 Date dimension has columns like a year, quarter, month, week, day, etc.,
+
+In Fact table, every reference to dimension table can have different relationship such as - order_date, shipping_date, received_date.
 
 **Shrunken**
 
@@ -453,11 +455,200 @@ A multinational company manufactures several brands of cars and sells them acros
 ![image](https://user-images.githubusercontent.com/68102477/126053760-8faf5acd-f9b5-48a0-8af0-950f7d26ce02.png)
 
 
-Check
-![image](https://user-images.githubusercontent.com/68102477/125054683-d32ee600-e0e9-11eb-83cf-b691b916168a.png)
+### Exercise:
 
-  
+![image](https://user-images.githubusercontent.com/68102477/126054200-1ec69819-e7b0-48f4-8c4a-9aa7444d0774.png)
+
+Using the Star schema model above, load the data into Snowflake DWH schema from ODS schema.
+
+**Solution**
+
+**Step 1: Create Schema**
+
+CREATE SCHEMA DWH;
+
+**Step 2: DIMEMPLOYEE**
+
+create table DIMEMPLOYEE ( EMPLOYEE_ID NUMBER, FIRST_NAME STRING, LAST_NAME STRING );
+
+insert into DIMEMPLOYEE select distinct EMPLOYEE_ID, FIRST_NAME, LAST_NAME from ods.EMPLOYEE;
+
+**Step 3: Create Table DIMPROTOCOL**
+
+create table DIMPROTOCOL( STEP_ID NUMBER, STEP_NAME string );
+
+insert into DIMPROTOCOL select distinct STEP_ID, STEP_NAME from ods.PROTOCOL;
+
+**Step 4 : Create Table DIMHIGHTOUCHAREAS**
+
+create table DIMHIGHTOUCHAREAS( SPOT_ID NUMBER, HIGH_TOUCH_AREA string );
+
+insert into DIMHIGHTOUCHAREAS select distinct SPOT_ID, HIGH_TOUCH_AREA from ods.HIGHTOUCHAREAS;
+
+**Step 5 : Create Table DIMFREQUENCY**
+
+create table DIMFREQUENCY( FREQUENCY_ID NUMBER, FREQUENCY NUMBER );
+
+insert into DIMFREQUENCY select distinct FREQUENCY_ID, FREQUENCY from ods.FREQUENCY;
+
+**Step 6: Create Table DIMROOM**
+
+create table DIMROOOM( ROOM_ID NUMBER, ROOM_NAME STRING );
+
+insert into DIMROOOM select distinct ROOM_ID, ROOM_NAME from ods.ROOMS;
+
+**Step 7 : Create Table DIMFLOORS**
+
+create table DIMFLOORS( FLOOR_ID number, FLOOR_NAME STRING );
+
+insert into DIMFLOORS select distinct FLOOR_ID, FLOOR_NAME from ods.FLOORS;
+
+**Step 8 : Create Table DIMFACILITY**
+
+create table DIMFACILITY ( BUILDING_ID NUMBER, BUILDING_NAME STRING );
+
+insert into DIMFACILITY select distinct BUILDING_ID, BUILDING_NAME from ods.FACILITY;
+
+**Step 9 : Create Table DIMCOMPLEX**
+
+create table DIMCOMPLEX ( COMPLEX_ID STRING, COMPLEX_NAME STRING );
+
+insert into DIMCOMPLEX select distinct COMPLEX_ID, COMPLEX_NAME from ods.COMPLEX;
+
+**Step 10 : Create Table FACTTABLE**
+
+create table facttable_CleaningSchedule (   
+TRANSACTION_ID NUMBER,    
+EMPLOYEE_ID NUMBER,   
+FIRST_NAME STRING,   
+LAST_NAME STRING,   
+STEP_ID NUMBER,   
+STEP_NAME string,   
+SPOT_ID NUMBER,   
+HIGH_TOUCH_AREA string,   
+FREQUENCY_ID NUMBER,   
+FREQUENCY NUMBER,   
+ROOM_ID NUMBER,   
+ROOM_NAME STRING,   
+FLOOR_ID number,   
+FLOOR_NAME STRING,   
+BUILDING_ID NUMBER,   
+BUILDING_NAME STRING,   
+COMPLEX_ID STRING,   
+COMPLEX_NAME STRING,   
+SQFT STRING,   
+TOTAL_AREA STRING,   
+CLEANED_AREA STRING,   
+TEST_VALUE NUMBER,   
+EFFICIENCY NUMBER,   
+CLEANED_ON STRING,   
+
+constraint fk_TRANSACTION_ID foreign key (TRANSACTION_ID)
+references ods.CLEANINGSCHEDULE (TRANSACTION_ID),   
+constraint fk_EMPLOYEE_id foreign key (EMPLOYEE_id)
+references ods.EMPLOYEE (EMPLOYEE_id),   
+constraint fk_SPOT_id foreign key (SPOT_id)
+references ods.HIGHTOUCHAREAS (SPOT_id),   
+constraint fk_FREQUENCY_id foreign key (FREQUENCY_id)
+references ods.FREQUENCY(FREQUENCY_id),   
+constraint fk_ROOM_id foreign key (ROOM_id)
+references ods.ROOMS (ROOM_id),   
+constraint fk_FLOOR_id foreign key (FLOOR_id)
+references ods.FLOORS (FLOOR_id),   
+constraint fk_BUILDING_id foreign key (BUILDING_id)
+references ods.FACILITY (BUILDING_id),   
+constraint fk_COMPLEX_id foreign key (COMPLEX_id)
+references ods.COMPLEX (COMPLEX_id)
+);
+
+
+
 # 5.  REPORTING
+
+One of the main goals of any data system is to use it to analyze data, help identify trends and patterns, support the decision-making of the executive teams, and provide insights for strategic planning. Once your data has been collected and stored, it can now be used for reporting. 
+
+**Type of queries on DW**
+
+Repetitive and expected
+
+Unique queries
+
+One of the key things to look out for is Improper testing of queries or badly written queries. A badly structured query may slow down or bring down the database, so testing of all known and common queries is vital. Working with users with unique queries to ensure the query is correctly entered can reduce risk.
+
+
+### Case Study
+
+There are over 200 stock exchanges in the world sending the stock market tick data at a rate of over a million messages per second. 
+
+Companies, like Reuters and Bloomberg, buy this data, clean and aggregate it into streams to sell to customers. 
+
+Customers subscribe to these feeds to buy and sell the stocks. When the entire database of all departments of the organization is available, it is possible to find some new opportunities for revenue generation.
+
+![image](https://user-images.githubusercontent.com/68102477/126054324-068ef214-ae81-443b-8c91-6e46a2da95ba.png)
+
+### Analytics
+
+Executive and decision-makers will query the system to generate reports and extract data, for purposes of analyisis. Let's use the COVID19 situation as an example to understand the difference between the three main types of analytics.
+
+![image](https://user-images.githubusercontent.com/68102477/126054345-bc8930ad-390d-493b-992e-15ec401f4dd4.png)
+
+
+
+**Descriptive analytics:** 
+
+You might have seen the red, yellow, and green color-coded maps to explain how covid is spreading across the globe. This is done by running statistics on the tested and admitted patient's data.
+
+**Predictive analytics:**
+
+Historical data is fed into a machine learning model that considers key trends and patterns. The model is then applied to current data to predict what will happen next. Back in our COVID example, predictive analytics may forecast a surge in patients admitted to the ER in the next several weeks. Based on patterns in the data, the illness is spreading at a rapid rate.
+
+**Prescriptive analytics:**
+
+Takes predictive data to the next level. Now that you have an idea of what will likely happen in the future, what should you do? It suggests various courses of action and outlines what the potential implications would be for each. Now that you know the COVID is spreading, per your ML models, the prescriptive analytics tool may suggest that you increase the number of staff on hand to adequately treat the influx of patients.
+
+
+
+### Exercise: Writing SQL that Correlates Business Intelligence
+
+ABC company has built a DWH using 4 transactional systems - product lifecycle database, order entry database, marketing database, HR database. 
+
+The product table has a list of products - Mobile phone, phone case, wireless charger and Bluetooth earbuds. 
+
+Customer(CustomerID, CustomerName) and Product(ProductID, ProductName) are two dimensions related to a Fact_table(CustomerID, ProductID, bill, bill date) using the Star schema. 
+
+The Order database has a list of customers who bought some of these products. Marketing dept wants to inform the customers, who bought at least $1000 worth of the products last month, giving 20% discounts to appreciate their business.
+
+**Write a sudo SQL code to list customers who qualify for the discount.**
+
+select c.customerName, sum(f.bill) from Customers c, Fact_table f where c.customerID = f.customerID and ((f.billdate between currentDate and (currentDate -30))  group by c.customerID having sum(f.bill) >= 1000;
+
+
+**Question 2:**
+
+ABC company has built a DWH using 4 transactional systems - product lifecycle database, order entry database, marketing database, HR database. It is making $100M with 10% profitability. In the response box below, respond to the following 2 questions.
+
+How can you develop the DWH to uncover hidden patterns?
+
+Explain what dimensions and other transactional systems are required to increase profitability.
+
+**Answer**
+
+Using Star schema, create Customer, Product, MarketingCampaigns, Location, Employee dimensions that are related to the Fact table, which has all the transactions with various marketing campaigns. You can help business users to identify the opportunities by querying the DWH to find hidden patterns to upsell and cross sell to the existing customers. You can also help business users to show how much revenue and profitability increased due to various marketing campaigns.
+
+## Challenges in building a data warehouse
+
+While upgrading the software, you will need to address deprecated features
+
+Careful planning and coordination required during migration.
+
+Performance problems due to growing data processing without increasing CPU capacity
+
+Most data warehouse projects are a multi-year effort
+
+Moving targets and priorities of other teams
+
+Shifting schedules because of those moving targets
+
 
   
  
