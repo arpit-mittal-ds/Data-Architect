@@ -2,7 +2,7 @@
 
 ## Lesson Overview
 
-In previous lessons we learnt how to extract data from source systems into staging and then from staging to ODS.
+In previous lessons we learnt how to extract data from source systems into staging and then from staging to ODS. Now we will move ahead and create a Data Warehouse
 
 **1. Data Warehouse**
 
@@ -33,9 +33,9 @@ A data warehouse is a database optimized to analyze relational data coming from 
 
 Analyzing the company data can provide insightful information about short-term tactical evaluations and strategic questions, such as: 
 
-**Are our sales promotions working? 
+**Are our sales promotions working?**
 
-**What market percentage are we controlling?
+**What market percentage are we controlling?**
 
 **Are we attracting new customers?**
 
@@ -44,16 +44,22 @@ Note that to answer such question historial data needs to be analysed. Also data
 Decision makers can no longer wait a couple of days for a report to be generated; they are compelled to make **quick decisions** if they want to **remain competitive**. Every day, TV ads offer low-price warranties, instant price matching, and so on. 
 How can companies survive on lower margins and still make a profit? The key is in **having the right data at the right time to support the decision-making process.**
 
+### Business Intelligence
+
 Companies and software vendors first addressed these multilevel decision support needs by creating autonomous applications for particular groups of users, such as those in finance, customer management, human resources, and product support. Applications were also tailored to different industries such as education, retail, health care, and finance. **This approach worked well for some time, but changes in the business world, such as globalization, expanding markets, mergers and acquisitions, increased regulation, and new technologies, called for new ways of integrating and managing decision support across levels, sectors, and geographic locations.** This more comprehensive and integrated decision support framework within organizations became known as **Business Intelligence**, with DW at it's core.
 
-BI is not a product by itself, but a **framework of concepts, practices, tools, and technologies** that help a business better understand its core capabilities, provide snapshots of the company situation, and identify key opportunities to create competitive advantage. In general, BI provides a framework for:
+BI is not a product by itself, but a **framework of concepts, practices, tools, and technologies** that help a business better understand its core capabilities, provide snapshots of the company situation, and identify key opportunities to create competitive advantage. In general, **BI provides a framework for:**
 
 • **Collecting and storing** operational data (ODS)
+
 • **Aggregating the operational data** into decision support data (Data Warehouse)
+
 • **Analyzing** decision support data to generate information
-• **Presenting** such information to the end user to support business decisions Making business decisions, which in turn generate more data that is collected, stored,
-and so on (restarting the process)
+
+• **Presenting** such information to the end user to support business decisions Making business decisions, which in turn generate more data that is collected, stored, and so on (restarting the process)
+
 • **Monitoring** results to evaluate outcomes of the business decisions, which again provides more data to be collected, stored, and so on
+
 • **Predicting** future behaviors and outcomes with a high degree of accuracy (ML)
 
 
@@ -75,7 +81,7 @@ The data warehouse is a centralized, consolidated database that integrates data 
 
 **Primary difference b/w a Data Warehouse and a Data Lake:**
 
-Data Lake can have structured, semi-structured and unstructured data also. In other words, s data lake is a modern data warehouse with unstructured data also.
+Data Lake can have structured, semi-structured and unstructured data also. In other words, a data lake is a modern data warehouse with unstructured data also.
 
 ### Benefits of a DWH:
 
@@ -90,39 +96,46 @@ Users trust data warehouse reports, which is cleansed and valued as a **Single V
 ![image](https://user-images.githubusercontent.com/68102477/121469810-8085df80-ca00-11eb-9c97-7d03fa9757e5.png)
 
 
-The End is in Sight
-You have seen the diagram above in earlier lessons, but it makes sense to revisit it now. The data warehouse supports the reporting that is the ultimate goal of the Data Architect. We have said many times throughout the course, it is the pot at the end of the rainbow. Decision-makers can now dive deep into the data to find hidden trends and other valuable information.
+The data warehouse supports REPORTING, which is the ultimate goal of the Data Architect. Decision-makers can now dive deep into the data to find hidden trends and other valuable information.
 
 
 ### Why Data Warehousing Matters
 
+**The Value of Data**
 
-The Value of Data
-Especially in unpredictable times, business leaders need access to their data to provide up to date, easy to access, and well-organized data to help provide insights to help navigate based on factual data, and not emotion.
+Especially in **unpredictable times**, business leaders need access to their data to get up to date, easy to access, and well-organized information to help get insights  - **and navigate based on factual information, and not emotions.**
 
-Insightful reporting data
 A data warehouse can provide insightful reporting data from across the entire organization.
 
-Important decisions can be made such as
+**Important decisions can be made such as**
+
 Selling or closing certain business units
+
 Merging some departments to minimize the costs
+
 Acquiring an external company to fill an unseen need
+
 Opening branches to enter into new markets
-Productivity can be increased
-by understanding the perspective from multiple departmental perspectives. Inefficiencies can be identified and addressed.
+
+**Productivity can be increased by understanding the perspective from multiple departmental perspectives. Inefficiencies can be identified and addressed.**
+
 What-if scenarios using clean enterprise data sets can be run to innovate possibilities
+
 Up to date and factual data related to revenue and expenses can be used to manage profits
-Case Study: The impact of COVID
+
+**Case Study: The impact of COVID**
+
 A data warehouse is even more important in these unprecedented situations:
 
 Several big tech companies crossed the $1 trillion market capitalization recently.
+
 During the period of COVID, a top tech company doubled its market cap to $2 trillion. when many companies are struggling to survive.
+
 Yet, some companies lost revenue. How is that possible?
 
 One of the reasons some companies were able to thrive during COVID time was that their Data Architecture was in place and decision-makers had access to up-to-date data from all aspects of the organization. The Source of Truth data provided reports that allowed them to understand their exact situation, and could plan accordingly.
 
 
- 
 ### EDW
 
 [Enterprise Data warehouse or "EDW"](https://en.wikipedia.org/wiki/Data_warehouse)
