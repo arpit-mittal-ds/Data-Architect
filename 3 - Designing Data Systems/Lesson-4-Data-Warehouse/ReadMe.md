@@ -4,19 +4,43 @@
 
 In previous lessons we learnt how to extract data from source systems into staging and then from staging to ODS. Now we will move ahead and create a Data Warehouse
 
-**1. Data Warehouse**
+**1. ETL Data from ODS to DWH**
 
-**2. Dimensional Modelling - Facts and Dimensions**
+**2. Data Warehouse**
 
-**3. Star and Snowflake Schema**
+**3. Dimensional Modelling - Facts and Dimensions**
 
-**4. ETL process from ODS to the data warehouse**
+**4. Star and Snowflake Schema**
 
 **5. Reporting** 
 Once the data warehouse is up and running, then most importantly, we will write SQL queries for the purpose of reporting. This reporting is vital for decision-makers and leaders to see patterns and intelligent insights.
 
 
-## 1. Data Warehouse
+## 1. ETL Data from ODS to DWH
+
+![image](https://user-images.githubusercontent.com/68102477/126052668-f4015b1f-d3cf-4327-9f9d-5a60bc8fb83f.png)
+
+![image](https://user-images.githubusercontent.com/68102477/126052674-2b40b10a-ff56-4869-afb3-015bea055b0f.png)
+
+**Moving Data from staging to ODS to OLAP - What does this mean?**
+
+After the initial ingestion of data into the staging area, then data is transformed from ODS source, which is an OLTP, into a data warehouse, which is an OLAP.
+
+**How we do it?**
+
+Fast ingestion strategies - Faster ingestion can be done with bulk loading and compression techniques. Every column can be a thread and load in parallel with columnar storage systems, like RedShift or Snowflake.
+
+Transforming the ER model into a Dimensional model
+
+Remember the ODS source is designed with ER models that use normalized rules as we discussed in a previous lesson.
+
+
+The ultimate goal of the data warehouse is reporting and analysis, so reading data fast is crucial. One of the primary tasks of a data warehouse is to answer aggregates quickly, such as sums, counts, averages, max, and min. Additionally, key performance indicators can be also calculated. This information to leaders and decision-makers is invaluable.
+
+![image](https://user-images.githubusercontent.com/68102477/125054683-d32ee600-e0e9-11eb-83cf-b691b916168a.png)
+
+# 2. DATA WAREHOUSE
+
 
 The complexity and range of information required to support business decisions has increased, and operational database structures were unable to support all of these requirements. Therefore, a new data storage facility, called a data warehouse, developed. The data warehouse extracts its data from operational databases as
 well as from external sources, providing a more comprehensive data pool.
@@ -177,17 +201,23 @@ Data Hubs are ideally the "go-to" place for data within an enterprise, so that m
 
 
 
-## 2. [Dimensional Modelling](https://docs.microsoft.com/en-us/power-bi/guidance/star-schema) - Facts and Dimensions
+# 3. [DIMENSION MODELLING](https://docs.microsoft.com/en-us/power-bi/guidance/star-schema) - Facts and Dimensions
 
 ### [Fact table](https://en.wikipedia.org/wiki/Fact_table)
 
 A fact table consists of the measurements, metrics or facts of a business process. It is located at the center of a star schema or a snowflake schema surrounded by dimension tables. Where multiple fact tables are used, these are arranged as a fact constellation schema. A fact table typically has two types of columns: those that contain facts and those that are a foreign key to dimension tables. The primary key of a fact table is usually a composite key that is made up of all of its foreign keys. 
 
-**Grain** - Fact tables are often defined by their grain. The grain of a fact table represents the most atomic level by which the facts may be defined. The grain of a sales fact table might be stated as "sales volume by day by product by store". Each record in this fact table is therefore uniquely defined by a day, product and store. Other dimensions might be members of this fact table (such as location/region) but these add nothing to the uniqueness of the fact records. 
+**Grain** - Fact tables are often defined by their grain. The grain of a fact table represents the most atomic level by which the facts may be defined. 
 
-Measure types
+The grain of a sales fact table might be stated as "sales volume by day by product by store". Each record in this fact table is therefore uniquely defined by a day, product and store. 
+Other dimensions might be members of this fact table (such as location/region) but these add nothing to the uniqueness of the fact records. 
+
+**Measure types**
+
 Additive - measures that can be added across any dimension.
+
 Non-additive - measures that cannot be added across any dimension.
+
 Semi-additive - measures that can be added across some dimensions.
 
 A fact table might contain either detail level facts or facts that have been aggregated (fact tables that contain aggregated facts are often instead called summary tables).
@@ -327,13 +357,15 @@ State codes
 
 
 
-## 3. Star and Snowflake Schema
+# 4. STAR AND SNOWFLAKE SCHEMA
 
 
 ## Star Schema
 
-### Star Schema Representation
+**Star Schema Representation**
+
 The fact table is related to each dimension table in a many-to-one (M:1) relationship.
+
 In other words, many fact rows are related to each dimension row.
 
 Because the fact table is related to many dimension tables, the primary key of the fact table is a composite primary key.
@@ -349,7 +381,4 @@ Data captured by Slowly Changing Dimensions (SCDs) change slowly but unpredictab
 
 [SCD Types Later](https://adatis.co.uk/introduction-to-slowly-changing-dimensions-scd-types/)
 
-## 4. ETL Data from ODS to DWH
-
-![image](https://user-images.githubusercontent.com/68102477/125054683-d32ee600-e0e9-11eb-83cf-b691b916168a.png)
-
+# 5.  REPORTING
