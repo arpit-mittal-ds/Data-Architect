@@ -37,7 +37,6 @@ Remember the ODS source is designed with ER models that use normalized rules as 
 
 The ultimate goal of the data warehouse is reporting and analysis, so reading data fast is crucial. One of the primary tasks of a data warehouse is to answer aggregates quickly, such as sums, counts, averages, max, and min. Additionally, key performance indicators can be also calculated. This information to leaders and decision-makers is invaluable.
 
-![image](https://user-images.githubusercontent.com/68102477/125054683-d32ee600-e0e9-11eb-83cf-b691b916168a.png)
 
 # 2. DATA WAREHOUSE
 
@@ -381,4 +380,87 @@ Data captured by Slowly Changing Dimensions (SCDs) change slowly but unpredictab
 
 [SCD Types Later](https://adatis.co.uk/introduction-to-slowly-changing-dimensions-scd-types/)
 
+### Star vs Snowflake Schema
+
+![image](https://user-images.githubusercontent.com/68102477/126053429-493ffd1e-85b6-40be-ad99-251a7c307374.png)
+
+![image](https://user-images.githubusercontent.com/68102477/126053435-6228b1bf-0170-4c42-b6b9-762ab1a1cbe7.png)
+
+![image](https://user-images.githubusercontent.com/68102477/126053455-36f86988-a50a-4d24-af12-c262909a112e.png)
+
+Both have the same dimensions but Snowflake is extended with furthermore granular dimensions. 
+
+Snowflake can also have more fact tables. 
+
+Snowflake is normalized when it comes to dimensions, meaning it uses sub-dimensions to go deeper. A Star schema has simpler denormalized dimensions.
+
+Star schema dimension tables are not normalized, snowflake schemas dimension tables are normalized.
+
+Snowflake schemas will use less space to store dimension tables but are more complex.
+
+Star schemas will only join the fact table with the dimension tables, leading to simpler, faster SQL queries.
+
+Snowflake schemas have no redundant data, so they're easier to maintain.
+
+Snowflake schemas are good for data warehouses, star schemas are better for data marts with simple relationships.
+
+As you can see below, the Star schema is a smaller schema, with less relationship information. Only the fact table is joined. These are typically used in Data Marts.
+
+![image](https://user-images.githubusercontent.com/68102477/126053342-f9367474-e70d-4fc6-a770-43b5bb04af8a.png)
+
+
+**Snowflake Schema**
+
+As you can see below in this OLAP model designed with Snowflake. the Snowflake schema is a larger schema than it would be with Star, with far more details about relationships, and is far more normalized. All the radiating tables are called dimensions.
+
+Dimension tables of the Star schema are divided into sub-dimensions in Snowflake
+
+Fact tables are further divided into sub fact tables
+
+**Characterstics of Snowflake Schema**
+
+More complex modeling technique than the Star model.
+
+Less redundant data because of its normalized model
+
+Uses complex joins in writing SQL statements for reading data
+
+In this example, the Sales fact table contains every sale transaction of every product of every store with respect to date. These are typically used in data warehouses.
+
+
+![image](https://user-images.githubusercontent.com/68102477/126053351-2d1a1eac-cb3c-4c99-90ea-4b153d7d0bc4.png)
+
+### Selecting a Schema (Star vs Snowflake)
+
+Selecting which schema to model the DWH is an important decision a data architect has to take. 
+
+**Example:**
+
+Question: ABC company has 4 transactional systems - product lifecycle database, order entry database, marketing database, HR database. Which schema do you recommend to build a data warehouse and explain the reasons?
+
+Answer: If the database size is in 100s of GB to TBs, and there isn't much time to implement a large data warehouse - when a particular department wants to have a dedicated reporting system ASAP, then Star schema is preferable.
+
+It is complex and time taking to implement an enterprise wide reporting system. If you have enough budgets and time to implement an enterprise reporting system, Snowflake suits best to model the complex relationships.
+
+**Exercise - Create a simple Dimensional Model using following ER-Model**
+
+![image](https://user-images.githubusercontent.com/68102477/126053767-00eb0047-1085-4443-8d31-b6fb4dd68bc6.png)
+
+A multinational company manufactures several brands of cars and sells them across the world. Several countries have manufacturing locations to create specific parts of the brands. Some parts are outsourced to supplier companies. You want to represent the relationships that exist as described in the ER model above. Create the corresponding Dimensional Model. Use Lucidchart or a similar diagram creation tool to model this.
+
+**Solution**
+
+![image](https://user-images.githubusercontent.com/68102477/126053760-8faf5acd-f9b5-48a0-8af0-950f7d26ce02.png)
+
+
+Check
+![image](https://user-images.githubusercontent.com/68102477/125054683-d32ee600-e0e9-11eb-83cf-b691b916168a.png)
+
+  
 # 5.  REPORTING
+
+  
+ 
+
+
+
