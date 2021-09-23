@@ -11,9 +11,9 @@ The data architect also "provides a standard common business vocabulary, express
 
 **A foundation in systems development.** Data architects must understand the system development life cycle, **project management approaches**, and requirements, design, and test techniques.
 
-**Data modeling and design.** This is the core skill of the data architect and the most requested skill in data architect job descriptions, according to Lambert, who notes that this often includes SQL development and database administration.
+**Data modeling and design.** 
 
-**Established and emerging data technologies.** Data architects need to understand established data management and reporting technologies, and have some knowledge of columnar and NoSQL databases, predictive analytics, data visualization, and unstructured data.
+**understand established and emerging data technologies.** - areas - columnar and NoSQL databases, predictive analytics, data visualization, and unstructured data.
 
 **Communication and political savvy.** Data architects need people skills. They must be articulate, persuasive, and good salespeople, Lambert says, and they must conceive and portray the big data picture to others
 
@@ -29,9 +29,9 @@ Data architecture goes way beyond database design. Technology is a big part of t
 
 The core of data architecture is finding the best answers to the following question: **what is the business trying to do and how can data help?**
 
-This means that data architecture focuses on both the business side and the technical side. As a data architect, it is your job to understand both sides and to live on both sides. You need to be the bridge between business users and technology.
+This means that data architecture focuses on both the business side and the technical side. As a data architect, it is your job to understand both sides and to live on both sides. You need to be the **bridge between business users and technology.**
 
-It's time to step out of your IT comfort zone!
+**It's time to step out of your IT comfort zone!**
 
 ## Data Architecture Characteristics
 
@@ -39,7 +39,15 @@ The main characteristics are:
 
 **Business needs First:** Use technology to solve Business Problems. Focus on Business Problem rather than Technology.
 
-**Data Governance:** Set of rules and standards designed to ensure proper stewardship of data. Remember: Who owns the data, Who manages the data, and Who can access the data
+**Data Governance:** Set of rules and standards designed to ensure proper stewardship of data. 
+
+Define rules for: 
+
+Who owns the data, 
+
+Who manages the data, 
+
+and Who can accesses the data
 
 **Data Integrity:** Ensuring the data is accurate and consistent
 
