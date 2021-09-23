@@ -1,15 +1,15 @@
 # Notes - What is Data Architecture
 
 
-Data architects are senior visionaries who translate business requirements into technology requirements and define data standards and principles. 
+Data architects are senior visionaries who translate **business requirements into technology requirements** and define data standards and principles. 
 
-The data architect is responsible for visualizing and designing an organization's enterprise data management framework. This framework describes the processes used to plan, specify, enable, create, acquire, maintain, use, archive, retrieve, control, and purge data. 
+The data architect is responsible for visualizing and designing an organization's enterprise **data management framework**. This framework describes the processes used to plan, specify, enable, create, acquire, maintain, use, archive, retrieve, control, and purge data. 
 
 The data architect also "provides a standard common business vocabulary, expresses strategic requirements, outlines high-level integrated designs to meet those requirements, and aligns with enterprise strategy and related business architecture
 
 ## Data architect skills
 
-**A foundation in systems development.** Data architects must understand the system development life cycle, project management approaches, and requirements, design, and test techniques, Lambert says.
+**A foundation in systems development.** Data architects must understand the system development life cycle, **project management approaches**, and requirements, design, and test techniques.
 
 **Data modeling and design.** This is the core skill of the data architect and the most requested skill in data architect job descriptions, according to Lambert, who notes that this often includes SQL development and database administration.
 
@@ -18,9 +18,9 @@ The data architect also "provides a standard common business vocabulary, express
 **Communication and political savvy.** Data architects need people skills. They must be articulate, persuasive, and good salespeople, Lambert says, and they must conceive and portray the big data picture to others
 
 
-Data architecture goes way beyond database design. Technology is a big part of the role, but providing solutions to business problems, that is what is at the heart of data architecture.
+Data architecture goes way beyond database design. Technology is a big part of the role, but **providing solutions to business problems**, that is what is at the heart of data architecture.
 
-Think outside of the limitations of technology. Learn the business role you will be working with. Shadow some employees, ask questions, sit in on some meetings, even read up on the field. Your business partners will appreciate you showing a real interest in their work, and your insight will help guide you in providing better architected solutions for your business partners.
+**Think outside of the limitations of technology. Learn the business role you will be working with. Shadow some employees, ask questions, sit in on some meetings, even read up on the field. Your business partners will appreciate you showing a real interest in their work, and your insight will help guide you in providing better architected solutions for your business partners.**
 
 
 ![image](https://user-images.githubusercontent.com/68102477/119764768-5bb84500-bef5-11eb-85d1-0cbc41eda533.png)
