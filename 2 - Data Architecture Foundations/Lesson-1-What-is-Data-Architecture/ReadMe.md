@@ -1,4 +1,4 @@
-# Notes - What is Data Architecture
+# Notes - Who are Data Architects
 
 
 Data architects are senior visionaries who translate **business requirements into technology requirements** and define data standards and principles. 
@@ -15,7 +15,7 @@ The data architect also "provides a standard common business vocabulary, express
 
 **understand established and emerging data technologies.** - areas - columnar and NoSQL databases, predictive analytics, data visualization, and unstructured data.
 
-**Communication and political savvy.** Data architects need people skills. They must be articulate, persuasive, and good salespeople, Lambert says, and they must conceive and portray the big data picture to others
+**Communication and political savvy.** Data architects need people skills. - articulate, persuasive, and good sales people, Lambert says, and they must conceive and portray the big picture to others
 
 
 Data architecture goes way beyond database design. Technology is a big part of the role, but **providing solutions to business problems**, that is what is at the heart of data architecture.
