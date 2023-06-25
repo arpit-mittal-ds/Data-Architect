@@ -46,6 +46,15 @@ TempDB is used as a temporary storage location that SQL Server will use when it 
 
 ![image](https://github.com/arpit-mittal-ds/Data-Architect/assets/68102477/80d2b057-b222-440d-ab6b-acdac6dbb031)
 
+![image](https://github.com/arpit-mittal-ds/Data-Architect/assets/68102477/bbe3ecf9-96d7-4ee4-a4b4-ac8c687d75b0)
+
+### In Dimensions, use dim_key as data warehouse key and dim_id as source system key from transactional source db
+
+**This allows us to go back to the source database and look up information if we need to, and it can help the ETL process know which records have already been written to the data warehouse.**
+
+**Other columns will be descriptive attributes in the dimension and foreign keys to other dimensions (if snowflake design)**
+
+![image](https://github.com/arpit-mittal-ds/Data-Architect/assets/68102477/a45174df-84a8-4539-a987-fad2514d2b0d)
 
 
 ![image](https://github.com/arpit-mittal-ds/Data-Architect/assets/68102477/eeaf94c9-aadb-41a7-9e56-c4fdf8cf8fb6)
